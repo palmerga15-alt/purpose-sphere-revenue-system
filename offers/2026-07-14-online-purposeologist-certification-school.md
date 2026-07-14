@@ -3,7 +3,7 @@
 **Date prepared:** 2026-07-14
 **Pipeline stage:** offer-architect (stage 2 of market-signal-researcher → offer-architect → content-angle-strategist)
 **Strategic priority addressed:** #2 — "Online Purposeologist certification school — scalable teaching/licensing model"
-**Grounded in:** `business-brief.md` (root), `/research/2026-07-purposeology-and-ai-webinar.md` (section 4 pricing benchmarks), and `/offers/2026-07-15-purposeology-ai-webinar-offer-suite.md` (existing funnel this offer sits downstream of)
+**Grounded in:** `business-brief.md` (root), `/research/2026-07-purposeology-and-ai-webinar.md` (general certification-pricing context), `/research/2026-07-purposeologist-certification-school.md` (dedicated follow-up: purpose/calling-niche demand, direct competitors, and refined pricing — **pricing below updated 2026-07-14 against this report**), and `/offers/2026-07-15-purposeology-ai-webinar-offer-suite.md` (existing funnel this offer sits downstream of)
 
 ---
 
@@ -41,15 +41,15 @@ High-level program structure only — no internal 26-concept framework or Concep
 
 ## Pricing / Packaging
 
-Grounded in the research report's section 4 benchmarks — reported there as market context, not recommendations, so figures below are **placeholders pending an explicit pricing decision**, not final prices:
+**Updated 2026-07-14** against `/research/2026-07-purposeologist-certification-school.md`, the dedicated purpose/calling-certification follow-up. That report found direct niche competitors (True Purpose® Institute ~$2,295, Life Purpose Institute $2,995, iNLP Center $3,995) clustering in a **$2,295–$3,995 live/cohort tier**, distinct from a lower-credibility $197–$500 self-study tier — and cited ICF Coaching Futures Report data that the **$3,000–$5,000 fixed-fee specialty tier is under-competed relative to demand**. The prior $3,995 anchor sat at the *top* of the validated range, not the middle; pricing below is refined accordingly.
 
-| Tier | What's included | Benchmark anchor | Status |
+| Tier | What's included | Price | Basis |
 |---|---|---|---|
-| **Certified Purposeologist** (core) | Full 6-month program, capstone assessment, credential/certificate, listing in a (future) practitioner directory | Anchored near the report's cited $3,995 6-month self-paced life-purpose-coach comparable | Placeholder — needs explicit decision |
-| **Certified Purposeologist + Corporate Delivery License** (upper tier) | Everything in core, plus rights to deliver a defined Purposeology workshop/training format under license inside organizations (i.e., eligibility to be staffed on priority #4 corporate engagements) | No direct comparable in the report — the AI-coaching certification ($149/mo or $1,495/yr) is priced far lower but does not include a delivery/licensing right, so it is not a valid anchor for this tier | **Unvalidated — do not price without a separate licensing-economics decision** (royalty/revenue-share vs. flat upcharge vs. separate annual license fee) |
-| **Payment structure** | Monthly plan option (e.g., modeled loosely on the AI-coaching comparable's $149/mo structure) alongside a lump-sum option at a discount | Report shows both models exist in this exact adjacent category | Reasonable to offer both; exact monthly figure is a placeholder |
+| **Certified Purposeologist** (core) | Full 6-month program, capstone assessment, credential/certificate, listing in a (future) practitioner directory | **$3,495** (or 3 × $1,225 payment plan) | Set inside the validated $2,295–$3,995 niche range and the ICF-flagged under-competed $3,000–$5,000 band, deliberately below the prior top-of-range placeholder rather than at it |
+| **Certified Purposeologist + Corporate Delivery License** (upper tier) | Everything in core, plus rights to deliver a defined Purposeology workshop/training format under license inside organizations (i.e., eligibility to be staffed on priority #4 corporate engagements) | **$12,000/year**, scaling toward **$25,000+/year** for mid-market accounts (50–200 seats) | **Still adjacent-market-derived, not niche-validated** — no purpose/calling-specific corporate-license comparable exists. Anchored to the report's general B2B training-content-licensing range ($3,000–$15,000/yr small deals, $15,000–$50,000/yr mid-market). Structured as a **recurring annual license** (CCL/Management 3.0 model), not a one-time perpetual fee (Coach U model), so quality-control and brand-standard enforcement stay revocable — consistent with the Dependencies section's licensing-framework concern |
+| **Payment structure** | Monthly plan for the core tier; the Corporate Delivery License is billed annually by design (see above) | Core: $3,495 lump sum or 3 × $1,225 | Both models are attested in adjacent certification categories |
 
-**Explicitly flagged as not derived from the report:** any number above should be treated as a working placeholder until either (a) a market-signal follow-up specifically tests purpose/calling-certification pricing and demand (see Research Gaps), or (b) the Purpose Council makes a deliberate go-to-market pricing call independent of research.
+**Still explicitly a decision, not a research finding:** these are data-informed prices, not lab-tested ones — no report establishes that Purposeology's specific offer converts at these prices, only that they sit inside a validated competitive range. The recommended pilot cohort (see below) is where real conversion data at this price point would come from.
 
 ## Deliverables and Outcomes
 
@@ -93,14 +93,19 @@ Framed around the five-stage journey, with no internal concept enumeration:
 
 A pilot cohort of this size is a proof point, not a launch — it lets the Council see real conversion and delivery data before committing to the LMS/legal/instructor-capacity build-out this offer would need at full scale. This recommendation is offered as an option for the Council's decision, not a default green light to build the full school.
 
-## Research Gaps (explicitly flagged, not filled with assumption)
+## Research Gaps
 
-The research report (`/research/2026-07-purposeology-and-ai-webinar.md`) was built for the AI webinar, not this offer, and does not cover:
-- **Direct demand signals for a purpose/calling-specific certification** — the report's benchmarks (life-purpose coach certifications, AI-coaching certification) are adjacent categories, not evidence that people specifically want to become certified in guiding *others* through a proprietary purpose-discovery method.
-- **Direct competitor certification programs in the purpose/calling space specifically** — the report names competitors in the AI-and-purpose *content* space (Sinek, Ikigai 2.0) but none in the *certification/credentialing* space for purpose or calling coaching specifically.
-- **Corporate appetite for a licensed-practitioner delivery model** — the report shows L&D buyers are currently sold skills/productivity almost exclusively and that a meaning/retention angle is open territory, but it does not test whether those buyers would accept training delivered by a licensed practitioner network versus DrG personally.
+**Closed by the 2026-07-14 follow-up report** (`/research/2026-07-purposeologist-certification-school.md`):
+- **Direct competitor certification programs in the purpose/calling space** — no longer an open gap. True Purpose® Institute (secular, proprietary-method), Called Coach Institute (faith-based), and Calling Coach Academy are real, named competitors. **Positioning copy should stop implying an empty competitive field** — this offer enters a validated structural pattern (proprietary framework + certification), not an uncontested category. Purposeology's differentiators remain real (faith-adjacent-without-denominational framing, veteran/corporate dual-audience reach, and a Corporate Delivery License tier none of the found competitors appear to offer) — but content-angle-strategist should position *against* these named competitors, not as if none exist.
+- **Pricing** — refined above from a general benchmark into a niche-specific one.
 
-These should be routed back to market-signal-researcher as a follow-up brief if/when the Council decides to move beyond the pilot-cohort stage recommended above.
+**Still open:**
+- **Demand is directional, not sized.** No keyword-volume tool was accessible in either research pass, so there is no confirmed search-volume figure for "life purpose coach certification" / "calling coach certification" / "purpose coaching certification." Treat demand as plausible, not measured.
+- **Corporate appetite for a licensed-practitioner delivery model** — still untested. The report shows L&D buyers are sold skills/productivity almost exclusively and that a meaning/retention angle is open territory, but not whether those buyers would accept training delivered by a licensed practitioner network versus DrG personally.
+- **The single most consistently repeated buyer objection is accreditation/legitimacy skepticism** (more than price or time-investment concerns) — content-angle-strategist should design copy to pre-empt this specifically, not ROI or saturation fears.
+- Unverified pricing for two named competitors (Calling Coach Academy, Called Coach Institute — both blocked on direct fetch) and no verbatim practitioner-objection sourcing (Reddit-native search did not surface usable thread content) — would need direct outreach or a live browse to close.
+
+These remaining items should be routed back to market-signal-researcher as a further follow-up only if the Council wants them closed before finalizing the licensing-tier structure or objection-handling copy — they are not blockers for the pilot cohort recommended below.
 
 ## Brand-Standard Compliance Check
 
