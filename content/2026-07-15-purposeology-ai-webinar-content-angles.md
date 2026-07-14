@@ -111,5 +111,5 @@ Per the offer spec and research report, segment strength and framing differ — 
 ## 6. Open Decisions Flagged for the User
 
 - **Exact fast-action deadline for the book offer (B1)** is not fixed in the offer spec ("24–48 hours or before the replay window closes" — a range, not a number). The hooks above ("This Closes Tonight," "before the window closes") need a real deadline plugged in before use, or the urgency language will be inaccurate.
-- **Workshop date/pricing** is still a placeholder in the offer spec (B2 general admission and VIP pricing both TBD). Titles/hooks above are price-agnostic by design, but enrollment email subject lines in the post-webinar sequence (2.E, steps 3–5) will need a firm date to be schedulable.
+- ~~Workshop date/pricing~~ **Resolved:** workshop is **July 22, 2026**, $497 general admission / $997 VIP (see updated offer spec). Enrollment email subject lines in the post-webinar sequence (2.E, steps 3–5) can now be scheduled against this date.
 - **Replay hosting status** — the offer spec flags this as "still needed, not yet confirmed." The replay-promotion title in 2.B and sequence step 2 in 2.E assume a replay link exists; confirm before sending.

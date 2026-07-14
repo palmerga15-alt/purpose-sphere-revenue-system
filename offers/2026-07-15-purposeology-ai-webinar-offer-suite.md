@@ -61,14 +61,16 @@ This is the "most urgent, most immediate revenue path" offer per the brief's pri
 
 ### B2 — Core Offer: Workshop (the primary immediate-revenue vehicle)
 
-**What it is:** A live, structured workshop — proposed as a half-day (3–4 hour) virtual intensive, delivered by DrG (distinct from the webinar's HeyGen-avatar delivery — the workshop is the higher-trust, higher-price tier and should carry DrG's own presence to justify that step-up). Small enough group size to allow structured interaction, not a mass broadcast.
+**What it is:** A live, structured workshop — a half-day (3–4 hour) virtual intensive, delivered by DrG (distinct from the webinar's HeyGen-avatar delivery — the workshop is the higher-trust, higher-price tier and should carry DrG's own presence to justify that step-up). Small enough group size to allow structured interaction, not a mass broadcast.
+
+**Date:** **July 22, 2026 (Wednesday)** — one week after the webinar, close enough to hold momentum from the webinar and the B1 fast-action book offer while leaving a one-week window to finalize workshop logistics (see Dependencies below).
 
 **Who it's for:** Webinar attendees who self-select as ready to move past awareness into structured work — primarily the individuals-in-transition and faith-adjacent segments per the brief; veterans framed per the report's "translate your edge" angle rather than anxiety relief.
 
-**Price/packaging:** **Placeholder — flagged for validation, do not treat as final.** The report contains no direct benchmark for a single workshop/seminar ticket. The closest external reference points it does supply are a different product category (life-purpose coach certifications $3,000–$7,500 for 3–9 month programs; an AI-coaching certification at $1,495/yr; keynote fees $2,500–$75,000+) — none of these are single-workshop prices and none should be used to back into one. Proposed structure, pending validation against comparable single-session workshop pricing (not supplied in the report):
-  - General admission (live virtual, group Q&A): price TBD/validate.
-  - VIP tier (general admission + small-group breakout or written follow-up on their "find" answer from the webinar): price TBD/validate, priced as a fixed premium over general admission.
-  - Payment plan (e.g., split into 2 installments) as a standard conversion lever — structural recommendation, not a specific number.
+**Price/packaging:** **Set by decision, not derived from a report benchmark** — the report contains no direct comp for a single workshop/seminar ticket (its closest reference points are a different product category: life-purpose coach certifications $3,000–$7,500 for 3–9 month programs, an AI-coaching certification at $1,495/yr, keynote fees $2,500–$75,000+ — none used to back into this number).
+  - **General admission (live virtual, group Q&A): $497.**
+  - **VIP tier (general admission + small-group breakout or written follow-up on their "find" answer from the webinar): $997.**
+  - Payment plan (e.g., split into 2 installments) recommended as a standard conversion lever, especially at the VIP tier.
 
 **Deliverables/outcomes (five-stage framing, no internal framework exposed):**
 - Structured movement from **find** into **focus** — participants leave with a written, personal articulation of the direction they're choosing to pursue, not a completed plan.
@@ -95,8 +97,8 @@ Not an offer — a list-building action. At the workshop's close (not the webina
 |---|---|---|
 | A — Webinar | Free | Grounded in report's funnel benchmarks |
 | B1 — Book (fast-action) | Placeholder | Use existing retail price if set; bundle premium unvalidated |
-| B2 — Workshop, general admission | Placeholder | No single-workshop benchmark in report; needs validation |
-| B2 — Workshop, VIP tier | Placeholder | Premium over GA, amount TBD |
+| B2 — Workshop, general admission | $497 | July 22, 2026. No single-workshop benchmark in report; set by decision |
+| B2 — Workshop, VIP tier | $997 | July 22, 2026. Set by decision |
 | Certification waitlist | N/A (free, no seat sold) | List-building only, per Purpose Council sequencing |
 
 ## Brand-standard compliance check
