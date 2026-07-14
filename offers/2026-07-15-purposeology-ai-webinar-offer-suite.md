@@ -49,7 +49,9 @@ This is the "most urgent, most immediate revenue path" offer per the brief's pri
 
 ### B1 — Fast-Action Offer (presented live, time-boxed)
 
-**What it is:** DrG's existing bestselling book, *Purpose-ology: The Science of Purpose*, offered as a decisive-action bonus to attendees who take the next step before a stated deadline (e.g., within 24–48 hours or before the replay window closes).
+**What it is:** DrG's existing bestselling book, *Purpose-ology: The Science of Purpose*, offered as a decisive-action bonus to attendees who take the next step before a stated deadline.
+
+**Deadline: July 20, 2026, 11:59 PM ET** (5 days after the webinar). Set to give replay viewers — 58% of registrants first-touch the replay per the research report — a real window to claim it, while still closing 2 days ahead of the July 22 workshop so the funnel sequence (fast-action bonus → workshop enrollment) doesn't overlap.
 
 **Why this offer:** It uses an asset that already exists (the book is already published) rather than requiring new content — directly aligned with the Purpose Council's instruction to strengthen proof/delivery on existing assets before opening new build fronts. It is also the literal top item in priority #1 ("books, seminars, and workshops").
 

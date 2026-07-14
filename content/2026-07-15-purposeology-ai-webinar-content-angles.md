@@ -67,7 +67,7 @@ Sequence logic, keyed to the five-stage journey and the report's replay-traffic 
 1. **T+0 (immediately post-webinar, live attendees only):** Fast-action book CTA — "Your First Step Into Find" (see C above). Time-boxed.
 2. **T+1 day:** Replay-availability email for no-shows/partial attendees — "You Missed It Live. The Reason Layer Is Still Here." + soft workshop mention.
 3. **T+2–3 days:** Workshop-focused email — "You Named It Live. Now Let's Build the Direction." Ties the webinar's live "find" prompt to the workshop's "find to focus" outcome.
-4. **T+4–5 days (fast-action window closing, if not already claimed):** Final book-offer reminder — "This Closes Tonight."
+4. **T+5 days / July 20, 2026 (fast-action window closing, if not already claimed):** Final book-offer reminder — "This Closes Tonight."
 5. **T+7 days:** Broader nurture email for non-converters — reframes without urgency pressure, re-poses the core thesis line, links to workshop enrollment and (for corporate/veteran/institutional contacts who stand out) a scheduled-call CTA per the offer spec's routing into priorities #3–4.
 6. **Workshop close (in-session, not email):** Certification-school waitlist opt-in — list-building only, framed as "the next horizon beyond focus" (form), not sold or priced.
 
@@ -110,6 +110,6 @@ Per the offer spec and research report, segment strength and framing differ — 
 
 ## 6. Open Decisions Flagged for the User
 
-- **Exact fast-action deadline for the book offer (B1)** is not fixed in the offer spec ("24–48 hours or before the replay window closes" — a range, not a number). The hooks above ("This Closes Tonight," "before the window closes") need a real deadline plugged in before use, or the urgency language will be inaccurate.
+- ~~Exact fast-action deadline for the book offer (B1)~~ **Resolved:** **July 20, 2026, 11:59 PM ET** (see updated offer spec). The hooks above ("This Closes Tonight," "before the window closes") should now use this date.
 - ~~Workshop date/pricing~~ **Resolved:** workshop is **July 22, 2026**, $497 general admission / $997 VIP (see updated offer spec). Enrollment email subject lines in the post-webinar sequence (2.E, steps 3–5) can now be scheduled against this date.
 - **Replay hosting status** — the offer spec flags this as "still needed, not yet confirmed." The replay-promotion title in 2.B and sequence step 2 in 2.E assume a replay link exists; confirm before sending.
