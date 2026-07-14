@@ -46,7 +46,7 @@ Urgency here comes from the real Kairos framing (a live, dated event) — not ma
 This is an existing published title — do not rename the book. Titles/hooks below are for the *offer framing* (the bonus/urgency wrapper), not the book cover.
 
 - **Live-close CTA headline:** "Your First Step Into Find — Claim It Before the Window Closes"
-- **Hook (spoken/on-screen at close of webinar):** "You just heard the reframe. *Purpose-ology: The Science of Purpose* is where you start living it — the fast-action option is on the screen now, and it closes in [24–48 hrs / at replay close]."
+- **Hook (spoken/on-screen at close of webinar):** "You just heard the reframe. *Purpose-ology: The Science of Purpose* is where you start living it — the fast-action option is on the screen now, and it closes July 20th."
 - **Post-webinar email subject (fast-action reminder):** "Still Open: The Book That Starts Your 'Find' Stage"
 - **Final-hours email subject:** "This Closes Tonight — Your Copy of Purpose-ology"
 
@@ -112,4 +112,4 @@ Per the offer spec and research report, segment strength and framing differ — 
 
 - ~~Exact fast-action deadline for the book offer (B1)~~ **Resolved:** **July 20, 2026, 11:59 PM ET** (see updated offer spec). The hooks above ("This Closes Tonight," "before the window closes") should now use this date.
 - ~~Workshop date/pricing~~ **Resolved:** workshop is **July 22, 2026**, $497 general admission / $997 VIP (see updated offer spec). Enrollment email subject lines in the post-webinar sequence (2.E, steps 3–5) can now be scheduled against this date.
-- **Replay hosting status** — the offer spec flags this as "still needed, not yet confirmed." The replay-promotion title in 2.B and sequence step 2 in 2.E assume a replay link exists; confirm before sending.
+- ~~Replay hosting status~~ **Resolved:** confirmed live. The replay-promotion title in 2.B and sequence step 2 in 2.E are cleared to use.

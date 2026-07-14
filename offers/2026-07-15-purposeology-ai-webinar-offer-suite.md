@@ -39,7 +39,8 @@ A third, non-monetized element (certification-school waitlist capture) is includ
 
 **Dependencies/assets:**
 - *Already built per the brief:* VSL scripts ("The New Reveal" framework), social rollout, email sequences, PowerPoint deck, HeyGen avatar presentation.
-- *Still needed (flagging, not building):* a registration/landing page and confirmation-email tech if not already live; a replay-hosting plan, since the report shows replay traffic materially outperforms live-only capture (58% of opportunities first-touch the replay). This is infrastructure, not new "build front" content, so it is consistent with the Purpose Council's proof-and-delivery priority.
+- *Still needed (flagging, not building):* a registration/landing page and confirmation-email tech if not already live.
+- *Confirmed live:* replay hosting is set up and ready, which matters given the report shows replay traffic materially outperforms live-only capture (58% of opportunities first-touch the replay).
 
 ---
 
