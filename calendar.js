@@ -1,8 +1,11 @@
-events:
-[}
-],status: "connected",
 
-events: [],events: [
+const CalendarModule = {
+  name: "Calendar Intelligence",
+  version: "1.0",
+
+  status: "connected",
+
+events: [
   {
     title: "Metro Occupational Therapy",
     date: "2026-07-25",
@@ -19,16 +22,6 @@ events: [],events: [
     time: "12:30 PM"
   }
 ],
-// Calendar Intelligence Module
-
-const CalendarModule = {
-  name: "Calendar Intelligence",
-  version: "1.0",
-
-  status: "connected",
-
-  events: [],
-
   getUpcomingEvents() {
     return this.events;
   },
