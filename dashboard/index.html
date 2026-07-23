@@ -403,6 +403,15 @@ safe(() => {
         ${(db.entries || []).map(e => `<tr><td class="white">${esc(e.name)}</td><td class="dim">${esc(e.modified)}</td></tr>`).join("")}
       </table>`
   });
+});// ---------- 10. CALENDAR ----------
+safe(() => {
+  const cal = window.CalendarModule;
+  panel({
+    id: "panel-calendar",
+    title: "CALENDAR // UPCOMING EVENTS",
+    online: !!cal,
+    bodyHTML: cal ? cal.display() : "Calendar module loading..."
+  });
 });
 
 document.getElementById("footer").textContent =
