@@ -28,4 +28,4 @@ const CalendarModule = {
 
 console.log("Calendar Intelligence Module Loaded");
 
-export default CalendarModule;
+window.CalendarModule = CalendarModule;
