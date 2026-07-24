@@ -146,6 +146,36 @@
   .alert-BLOCKED { color: var(--amber); border-color: rgba(255,180,84,.5); }
   .alert-ACTION { color: var(--cyan); border-color: rgba(83,199,240,.5); }
 
+  /* finance // payment tracker */
+  #panel-finance { border-color: rgba(255,215,0,.28); }
+  #panel-finance .panel-title { color: var(--gold); }
+  .badge-sample { color: var(--amber); border-color: rgba(255,180,84,.5); }
+  .fin-cards {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px; margin-bottom: 14px;
+  }
+  .fin-card {
+    border: 1px solid var(--panel-edge); background: rgba(20,32,58,.25);
+    border-left: 2px solid var(--cyan); padding: 10px 12px;
+  }
+  .fin-card .n { font-size: 20px; color: #fff; }
+  .fin-card .l { font-size: 9px; letter-spacing: 1.5px; color: var(--text-dim); margin-top: 3px; }
+  .fin-card .sub { font-size: 10px; color: var(--text-dim); margin-top: 4px; }
+  .fin-card.c-due7 { border-left-color: var(--amber); }
+  .fin-card.c-month { border-left-color: var(--cyan); }
+  .fin-card.c-paid { border-left-color: var(--green); }
+  .fin-card.c-recur { border-left-color: var(--purple); }
+  .fin-card.c-overdue { border-left-color: var(--red); }
+  .fin-table { min-width: 1080px; }
+  .fin-table th { white-space: nowrap; }
+  .pay-status { font-size: 9px; letter-spacing: 1px; padding: 2px 7px; border: 1px solid; white-space: nowrap; }
+  .ps-DUE { color: var(--cyan); border-color: rgba(83,199,240,.5); }
+  .ps-DUE-SOON { color: var(--amber); border-color: rgba(255,180,84,.5); }
+  .ps-PAID { color: var(--green); border-color: rgba(61,214,140,.5); }
+  .ps-OVERDUE { color: var(--red); border-color: rgba(255,93,93,.5); }
+  .ps-CANCELLED { color: var(--text-dim); border-color: rgba(92,114,145,.5); }
+  tr.row-cancelled td { opacity: .45; }
+
   /* big stats */
   .stat-row { display: flex; gap: 20px; margin-bottom: 12px; flex-wrap: wrap; }
   .stat { border-left: 2px solid var(--cyan); padding-left: 10px; }
@@ -174,6 +204,7 @@
 <footer id="footer"></footer>
 
 <script src="data.js"></script>
+<script src="finance-data.js"></script>
 <script src="../calendar.js"></script>
 <script>
 "use strict";
@@ -221,14 +252,17 @@ document.getElementById("header-sub").textContent =
 
 // ---------- panel factory ----------
 const grid = document.getElementById("grid");
-function panel({ id, title, cls = "", online = true, bodyHTML }) {
+function panel({ id, title, cls = "", online = true, bodyHTML, badge }) {
   const el = document.createElement("section");
   el.className = `panel ${cls}`;
   el.id = id;
+  const badgeHTML = badge
+    ? `<span class="panel-badge ${esc(badge.cls)}">${esc(badge.text)}</span>`
+    : `<span class="panel-badge ${online ? "badge-online" : "badge-offline"}">${online ? "● LIVE DATA" : "○ OFFLINE"}</span>`;
   el.innerHTML = `
     <div class="panel-head">
       <span class="panel-title">${esc(title)}</span>
-      <span class="panel-badge ${online ? "badge-online" : "badge-offline"}">${online ? "● LIVE DATA" : "○ OFFLINE"}</span>
+      ${badgeHTML}
     </div>
     <div class="panel-body">${online ? bodyHTML : `<div class="panel-offline-msg">SOURCE OFFLINE — LAST KNOWN DATA UNAVAILABLE<br>PANEL DEGRADED GRACEFULLY</div>`}</div>`;
   grid.appendChild(el);
@@ -291,7 +325,98 @@ safe(() => {
   });
 });
 
-// ---------- 4. GMAIL COMMS ----------
+// ---------- 4. BUSINESS FINANCE // PAYMENT TRACKER ----------
+safe(() => {
+  const F = (typeof window.FINANCE_DATA === "object" && window.FINANCE_DATA) || null;
+  const payments = (F && Array.isArray(F.payments)) ? F.payments : [];
+
+  const MS_DAY = 86400000;
+  const parseDay = s => {
+    const [y, m, d] = String(s || "").split("-").map(Number);
+    return (y && m && d) ? new Date(y, m - 1, d) : null;
+  };
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const daysUntil = due => due ? Math.round((due - today) / MS_DAY) : null;
+
+  // Status auto-calcs from due date; only manual PAID / CANCELLED override it.
+  const effectiveStatus = p => {
+    const manual = String(p.status || "").toUpperCase();
+    if (manual === "PAID" || manual === "CANCELLED") return manual;
+    const d = daysUntil(parseDay(p.dueDate));
+    if (d === null) return "DUE";
+    if (d < 0) return "OVERDUE";
+    if (d <= 7) return "DUE SOON";
+    return "DUE";
+  };
+
+  const rows = payments.map(p => ({ ...p, st: effectiveStatus(p), due: parseDay(p.dueDate) }));
+  const isUnpaid = r => r.st !== "PAID" && r.st !== "CANCELLED";
+  const inThisMonth = d => d && d.getFullYear() === today.getFullYear() && d.getMonth() === today.getMonth();
+  const sum = list => list.reduce((t, r) => t + (typeof r.amount === "number" ? r.amount : 0), 0);
+  const fmtAmt = n => (typeof n === "number")
+    ? "$" + n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+    : "—";
+
+  const due7 = rows.filter(r => isUnpaid(r) && r.due && daysUntil(r.due) >= 0 && daysUntil(r.due) <= 7);
+  const dueMonth = rows.filter(r => isUnpaid(r) && inThisMonth(r.due));
+  const paidMonth = rows.filter(r => r.st === "PAID" && inThisMonth(parseDay(r.paidDate) || r.due));
+  const recurring = rows.filter(r => r.st !== "CANCELLED" && String(r.frequency).toUpperCase() === "MONTHLY");
+  const overdue = rows.filter(r => r.st === "OVERDUE");
+
+  // Unpaid first, sorted by nearest due date; then paid (most recent first); cancelled last.
+  const rank = r => isUnpaid(r) ? 0 : (r.st === "PAID" ? 1 : 2);
+  rows.sort((a, b) => rank(a) - rank(b) || ((a.due?.getTime() ?? Infinity) - (b.due?.getTime() ?? Infinity)) * (rank(a) === 1 ? -1 : 1));
+
+  const card = (cls, val, label, subCount) => `
+    <div class="fin-card ${cls}">
+      <div class="n money">${esc(fmtAmt(val))}</div>
+      <div class="l">${esc(label)}</div>
+      <div class="sub">${subCount} ${subCount === 1 ? "PAYMENT" : "PAYMENTS"}</div>
+    </div>`;
+
+  panel({
+    id: "panel-finance",
+    title: "BUSINESS FINANCE // PAYMENT TRACKER",
+    cls: "wide",
+    online: !!F,
+    badge: F ? {
+      cls: F.source?.mode === "sample" ? "badge-sample" : "badge-online",
+      text: F.source?.mode === "sample" ? "◆ SAMPLE DATA" : "● LIVE DATA"
+    } : undefined,
+    bodyHTML: !F ? "" : `
+      <div class="fin-cards">
+        ${card("c-due7", sum(due7), "DUE NEXT 7 DAYS", due7.length)}
+        ${card("c-month", sum(dueMonth), "DUE THIS MONTH", dueMonth.length)}
+        ${card("c-paid", sum(paidMonth), "PAID THIS MONTH", paidMonth.length)}
+        ${card("c-recur", sum(recurring), "MONTHLY RECURRING", recurring.length)}
+        ${card("c-overdue", sum(overdue), "OVERDUE", overdue.length)}
+      </div>
+      <table class="fin-table">
+        <tr>
+          <th>VENDOR</th><th>EXPENSE</th><th>CATEGORY</th><th>AMOUNT</th><th>DUE DATE</th>
+          <th>FREQ</th><th>STATUS</th><th>BUSINESS / PROJECT</th><th>METHOD</th><th>NOTES</th><th>RECEIPT</th>
+        </tr>
+        ${rows.map(r => `
+          <tr class="${r.st === "CANCELLED" ? "row-cancelled" : ""}">
+            <td class="white">${esc(r.vendor)}</td>
+            <td class="dim">${esc(r.description)}</td>
+            <td class="dim">${esc(r.category)}</td>
+            <td>${money(fmtAmt(r.amount))}</td>
+            <td class="${r.st === "OVERDUE" ? "white" : "dim"}">${esc(r.dueDate || "—")}${r.st === "PAID" && r.paidDate ? ` <span class="dim">· pd ${esc(r.paidDate)}</span>` : ""}</td>
+            <td class="dim">${esc(r.frequency || "—")}</td>
+            <td><span class="pay-status ps-${esc(r.st.replace(" ", "-"))}">${esc(r.st)}</span></td>
+            <td class="dim">${esc(r.business || "—")}</td>
+            <td class="dim">${esc(r.paymentMethod || "—")}</td>
+            <td class="dim">${esc(r.notes || "")}</td>
+            <td class="dim">${esc(r.receiptRef || "—")}</td>
+          </tr>`).join("")}
+      </table>
+      <div class="dim" style="margin-top:10px;font-size:10px;letter-spacing:1px">${esc(F.source?.label || "")} · STATUS AUTO-CALCULATED FROM DUE DATE UNLESS MARKED PAID / CANCELLED · NO ACCOUNT NUMBERS OR CREDENTIALS STORED IN THIS MODULE</div>`
+  });
+});
+
+// ---------- 5. GMAIL COMMS ----------
 safe(() => {
   const g = D.gmail;
   panel({
@@ -310,7 +435,7 @@ safe(() => {
   });
 });
 
-// ---------- 5. UNREAD SIGNALS ----------
+// ---------- 6. UNREAD SIGNALS ----------
 safe(() => {
   const g = D.gmail;
   panel({
@@ -328,7 +453,7 @@ safe(() => {
   });
 });
 
-// ---------- 6. LOVABLE WEB PROPERTIES ----------
+// ---------- 7. LOVABLE WEB PROPERTIES ----------
 safe(() => {
   const l = D.lovable;
   panel({
@@ -350,7 +475,7 @@ safe(() => {
   });
 });
 
-// ---------- 7. GOOGLE DRIVE ----------
+// ---------- 8. GOOGLE DRIVE ----------
 safe(() => {
   const gd = D.gdrive;
   panel({
@@ -368,7 +493,7 @@ safe(() => {
   });
 });
 
-// ---------- 8. GITHUB OPS ----------
+// ---------- 9. GITHUB OPS ----------
 safe(() => {
   const gh = D.github;
   panel({
@@ -388,7 +513,7 @@ safe(() => {
   });
 });
 
-// ---------- 9. DROPBOX ----------
+// ---------- 10. DROPBOX ----------
 safe(() => {
   const db = D.dropbox;
   panel({
@@ -404,7 +529,7 @@ safe(() => {
         ${(db.entries || []).map(e => `<tr><td class="white">${esc(e.name)}</td><td class="dim">${esc(e.modified)}</td></tr>`).join("")}
       </table>`
   });
-});// ---------- 10. CALENDAR ----------
+});// ---------- 11. CALENDAR ----------
 safe(() => {
   const cal = window.CalendarModule;
   const events = cal ? cal.getUpcomingEvents() : [];
