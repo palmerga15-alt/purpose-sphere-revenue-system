@@ -146,6 +146,143 @@
   .alert-BLOCKED { color: var(--amber); border-color: rgba(255,180,84,.5); }
   .alert-ACTION { color: var(--cyan); border-color: rgba(83,199,240,.5); }
 
+  /* ---------- business financial intelligence (dashboard/finance.js) ---------- */
+  .fin-panel { border-color: rgba(255,215,0,.28); }
+  .fin-panel .panel-title { color: var(--gold); }
+  .section-head {
+    grid-column: 1 / -1;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 8px;
+    border: 1px solid rgba(255,215,0,.35);
+    background: linear-gradient(180deg, rgba(255,215,0,.07), transparent);
+    padding: 10px 16px; margin-top: 6px;
+  }
+  .sh-title { color: var(--gold); font-size: 13px; letter-spacing: 3px; font-weight: 700; }
+  .sh-note { color: var(--text-dim); font-size: 9px; letter-spacing: 1.5px; }
+  .badge-sample { color: var(--amber); border-color: rgba(255,180,84,.5); }
+  .fin-cards {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px; margin-bottom: 14px;
+  }
+  .fin-card {
+    border: 1px solid var(--panel-edge); background: rgba(20,32,58,.25);
+    border-left: 2px solid var(--cyan); padding: 10px 12px;
+  }
+  .fin-card .n { font-size: 20px; color: #fff; }
+  .fin-card .l { font-size: 9px; letter-spacing: 1.5px; color: var(--text-dim); margin-top: 3px; }
+  .fin-card .sub { font-size: 10px; color: var(--text-dim); margin-top: 4px; }
+  .fin-card.c-cash { border-left-color: var(--cyan); }
+  .fin-card.c-due7 { border-left-color: var(--amber); }
+  .fin-card.c-month { border-left-color: var(--cyan); }
+  .fin-card.c-paid { border-left-color: var(--green); }
+  .fin-card.c-recur { border-left-color: var(--purple); }
+  .fin-card.c-overdue { border-left-color: var(--red); }
+  .fin-table { min-width: 1080px; }
+  .fin-table th { white-space: nowrap; }
+  .pay-status { font-size: 9px; letter-spacing: 1px; padding: 2px 7px; border: 1px solid; white-space: nowrap; }
+  .ps-DUE { color: var(--cyan); border-color: rgba(83,199,240,.5); }
+  .ps-DUE-SOON { color: var(--amber); border-color: rgba(255,180,84,.5); }
+  .ps-PAID { color: var(--green); border-color: rgba(61,214,140,.5); }
+  .ps-OVERDUE { color: var(--red); border-color: rgba(255,93,93,.5); }
+  .ps-CANCELLED { color: var(--text-dim); border-color: rgba(92,114,145,.5); }
+  tr.row-cancelled td { opacity: .45; }
+  /* privacy mode: every finance panel goes dark — vendors, amounts, dates,
+     projects, methods, notes, receipts, totals and counts all hidden */
+  .fin-privacy-msg {
+    display: none; text-align: center; padding: 38px 16px;
+    color: var(--amber); font-size: 12px; letter-spacing: 2.5px;
+  }
+  .fin-privacy-msg .sub2 {
+    display: block; margin-top: 9px;
+    color: var(--text-dim); font-size: 10px; letter-spacing: 1.5px;
+  }
+  body.privacy .fin-panel .fin-sensitive { display: none; }
+  body.privacy .fin-panel .fin-privacy-msg { display: block; }
+
+  /* expense intelligence bars */
+  .fin-bar-row {
+    display: grid; grid-template-columns: 150px 1fr 84px 44px;
+    gap: 10px; align-items: center; padding: 5px 0; font-size: 11px;
+  }
+  .fb-label { letter-spacing: .5px; }
+  .fin-bar { height: 8px; background: rgba(20,32,58,.8); border: 1px solid var(--panel-edge); }
+  .fin-bar-fill { height: 100%; background: linear-gradient(90deg, var(--gold), var(--amber)); }
+  .fb-amt { text-align: right; }
+  .fb-pct { text-align: right; font-size: 10px; }
+  .fin-footnote { margin-top: 10px; font-size: 10px; letter-spacing: 1px; }
+
+  /* subscription manager */
+  .fin-table-sm { min-width: 640px; }
+  .fin-table-sm th { white-space: nowrap; }
+  tr.row-dup td { background: rgba(255,180,84,.06); }
+  .dup-chip {
+    display: block; margin-top: 3px; font-size: 9px; letter-spacing: 1px;
+    color: var(--amber);
+  }
+
+  /* financial calendar event chips */
+  .ev-chip { font-size: 9px; letter-spacing: 1px; padding: 2px 7px; border: 1px solid; white-space: nowrap; }
+  .ev-BILL { color: var(--cyan); border-color: rgba(83,199,240,.5); }
+  .ev-RENEWAL { color: var(--purple); border-color: rgba(157,123,255,.5); }
+  .ev-TAX { color: var(--red); border-color: rgba(255,93,93,.5); }
+  .ev-INSURANCE { color: var(--amber); border-color: rgba(255,180,84,.5); }
+  .ev-DOMAIN { color: var(--green); border-color: rgba(61,214,140,.5); }
+  .ev-ANNUAL, .ev-EVENT { color: var(--text-dim); border-color: rgba(92,114,145,.5); }
+
+  /* ai insights slots */
+  .ai-slots { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px; }
+  .ai-slot { border: 1px dashed rgba(157,123,255,.4); padding: 10px 12px; font-size: 11px; }
+  .ai-slot-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 5px; }
+  .ai-local { margin-top: 14px; border-top: 1px dashed rgba(40,70,120,.35); padding-top: 10px; }
+  .ai-local-head { color: var(--text-dim); font-size: 9px; letter-spacing: 1.5px; margin-bottom: 6px; }
+
+  /* phase 2: connection-status control + adapter mode switching */
+  .badge-local { color: var(--cyan); border-color: rgba(83,199,240,.5); }
+  .fin-controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .fin-state-chip { font-size: 9px; letter-spacing: 1.5px; padding: 4px 10px; border: 1px solid; }
+  .st-sample { color: var(--amber); border-color: rgba(255,180,84,.5); }
+  .st-local { color: var(--cyan); border-color: rgba(83,199,240,.5); }
+  .st-live { color: var(--green); border-color: rgba(61,214,140,.5); }
+  .st-err { color: var(--red); border-color: rgba(255,93,93,.5); }
+  .fin-mode-btn, .fin-lock-btn, .fin-sm-btn {
+    background: none; border: 1px solid var(--panel-edge); color: var(--text-dim);
+    font-family: var(--mono); font-size: 9px; letter-spacing: 1.5px;
+    padding: 4px 10px; cursor: pointer; transition: all .2s;
+  }
+  .fin-mode-btn:hover, .fin-sm-btn:hover { border-color: var(--cyan); color: var(--cyan); }
+  .fin-mode-btn.active { border-color: var(--gold); color: var(--gold); background: rgba(255,215,0,.08); }
+  .fin-lock-btn { border-color: rgba(255,180,84,.5); color: var(--amber); }
+  .fin-lock-btn:hover { background: rgba(255,180,84,.12); }
+  .fin-sm-btn.primary { border-color: rgba(61,214,140,.5); color: var(--green); }
+  .fin-sm-btn.primary:hover { background: rgba(61,214,140,.1); }
+  .fin-sm-btn.danger { border-color: rgba(255,93,93,.5); color: var(--red); }
+  .fin-sm-btn.danger:hover { background: rgba(255,93,93,.1); }
+
+  /* phase 2: manual local entry */
+  .fin-local-note {
+    border: 1px dashed rgba(255,180,84,.45); color: var(--text-dim);
+    font-size: 10px; letter-spacing: .8px; line-height: 1.8; padding: 10px 12px; margin-bottom: 14px;
+  }
+  .fin-entry-bar { display: flex; align-items: flex-end; gap: 14px; margin-bottom: 10px; flex-wrap: wrap; }
+  .fin-form { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; margin-bottom: 12px; }
+  .fin-field { display: flex; flex-direction: column; gap: 4px; }
+  .fin-field-label { font-size: 8px; letter-spacing: 1.5px; color: var(--text-dim); }
+  .fin-input {
+    background: #070c18; border: 1px solid var(--panel-edge); color: var(--text);
+    font-family: var(--mono); font-size: 11px; padding: 6px 8px;
+  }
+  .fin-input:focus { outline: none; border-color: var(--cyan); }
+  .fin-check { font-size: 10px; color: var(--text); padding: 6px 0; }
+  .fin-entry-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .fin-entry-err { color: var(--red); font-size: 10px; letter-spacing: .5px; }
+  .fin-local-group { color: var(--text-dim); font-size: 9px; letter-spacing: 1.5px; margin: 14px 0 4px; border-bottom: 1px solid var(--panel-edge); padding-bottom: 4px; }
+  .fin-local-row {
+    display: grid; grid-template-columns: 1fr 110px 110px auto;
+    gap: 10px; align-items: center; padding: 5px 0; font-size: 11px;
+    border-top: 1px solid rgba(20,32,58,.6);
+  }
+  .fin-row-actions { display: flex; gap: 6px; }
+
   /* big stats */
   .stat-row { display: flex; gap: 20px; margin-bottom: 12px; flex-wrap: wrap; }
   .stat { border-left: 2px solid var(--cyan); padding-left: 10px; }
@@ -174,6 +311,12 @@
 <footer id="footer"></footer>
 
 <script src="data.js"></script>
+<script src="finance-validate.js"></script>
+<script src="finance-data.js"></script>
+<script src="finance-local.js"></script>
+<script src="finance-api-client.js"></script>
+<script src="finance-adapter.js"></script>
+<script src="finance.js"></script>
 <script src="../calendar.js"></script>
 <script>
 "use strict";
@@ -183,14 +326,18 @@ const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt
 const money = v => v ? `<span class="money">${esc(v)}</span>` : "";
 const srcOnline = key => { try { return D.sources?.[key]?.status === "online"; } catch { return false; } };
 
-function togglePrivacy() {
-  const on = document.body.classList.toggle("privacy");
+function setPrivacy(on) {
+  document.body.classList.toggle("privacy", !!on);
   const b = document.getElementById("privacyToggle");
   b.textContent = on ? "🔒 PRIVACY: ON" : "🔒 PRIVACY: OFF";
-  b.classList.toggle("active", on);
-  try { localStorage.setItem("ps_privacy", on ? "1" : "0"); } catch {}
+  b.classList.toggle("active", !!on);
 }
-try { if (localStorage.getItem("ps_privacy") === "1") togglePrivacy(); } catch {}
+function togglePrivacy() { setPrivacy(!document.body.classList.contains("privacy")); }
+window.setPrivacy = setPrivacy;
+// SECURITY: Privacy Mode starts ON at every load — financial panels boot
+// locked and stay hidden until deliberately revealed. The financial module
+// also re-locks on inactivity and on session expiry (see finance.js).
+setPrivacy(true);
 
 // clock
 setInterval(() => {
@@ -291,7 +438,10 @@ safe(() => {
   });
 });
 
-// ---------- 4. GMAIL COMMS ----------
+// ---------- 4. BUSINESS FINANCIAL INTELLIGENCE (rendered by dashboard/finance.js) ----------
+safe(() => window.FinanceModule && window.FinanceModule.render({ grid }));
+
+// ---------- 5. GMAIL COMMS ----------
 safe(() => {
   const g = D.gmail;
   panel({
@@ -310,7 +460,7 @@ safe(() => {
   });
 });
 
-// ---------- 5. UNREAD SIGNALS ----------
+// ---------- 6. UNREAD SIGNALS ----------
 safe(() => {
   const g = D.gmail;
   panel({
@@ -328,7 +478,7 @@ safe(() => {
   });
 });
 
-// ---------- 6. LOVABLE WEB PROPERTIES ----------
+// ---------- 7. LOVABLE WEB PROPERTIES ----------
 safe(() => {
   const l = D.lovable;
   panel({
@@ -350,7 +500,7 @@ safe(() => {
   });
 });
 
-// ---------- 7. GOOGLE DRIVE ----------
+// ---------- 8. GOOGLE DRIVE ----------
 safe(() => {
   const gd = D.gdrive;
   panel({
@@ -368,7 +518,7 @@ safe(() => {
   });
 });
 
-// ---------- 8. GITHUB OPS ----------
+// ---------- 9. GITHUB OPS ----------
 safe(() => {
   const gh = D.github;
   panel({
@@ -388,7 +538,7 @@ safe(() => {
   });
 });
 
-// ---------- 9. DROPBOX ----------
+// ---------- 10. DROPBOX ----------
 safe(() => {
   const db = D.dropbox;
   panel({
@@ -404,7 +554,7 @@ safe(() => {
         ${(db.entries || []).map(e => `<tr><td class="white">${esc(e.name)}</td><td class="dim">${esc(e.modified)}</td></tr>`).join("")}
       </table>`
   });
-});// ---------- 10. CALENDAR ----------
+});// ---------- 11. CALENDAR ----------
 safe(() => {
   const cal = window.CalendarModule;
   const events = cal ? cal.getUpcomingEvents() : [];
