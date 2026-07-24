@@ -173,6 +173,20 @@ starts ON at every page load, inactivity relock, manual lock button, and
 automatic relock on session expiry. This is a viewing shield, not encryption
 — which is exactly why only fictional data may ship in the public repo.
 
+## Testing
+
+Automated tests live in `dashboard/tests/` and cover the whole module.
+
+| Suite | Runner | Covers |
+|---|---|---|
+| `finance-validate.test.js` | `node dashboard/tests/finance-validate.test.js` | Contract validation accept/reject matrix — schema, property whitelists, required fields, amount/date bounds, enum values, duplicate IDs, credential-like strings; confirms error output carries paths/codes but **never values**; exercises `validateRecord()` (the manual-local CRUD gate). |
+| `finance-browser.test.js` | serve the repo root, then `node dashboard/tests/finance-browser.test.js` | All panels render; Privacy Mode boots **locked** and masks every sensitive field across all 7 panels; manual **and** inactivity relock; `sample` / `manual-local` / `secure-api` modes (incl. a routed secure-api test double for CONNECTED and 401→EXPIRED, verifying the token never appears in a URL); disconnected/ERROR degradation that leaves the base Command Center working; desktop **and** mobile layouts (no horizontal overflow); zero JavaScript errors. |
+
+The browser suite needs a static server (e.g. `python3 -m http.server 8788`)
+and Chromium via Playwright; set `BASE_URL` / `CHROMIUM_PATH` to override the
+defaults. Latest run: **19 validator + 49 browser checks passing, zero
+JavaScript errors.** See `dashboard/tests/README.md` for exact commands.
+
 ## Future extensibility — reusable business-protection architecture
 
 > **Scope note.** This section is *documentation only*. It records how the
@@ -199,7 +213,7 @@ config layer would need to parameterize.
 | **Privacy & session-lock controls** | `body.privacy`, LOCK button, inactivity relock (`FINANCE_CONFIG.inactivitySeconds`), and expiry relock are already generic and config-driven. | Client sets the inactivity window and default-lock policy in config. |
 | **Secure backend separation** | The authenticated backend, its credentials, and `finance-config.js` live entirely outside this repo. The client only ever holds display labels. | Each client points `apiEndpoint` at its own backend; the contract is unchanged. |
 | **Role-based access readiness** | The contract already assumes the **server** decides what a session may see (the client never filters). Adding roles is a backend concern that returns a narrower payload — the UI needs no change to honor it. | Backend attaches a role/scope to the session and returns only authorized records; optionally a `viewerRole` field could hide controls, but this is deferred. |
-| **Clean documentation** | This file plus `SECURITY-THREAT-MODEL.md` describe the contract, states, security boundaries, and deployment path. | Add a per-client deployment runbook when the first real deployment happens. |
+| **Clean documentation** | This document describes the contract, adapter states, validation, security boundaries, and the sample-to-live deployment path. | Add a per-client deployment runbook when the first real deployment happens. |
 
 ### Where Purposeology-specific assumptions currently live (documented, not changed)
 
