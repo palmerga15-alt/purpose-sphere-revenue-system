@@ -1,0 +1,18 @@
+# ── financial security ─────────────────────────────────────────
+# Deployment-injected finance configuration (endpoint, timeouts).
+# A private deployment writes this file at deploy time; it must
+# NEVER be committed — the public build ships without it and the
+# dashboard falls back to fictional sample data.
+dashboard/finance-config.js
+
+# Private financial exports must never enter this repository.
+*.ofx
+*.qfx
+*.qbo
+bank-export*
+statement*.csv
+transactions*.csv
+
+# ── general ────────────────────────────────────────────────────
+node_modules/
+.DS_Store
