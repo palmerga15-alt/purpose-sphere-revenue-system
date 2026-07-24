@@ -1,4 +1,4 @@
-# Purpose Sphere Command Center
+# PurposeSphere Command Center
 
 An executive business command center for financial intelligence, strategic operations, and future AI-powered business management.
 
