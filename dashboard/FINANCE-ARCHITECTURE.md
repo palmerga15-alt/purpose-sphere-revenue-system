@@ -172,3 +172,51 @@ notice via pure CSS — toggling off restores instantly. Phase 2 additions:
 starts ON at every page load, inactivity relock, manual lock button, and
 automatic relock on session expiry. This is a viewing shield, not encryption
 — which is exactly why only fictional data may ship in the public repo.
+
+## Future extensibility — reusable business-protection architecture
+
+> **Scope note.** This section is *documentation only*. It records how the
+> module as it exists today could later be reused for client-specific
+> deployments. It does **not** authorize building a multi-tenant product,
+> client portal, sales system, compliance platform, or additional modules.
+> Nothing here changes the present implementation.
+
+The Command Center may eventually become a repeatable business-protection
+model that other organizations deploy for their own finances. The current
+module was built module-first, so most of the reusability surface already
+exists as seams rather than features to be added later. The table maps each
+desired client-deployment property to the mechanism that already carries it,
+and — honestly — to the Purposeology-specific assumptions that a future
+config layer would need to parameterize.
+
+| Reusability property | Already supported by | Future parameterization (not built) |
+|---|---|---|
+| **Modular components** | Each concern is a separate file behind a `window.*` global (`FinanceValidate`, `FinanceLocal`, `FinanceApiClient`, `FinanceAdapter`, `FinanceModule`). Panels are built by data-driven factories, not bespoke markup. | None required — components already load and can be reused independently. |
+| **Adapter-based data sources** | `FinanceAdapter.load()` is the single seam; the UI paints whatever state comes back. `sample` / `manual-local` / `secure-api` modes already exist. | A client deployment selects its mode via injected config; no UI change. |
+| **Validation layers** | `FinanceValidate` runs the same contract on every source. The payment validator already reads **`data.categories` from the payload**, so a client's category vocabulary validates without code changes. | Promote the other fixed vocabularies (frequencies, revenue streams, calendar types) to optional payload-supplied lists the same way. |
+| **Configurable categories** | Category → expense-group mapping is data (`categoryGroups`, `expenseGroups`) and already flows from the payload through the model math. | A per-client config file supplies the category set and grouping; defaults stay as today's fallback. |
+| **Configurable branding** | All color, type, and accent styling is CSS custom properties in `:root`; panels reference `var(--…)` only. | A branding config overrides the `:root` variable block and the header title string. |
+| **Privacy & session-lock controls** | `body.privacy`, LOCK button, inactivity relock (`FINANCE_CONFIG.inactivitySeconds`), and expiry relock are already generic and config-driven. | Client sets the inactivity window and default-lock policy in config. |
+| **Secure backend separation** | The authenticated backend, its credentials, and `finance-config.js` live entirely outside this repo. The client only ever holds display labels. | Each client points `apiEndpoint` at its own backend; the contract is unchanged. |
+| **Role-based access readiness** | The contract already assumes the **server** decides what a session may see (the client never filters). Adding roles is a backend concern that returns a narrower payload — the UI needs no change to honor it. | Backend attaches a role/scope to the session and returns only authorized records; optionally a `viewerRole` field could hide controls, but this is deferred. |
+| **Clean documentation** | This file plus `SECURITY-THREAT-MODEL.md` describe the contract, states, security boundaries, and deployment path. | Add a per-client deployment runbook when the first real deployment happens. |
+
+### Where Purposeology-specific assumptions currently live (documented, not changed)
+
+To keep future extraction honest, these are the only hard-coded
+Purposeology-specific touch-points in the current module; a later config
+layer would externalize them, but they are intentionally left in place now
+to avoid expanding scope:
+
+- The header title `PURPOSE SPHERE // COMMAND CENTER` in `dashboard/index.html`.
+- The default category / expense-group / revenue-stream vocabularies in
+  `FinanceValidate.CONTRACT` (these already act as *fallbacks* — payload data
+  can override categories today).
+- The sample vendors, streams, and notes in `finance-data.js` (fictional and
+  replaced wholesale by any real deployment's backend payload).
+
+Everything else — the adapter contract, validation engine, privacy/session
+controls, panel factories, and the secure-backend boundary — is already
+client-agnostic. The path from "single-owner dashboard" to "reusable
+deployment" is therefore a **configuration layer over unchanged code**, which
+is why no structural work is needed now to preserve it.
