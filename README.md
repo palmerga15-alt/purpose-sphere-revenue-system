@@ -1,6 +1,6 @@
 # PurposeSphere Command Center
 
-An executive business command center for financial intelligence, strategic operations, and future AI-powered business management.
+A centralized business command center for G. Alfred Palmer's speaking, publishing, coaching, self-help, and Purposeology enterprises — covering financial intelligence, strategic operations, and future AI-powered business management.
 
 ## Current Release
 
