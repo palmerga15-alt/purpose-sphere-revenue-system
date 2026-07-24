@@ -165,7 +165,7 @@ window.FinanceModule = (function () {
 
   // ---------- module state ----------
   let grid = null, sentinel = null, nodes = [];
-  let securityArmed = false, inactivityTimer = null;
+  let securityArmed = false, inactivityTimer = null, privacyObserver = null;
   let entryType = "payment", editKey = null;
 
   const PANEL_TITLES = [
@@ -195,12 +195,39 @@ window.FinanceModule = (function () {
   }
 
   // Privacy Mode: content sits inside .fin-sensitive, hidden by body.privacy
-  // in favor of the .fin-privacy-msg notice.
+  // in favor of the .fin-privacy-msg notice. The reveal control lives in the
+  // section header (the "Privacy Mode: ON/OFF" toggle) — see makeHead.
   const priv = inner => `
-    <div class="fin-privacy-msg">🔒 PRIVATE FINANCIAL DATA HIDDEN<span class="sub2">TURN PRIVACY OFF TO VIEW AND MANAGE FINANCES</span></div>
+    <div class="fin-privacy-msg">🔒 PRIVATE FINANCIAL DATA HIDDEN<span class="sub2">CLICK “PRIVACY MODE: ON” IN THE SECTION HEADER ABOVE TO REVEAL AND MANAGE FINANCES</span></div>
     <div class="fin-sensitive">${inner}</div>`;
 
-  // ---------- section header w/ connection-status control ----------
+  // ---------- privacy state helpers ----------
+  // Single source of truth for privacy is the shared body.privacy class,
+  // toggled by window.setPrivacy (defined in index.html). Every finance
+  // privacy control reads/writes through it so the header toggle, the
+  // in-section toggle, the LOCK button, and inactivity/expiry relock all
+  // stay in sync.
+  const isPrivacyOn = () => document.body.classList.contains("privacy");
+  function setPrivacy(on) {
+    if (window.setPrivacy) window.setPrivacy(!!on);
+    else document.body.classList.toggle("privacy", !!on); // defensive fallback
+  }
+  // Keep the in-section toggle's label/appearance matching the live state,
+  // no matter which control (or timer) changed it.
+  function syncPrivacyToggle() {
+    const btn = document.getElementById("fin-privacy-toggle");
+    if (!btn) return;
+    const on = isPrivacyOn();
+    btn.textContent = on ? "🔒 Privacy Mode: ON" : "🔓 Privacy Mode: OFF";
+    btn.classList.toggle("on", on);
+    btn.classList.toggle("off", !on);
+    btn.setAttribute("aria-pressed", String(on));
+    btn.title = on
+      ? "Financial data is hidden — click to reveal"
+      : "Financial data is visible — click to hide";
+  }
+
+  // ---------- section header w/ privacy + connection-status controls ----------
   function makeHead(state) {
     const meta = STATE_META[state] || STATE_META.ERROR;
     const mode = window.FinanceAdapter.currentMode();
@@ -215,7 +242,8 @@ window.FinanceModule = (function () {
         <button class="fin-mode-btn ${mode === "sample" ? "active" : ""}" data-mode="sample" title="Fictional demo data from the public repo">SAMPLE</button>
         <button class="fin-mode-btn ${mode === "manual-local" ? "active" : ""}" data-mode="manual-local" title="Records stored only in this browser">LOCAL</button>
         ${secure ? `<button class="fin-mode-btn ${mode === "secure-api" ? "active" : ""}" data-mode="secure-api" title="Private authenticated backend">SECURE</button>` : ""}
-        <button class="fin-lock-btn" id="fin-lock-btn" title="Enable Privacy Mode immediately">🔒 LOCK FINANCIAL PANELS</button>
+        <button class="fin-privacy-toggle" id="fin-privacy-toggle" aria-pressed="true"></button>
+        <button class="fin-lock-btn" id="fin-lock-btn" title="Hide financial panels immediately">🔒 LOCK FINANCIAL PANELS</button>
       </span>`;
     return head;
   }
@@ -586,11 +614,19 @@ window.FinanceModule = (function () {
   }
 
   // ---------- security controls ----------
-  function lock() { if (window.setPrivacy) window.setPrivacy(true); }
+  function lock() { setPrivacy(true); }                 // immediate hide
+  function unlock() { setPrivacy(false); }              // reveal
+  function togglePrivacy() { setPrivacy(!isPrivacyOn()); }
 
   function initSecurity() {
     if (securityArmed) return;
     securityArmed = true;
+    // Keep the in-section toggle label in sync when privacy changes from ANY
+    // source (header toggle, LOCK button, inactivity/expiry relock).
+    if (window.MutationObserver && !privacyObserver) {
+      privacyObserver = new MutationObserver(syncPrivacyToggle);
+      privacyObserver.observe(document.body, { attributes: true, attributeFilter: ["class"] });
+    }
     // Inactivity relock: privacy re-engages after a configurable quiet period.
     const secs = (window.FINANCE_CONFIG && Number(window.FINANCE_CONFIG.inactivitySeconds)) || 300;
     const rearm = () => {
@@ -637,7 +673,11 @@ window.FinanceModule = (function () {
       editKey = null;
       rerender();
     }));
+    // Two-way privacy control: reveals when locked, hides when visible.
+    head.querySelector("#fin-privacy-toggle")?.addEventListener("click", togglePrivacy);
+    // LOCK stays a separate immediate-hide action.
     head.querySelector("#fin-lock-btn")?.addEventListener("click", lock);
+    syncPrivacyToggle(); // label matches the live state on every (re)render
     const entry = els.find(e => e.id === "panel-fin-entry");
     if (entry) wireEntryPanel(entry);
   }

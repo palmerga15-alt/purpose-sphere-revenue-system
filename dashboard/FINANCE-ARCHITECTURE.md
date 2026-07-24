@@ -101,7 +101,7 @@ manual-local CRUD, so invalid records can't even be saved locally.
 | Session memory | The API token lives in closure memory only and is dropped on 401/403. |
 | Network | HTTPS/same-origin endpoints only; token in header, never URL; no query-string data; `no-referrer`. |
 | Console / logs / errors | No financial payloads, no tokens, no vendor names — state codes and issue counts only. |
-| Shoulder-surfing | Privacy Mode starts ON at every load, re-locks after inactivity (default 300 s, configurable), on session expiry, and via the LOCK FINANCIAL PANELS button. |
+| Shoulder-surfing | Privacy Mode starts ON at every load; a two-way in-section “Privacy Mode: ON/OFF” toggle reveals or hides; re-locks after inactivity (default 300 s, configurable), on session expiry, and via the separate LOCK FINANCIAL PANELS button. |
 | Malformed/hostile payloads | Contract validation rejects them before render; all rendering escapes HTML. |
 
 ## Public vs private components
@@ -166,12 +166,28 @@ Bands: ≥ 80 STRONG (green) · ≥ 60 STABLE (amber) · < 60 NEEDS ATTENTION (r
 
 ## Privacy Mode
 
-Reuses the header toggle (`body.privacy`). Every finance panel wraps content
-in `.fin-sensitive`, hidden in favor of a “PRIVATE FINANCIAL DATA HIDDEN”
-notice via pure CSS — toggling off restores instantly. Phase 2 additions:
-starts ON at every page load, inactivity relock, manual lock button, and
-automatic relock on session expiry. This is a viewing shield, not encryption
-— which is exactly why only fictional data may ship in the public repo.
+Reuses the shared `body.privacy` state. Every finance panel wraps content in
+`.fin-sensitive`, hidden in favor of a “PRIVATE FINANCIAL DATA HIDDEN” notice
+via pure CSS — toggling off restores instantly.
+
+Controls (all read/write the single `body.privacy` state through
+`window.setPrivacy`, so they never disagree):
+
+- **In-section two-way toggle** (`#fin-privacy-toggle`) in the section header —
+  the primary reveal/hide control. Reads **“🔒 Privacy Mode: ON”** (amber)
+  while data is hidden and **“🔓 Privacy Mode: OFF”** (green) while visible;
+  clicking flips the state. Its label is kept in sync with the live state by a
+  `MutationObserver` on `body`'s class, so it stays correct no matter which
+  control or timer changed privacy.
+- **LOCK FINANCIAL PANELS** (`#fin-lock-btn`) — a separate one-way
+  *immediate-hide* convenience.
+- The global header privacy button and the in-section toggle mirror each other.
+
+Behavior: **starts ON at every page load**, relocks after inactivity (default
+300 s, configurable), and relocks automatically on session expiry.
+
+This is a viewing shield, not encryption — which is exactly why only fictional
+data may ship in the public repo.
 
 ## Testing
 

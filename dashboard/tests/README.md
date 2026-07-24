@@ -38,4 +38,7 @@ Command Center working · desktop + mobile layouts · zero JavaScript errors.
 
 ## Latest result
 
-19 validator + 49 browser checks passing, zero JavaScript errors.
+19 validator + 63 browser checks passing, zero JavaScript errors.
+Browser suite includes the two-way "Privacy Mode: ON/OFF" toggle: default
+locked state, unlock, re-lock, panel visibility, manual-local mode, LOCK
+button sync, header-control sync, and inactivity relock.

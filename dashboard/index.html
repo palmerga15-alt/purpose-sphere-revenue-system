@@ -253,6 +253,16 @@
   .fin-mode-btn.active { border-color: var(--gold); color: var(--gold); background: rgba(255,215,0,.08); }
   .fin-lock-btn { border-color: rgba(255,180,84,.5); color: var(--amber); }
   .fin-lock-btn:hover { background: rgba(255,180,84,.12); }
+  /* two-way privacy toggle: reveals when locked, hides when visible */
+  .fin-privacy-toggle {
+    background: none; border: 1px solid; font-family: var(--mono);
+    font-size: 9px; letter-spacing: 1.5px; font-weight: 700;
+    padding: 4px 12px; cursor: pointer; transition: all .2s;
+  }
+  .fin-privacy-toggle.on { border-color: var(--amber); color: var(--amber); }
+  .fin-privacy-toggle.on:hover { background: rgba(255,180,84,.14); }
+  .fin-privacy-toggle.off { border-color: var(--green); color: var(--green); }
+  .fin-privacy-toggle.off:hover { background: rgba(61,214,140,.14); }
   .fin-sm-btn.primary { border-color: rgba(61,214,140,.5); color: var(--green); }
   .fin-sm-btn.primary:hover { background: rgba(61,214,140,.1); }
   .fin-sm-btn.danger { border-color: rgba(255,93,93,.5); color: var(--red); }
