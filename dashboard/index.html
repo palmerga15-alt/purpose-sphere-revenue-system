@@ -171,6 +171,7 @@
   .fin-card .n { font-size: 20px; color: #fff; }
   .fin-card .l { font-size: 9px; letter-spacing: 1.5px; color: var(--text-dim); margin-top: 3px; }
   .fin-card .sub { font-size: 10px; color: var(--text-dim); margin-top: 4px; }
+  .fin-card.c-cash { border-left-color: var(--cyan); }
   .fin-card.c-due7 { border-left-color: var(--amber); }
   .fin-card.c-month { border-left-color: var(--cyan); }
   .fin-card.c-paid { border-left-color: var(--green); }
@@ -185,7 +186,7 @@
   .ps-OVERDUE { color: var(--red); border-color: rgba(255,93,93,.5); }
   .ps-CANCELLED { color: var(--text-dim); border-color: rgba(92,114,145,.5); }
   tr.row-cancelled td { opacity: .45; }
-  /* privacy mode: the whole tracker goes dark — vendors, amounts, dates,
+  /* privacy mode: every finance panel goes dark — vendors, amounts, dates,
      projects, methods, notes, receipts, totals and counts all hidden */
   .fin-privacy-msg {
     display: none; text-align: center; padding: 38px 16px;
@@ -330,7 +331,6 @@ function setPrivacy(on) {
   const b = document.getElementById("privacyToggle");
   b.textContent = on ? "🔒 PRIVACY: ON" : "🔒 PRIVACY: OFF";
   b.classList.toggle("active", !!on);
-  try { localStorage.setItem("ps_privacy", on ? "1" : "0"); } catch {}
 }
 function togglePrivacy() { setPrivacy(!document.body.classList.contains("privacy")); }
 window.setPrivacy = setPrivacy;
@@ -368,17 +368,14 @@ document.getElementById("header-sub").textContent =
 
 // ---------- panel factory ----------
 const grid = document.getElementById("grid");
-function panel({ id, title, cls = "", online = true, bodyHTML, badge }) {
+function panel({ id, title, cls = "", online = true, bodyHTML }) {
   const el = document.createElement("section");
   el.className = `panel ${cls}`;
   el.id = id;
-  const badgeHTML = badge
-    ? `<span class="panel-badge ${esc(badge.cls)}">${esc(badge.text)}</span>`
-    : `<span class="panel-badge ${online ? "badge-online" : "badge-offline"}">${online ? "● LIVE DATA" : "○ OFFLINE"}</span>`;
   el.innerHTML = `
     <div class="panel-head">
       <span class="panel-title">${esc(title)}</span>
-      ${badgeHTML}
+      <span class="panel-badge ${online ? "badge-online" : "badge-offline"}">${online ? "● LIVE DATA" : "○ OFFLINE"}</span>
     </div>
     <div class="panel-body">${online ? bodyHTML : `<div class="panel-offline-msg">SOURCE OFFLINE — LAST KNOWN DATA UNAVAILABLE<br>PANEL DEGRADED GRACEFULLY</div>`}</div>`;
   grid.appendChild(el);
