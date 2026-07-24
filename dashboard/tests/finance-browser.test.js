@@ -69,18 +69,44 @@ function attachErrorSink(page, errors) {
     t("vendors concealed while locked", !locked.includes("LearnSphere Academy"));
     t("amounts blurred class present", await page.locator("body.privacy .money").count() > 0);
 
-    // reveal
-    await page.evaluate(() => window.setPrivacy(false));
-    await page.waitForTimeout(150);
+    // ---- BUG FIX: in-section two-way "Privacy Mode" toggle ----
+    const toggle = page.locator("#fin-privacy-toggle");
+    t("in-section privacy toggle exists", await toggle.count() === 1);
+    t("toggle labeled 'Privacy Mode: ON' while locked", (await toggle.innerText()).includes("Privacy Mode: ON"));
+    t("toggle has .on class while locked", (await toggle.getAttribute("class")).includes("on"));
+
+    // clicking the toggle must REVEAL (this is the reported broken flow)
+    await toggle.click();
+    await page.waitForTimeout(120);
+    t("clicking toggle turns privacy OFF", await page.evaluate(() => !document.body.classList.contains("privacy")));
+    t("toggle relabels to 'Privacy Mode: OFF'", (await toggle.innerText()).includes("Privacy Mode: OFF"));
     const open = await page.evaluate(() => document.body.innerText);
-    t("vendors revealed with privacy off", open.includes("LearnSphere Academy"));
-    t("all 7 panels' content visible with privacy off",
+    t("vendors revealed after toggle", open.includes("LearnSphere Academy"));
+    t("all 7 panels' content visible after toggle",
       (await Promise.all(FIN_PANELS.map(id => page.locator(`#${id} .fin-sensitive`).isVisible()))).every(Boolean));
 
-    // manual LOCK button re-engages privacy
+    // clicking again must RE-LOCK
+    await toggle.click();
+    await page.waitForTimeout(120);
+    t("clicking toggle again turns privacy ON", await page.evaluate(() => document.body.classList.contains("privacy")));
+    t("toggle relabels to 'Privacy Mode: ON'", (await toggle.innerText()).includes("Privacy Mode: ON"));
+    t("panels masked again after re-lock", !(await page.locator("#panel-finance .fin-sensitive").isVisible()));
+
+    // reveal again via the toggle for the following checks
+    await toggle.click();
+    await page.waitForTimeout(100);
+    t("toggle reveal works a second time", await page.evaluate(() => !document.body.classList.contains("privacy")));
+
+    // separate LOCK button still performs an immediate hide, and keeps the toggle in sync
     await page.locator("#fin-lock-btn").click();
+    await page.waitForTimeout(100);
     t("LOCK FINANCIAL PANELS re-engages privacy", await page.evaluate(() => document.body.classList.contains("privacy")));
+    t("toggle syncs to ON after LOCK button", (await toggle.innerText()).includes("Privacy Mode: ON"));
+
+    // header global toggle stays in sync with the in-section toggle
     await page.evaluate(() => window.setPrivacy(false));
+    await page.waitForTimeout(100);
+    t("in-section toggle syncs when header control changes privacy", (await toggle.innerText()).includes("Privacy Mode: OFF"));
 
     // ---- manual-local mode ----
     await page.evaluate(() => {
@@ -100,7 +126,13 @@ function attachErrorSink(page, errors) {
     await page.evaluate(() => window.FinanceModule.rerender());
     await page.waitForTimeout(150);
     t("manual-local renders LOCAL state", await page.evaluate(() => window.FinanceModule.state) === "LOCAL");
-    await page.evaluate(() => window.setPrivacy(false));
+    // the two-way toggle must work in manual-local mode too — start from a known locked state
+    await page.evaluate(() => window.setPrivacy(true));
+    await page.waitForTimeout(100);
+    t("[manual-local] toggle present & labeled ON", (await page.locator("#fin-privacy-toggle").innerText()).includes("Privacy Mode: ON"));
+    await page.locator("#fin-privacy-toggle").click();
+    await page.waitForTimeout(120);
+    t("[manual-local] toggle reveals local data", await page.evaluate(() => !document.body.classList.contains("privacy")));
     t("manual-local record appears in tracker", (await page.locator("#panel-finance").innerText()).includes("Test Vendor"));
     t("manual-local entry panel present", await page.locator("#panel-fin-entry").count() === 1);
     await page.evaluate(() => { window.FinanceLocal.eraseAll(); window.FinanceAdapter.setMode("sample"); });
@@ -189,11 +221,15 @@ function attachErrorSink(page, errors) {
     await page.addInitScript(() => { window.FINANCE_CONFIG = { inactivitySeconds: 1 }; });
     await page.goto(URL, { waitUntil: "networkidle" });
     await page.waitForTimeout(300);
-    await page.evaluate(() => window.setPrivacy(false));
+    // reveal via the in-section toggle, then go idle
+    await page.locator("#fin-privacy-toggle").click();
+    await page.waitForTimeout(100);
     t("inactivity: privacy off before idle", await page.evaluate(() => !document.body.classList.contains("privacy")));
     // stay completely idle past the 1s inactivity window
     await page.waitForTimeout(1600);
     t("inactivity relock re-engages privacy after idle", await page.evaluate(() => document.body.classList.contains("privacy")));
+    t("inactivity relock syncs toggle label to ON",
+      (await page.locator("#fin-privacy-toggle").innerText()).includes("Privacy Mode: ON"));
     t("[inactivity] zero JS errors", errors.length === 0, errors);
     await ctx.close();
   }
