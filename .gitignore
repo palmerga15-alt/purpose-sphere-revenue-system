@@ -13,6 +13,17 @@ bank-export*
 statement*.csv
 transactions*.csv
 
+# Deployment-injected billing configuration (endpoint, timeouts).
+# A private deployment writes this file at deploy time; it must
+# NEVER be committed — the public build ships without it and the
+# dashboard falls back to fictional sample data.
+dashboard/billing-config.js
+
+# Private billing/AR exports must never enter this repository.
+invoice-export*
+customer-export*
+ar-export*.csv
+
 # ── general ────────────────────────────────────────────────────
 node_modules/
 .DS_Store
