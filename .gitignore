@@ -13,6 +13,26 @@ bank-export*
 statement*.csv
 transactions*.csv
 
+# ── intellectual property security ─────────────────────────────
+# Deployment-injected IP configuration (endpoint, mode). A private
+# deployment writes this file at deploy time; it must NEVER be
+# committed — the public build ships without it and the dashboard
+# falls back to fictional sample IP metadata.
+dashboard/ip-config.js
+
+# Proprietary IP documents must never enter this repository:
+# manuscripts, frameworks, curricula, assessments, research,
+# contracts, and legal documents live only in private encrypted
+# storage. Anything staged under these names is refused.
+ip-private/
+manuscript*
+*-manuscript.*
+curriculum-content*
+assessment-questions*
+contract*.pdf
+contract*.docx
+legal-doc*
+
 # ── general ────────────────────────────────────────────────────
 node_modules/
 .DS_Store
