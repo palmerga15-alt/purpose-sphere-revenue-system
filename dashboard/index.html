@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PURPOSE SPHERE // COMMAND CENTER</title>
+<style>
+  :root {
+    --bg: #05080f;
+    --panel: #0a1020;
+    --panel-edge: #14203a;
+    --grid-line: rgba(40, 70, 120, 0.12);
+    --amber: #ffb454;
+    --green: #3dd68c;
+    --red: #ff5d5d;
+    --cyan: #53c7f0;
+    --purple: #9d7bff;
+    --gold: #ffd700;
+    --text: #c8d6e8;
+    --text-dim: #5c7291;
+    --mono: "SF Mono", "Cascadia Code", Consolas, "Roboto Mono", monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 42px 42px;
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 13px;
+    min-height: 100vh;
+    padding: 18px;
+  }
+
+  /* ---------- header ---------- */
+  header {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px;
+    border: 1px solid var(--panel-edge);
+    background: linear-gradient(180deg, #0c1428, #070c18);
+    padding: 14px 20px; margin-bottom: 16px;
+    position: relative; overflow: hidden;
+  }
+  header::before {
+    content: ""; position: absolute; inset: 0 0 auto 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    animation: scan 4s linear infinite;
+  }
+  @keyframes scan { 0% { transform: translateX(-100%);} 100% { transform: translateX(100%);} }
+  .mission-title { font-size: 17px; letter-spacing: 3px; color: #fff; font-weight: 700; }
+  .mission-title .accent { color: var(--gold); }
+  .mission-sub { color: var(--text-dim); font-size: 11px; letter-spacing: 1.5px; margin-top: 3px; }
+  .header-right { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  #clock { font-size: 20px; color: var(--cyan); letter-spacing: 2px; }
+
+  /* privacy toggle */
+  .privacy-btn {
+    background: none; border: 1px solid var(--amber); color: var(--amber);
+    font-family: var(--mono); font-size: 11px; letter-spacing: 1.5px;
+    padding: 8px 14px; cursor: pointer; transition: all .2s;
+  }
+  .privacy-btn:hover { background: rgba(255,180,84,.12); }
+  .privacy-btn.active { background: var(--amber); color: #05080f; }
+  body.privacy .money {
+    filter: blur(7px);
+    user-select: none;
+  }
+  .money { color: var(--gold); transition: filter .25s; }
+
+  /* ---------- source status strip ---------- */
+  .status-strip { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+  .src-chip {
+    display: flex; align-items: center; gap: 8px;
+    border: 1px solid var(--panel-edge); background: var(--panel);
+    padding: 7px 13px; font-size: 11px; letter-spacing: 1.2px;
+  }
+  .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .dot.online { background: var(--green); box-shadow: 0 0 8px var(--green); animation: pulse 2s infinite; }
+  .dot.offline { background: var(--red); box-shadow: 0 0 8px var(--red); }
+  @keyframes pulse { 50% { opacity: .45; } }
+  .src-chip .st { color: var(--text-dim); }
+  .src-chip.offline-chip { border-color: rgba(255,93,93,.4); }
+  .src-chip.offline-chip .st { color: var(--red); }
+
+  /* ---------- grid ---------- */
+  .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+  .panel {
+    grid-column: span 6;
+    border: 1px solid var(--panel-edge); background: var(--panel);
+    display: flex; flex-direction: column; min-height: 180px;
+  }
+  .panel.wide { grid-column: span 12; }
+  .panel.third { grid-column: span 4; }
+  @media (max-width: 1100px) { .panel, .panel.third { grid-column: span 12; } }
+  .panel-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 16px; border-bottom: 1px solid var(--panel-edge);
+    background: rgba(20, 32, 58, .35);
+  }
+  .panel-title { font-size: 12px; letter-spacing: 2.5px; color: var(--cyan); font-weight: 700; }
+  .panel-badge { font-size: 9px; letter-spacing: 1.5px; padding: 3px 8px; border: 1px solid; }
+  .badge-online { color: var(--green); border-color: rgba(61,214,140,.5); }
+  .badge-offline { color: var(--red); border-color: rgba(255,93,93,.5); }
+  .panel-body { padding: 14px 16px; flex: 1; overflow-x: auto; }
+  .panel-offline-msg { color: var(--red); padding: 24px; text-align: center; letter-spacing: 1.5px; font-size: 11px; }
+
+  /* briefing */
+  #panel-briefing { border-color: rgba(157,123,255,.35); }
+  #panel-briefing .panel-title { color: var(--purple); }
+  .brief-headline { color: #fff; font-size: 14px; line-height: 1.6; margin-bottom: 8px; }
+  .brief-summary { color: var(--text-dim); line-height: 1.7; font-size: 12px; margin-bottom: 14px; }
+  .action {
+    display: flex; gap: 12px; padding: 10px 0;
+    border-top: 1px dashed rgba(40,70,120,.35); align-items: flex-start;
+  }
+  .action-num {
+    min-width: 30px; height: 30px; border: 1px solid var(--amber); color: var(--amber);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 700;
+  }
+  .action-title { color: #fff; font-weight: 700; margin-bottom: 3px; }
+  .action-detail { color: var(--text-dim); font-size: 12px; line-height: 1.65; }
+  .src-tags { margin-top: 5px; display: flex; gap: 6px; }
+  .src-tag {
+    font-size: 9px; letter-spacing: 1px; color: var(--cyan);
+    border: 1px solid rgba(83,199,240,.4); padding: 2px 7px;
+  }
+
+  /* tables */
+  table { width: 100%; border-collapse: collapse; }
+  td, th { text-align: left; padding: 6px 8px; font-size: 12px; vertical-align: top; }
+  th { color: var(--text-dim); font-size: 10px; letter-spacing: 1.5px; border-bottom: 1px solid var(--panel-edge); }
+  tr + tr td { border-top: 1px solid rgba(20,32,58,.6); }
+  .dim { color: var(--text-dim); }
+  .white { color: #fff; }
+  .stage { font-size: 10px; letter-spacing: 1px; }
+  .stage.hot { color: var(--amber); }
+  .stage.ok { color: var(--green); }
+  .tag-pub { color: var(--green); font-size: 10px; letter-spacing: 1px; }
+  .tag-unpub { color: var(--amber); font-size: 10px; letter-spacing: 1px; }
+  .alert-line { display: flex; gap: 10px; padding: 5px 0; align-items: baseline; }
+  .alert-type { font-size: 9px; letter-spacing: 1px; padding: 2px 7px; border: 1px solid; white-space: nowrap; }
+  .alert-BOUNCE { color: var(--red); border-color: rgba(255,93,93,.5); }
+  .alert-BLOCKED { color: var(--amber); border-color: rgba(255,180,84,.5); }
+  .alert-ACTION { color: var(--cyan); border-color: rgba(83,199,240,.5); }
+
+  /* ---------- business financial intelligence (dashboard/finance.js) ---------- */
+  .fin-panel { border-color: rgba(255,215,0,.28); }
+  .fin-panel .panel-title { color: var(--gold); }
+  .section-head {
+    grid-column: 1 / -1;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 8px;
+    border: 1px solid rgba(255,215,0,.35);
+    background: linear-gradient(180deg, rgba(255,215,0,.07), transparent);
+    padding: 10px 16px; margin-top: 6px;
+  }
+  .sh-title { color: var(--gold); font-size: 13px; letter-spacing: 3px; font-weight: 700; }
+  .sh-note { color: var(--text-dim); font-size: 9px; letter-spacing: 1.5px; }
+  .badge-sample { color: var(--amber); border-color: rgba(255,180,84,.5); }
+  .fin-cards {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px; margin-bottom: 14px;
+  }
+  .fin-card {
+    border: 1px solid var(--panel-edge); background: rgba(20,32,58,.25);
+    border-left: 2px solid var(--cyan); padding: 10px 12px;
+  }
+  .fin-card .n { font-size: 20px; color: #fff; }
+  .fin-card .l { font-size: 9px; letter-spacing: 1.5px; color: var(--text-dim); margin-top: 3px; }
+  .fin-card .sub { font-size: 10px; color: var(--text-dim); margin-top: 4px; }
+  .fin-card.c-cash { border-left-color: var(--cyan); }
+  .fin-card.c-due7 { border-left-color: var(--amber); }
+  .fin-card.c-month { border-left-color: var(--cyan); }
+  .fin-card.c-paid { border-left-color: var(--green); }
+  .fin-card.c-recur { border-left-color: var(--purple); }
+  .fin-card.c-overdue { border-left-color: var(--red); }
+  .fin-table { min-width: 1080px; }
+  .fin-table th { white-space: nowrap; }
+  .pay-status { font-size: 9px; letter-spacing: 1px; padding: 2px 7px; border: 1px solid; white-space: nowrap; }
+  .ps-DUE { color: var(--cyan); border-color: rgba(83,199,240,.5); }
+  .ps-DUE-SOON { color: var(--amber); border-color: rgba(255,180,84,.5); }
+  .ps-PAID { color: var(--green); border-color: rgba(61,214,140,.5); }
+  .ps-OVERDUE { color: var(--red); border-color: rgba(255,93,93,.5); }
+  .ps-CANCELLED { color: var(--text-dim); border-color: rgba(92,114,145,.5); }
+  tr.row-cancelled td { opacity: .45; }
+  /* privacy mode: every finance panel goes dark — vendors, amounts, dates,
+     projects, methods, notes, receipts, totals and counts all hidden */
+  .fin-privacy-msg {
+    display: none; text-align: center; padding: 38px 16px;
+    color: var(--amber); font-size: 12px; letter-spacing: 2.5px;
+  }
+  .fin-privacy-msg .sub2 {
+    display: block; margin-top: 9px;
+    color: var(--text-dim); font-size: 10px; letter-spacing: 1.5px;
+  }
+  body.privacy .fin-panel .fin-sensitive { display: none; }
+  body.privacy .fin-panel .fin-privacy-msg { display: block; }
+
+  /* expense intelligence bars */
+  .fin-bar-row {
+    display: grid; grid-template-columns: 150px 1fr 84px 44px;
+    gap: 10px; align-items: center; padding: 5px 0; font-size: 11px;
+  }
+  .fb-label { letter-spacing: .5px; }
+  .fin-bar { height: 8px; background: rgba(20,32,58,.8); border: 1px solid var(--panel-edge); }
+  .fin-bar-fill { height: 100%; background: linear-gradient(90deg, var(--gold), var(--amber)); }
+  .fb-amt { text-align: right; }
+  .fb-pct { text-align: right; font-size: 10px; }
+  .fin-footnote { margin-top: 10px; font-size: 10px; letter-spacing: 1px; }
+
+  /* subscription manager */
+  .fin-table-sm { min-width: 640px; }
+  .fin-table-sm th { white-space: nowrap; }
+  tr.row-dup td { background: rgba(255,180,84,.06); }
+  .dup-chip {
+    display: block; margin-top: 3px; font-size: 9px; letter-spacing: 1px;
+    color: var(--amber);
+  }
+
+  /* financial calendar event chips */
+  .ev-chip { font-size: 9px; letter-spacing: 1px; padding: 2px 7px; border: 1px solid; white-space: nowrap; }
+  .ev-BILL { color: var(--cyan); border-color: rgba(83,199,240,.5); }
+  .ev-RENEWAL { color: var(--purple); border-color: rgba(157,123,255,.5); }
+  .ev-TAX { color: var(--red); border-color: rgba(255,93,93,.5); }
+  .ev-INSURANCE { color: var(--amber); border-color: rgba(255,180,84,.5); }
+  .ev-DOMAIN { color: var(--green); border-color: rgba(61,214,140,.5); }
+  .ev-ANNUAL, .ev-EVENT { color: var(--text-dim); border-color: rgba(92,114,145,.5); }
+
+  /* ai insights slots */
+  .ai-slots { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px; }
+  .ai-slot { border: 1px dashed rgba(157,123,255,.4); padding: 10px 12px; font-size: 11px; }
+  .ai-slot-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 5px; }
+  .ai-local { margin-top: 14px; border-top: 1px dashed rgba(40,70,120,.35); padding-top: 10px; }
+  .ai-local-head { color: var(--text-dim); font-size: 9px; letter-spacing: 1.5px; margin-bottom: 6px; }
+
+  /* phase 2: connection-status control + adapter mode switching */
+  .badge-local { color: var(--cyan); border-color: rgba(83,199,240,.5); }
+  .fin-controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .fin-state-chip { font-size: 9px; letter-spacing: 1.5px; padding: 4px 10px; border: 1px solid; }
+  .st-sample { color: var(--amber); border-color: rgba(255,180,84,.5); }
+  .st-local { color: var(--cyan); border-color: rgba(83,199,240,.5); }
+  .st-live { color: var(--green); border-color: rgba(61,214,140,.5); }
+  .st-err { color: var(--red); border-color: rgba(255,93,93,.5); }
+  .fin-mode-btn, .fin-lock-btn, .fin-sm-btn {
+    background: none; border: 1px solid var(--panel-edge); color: var(--text-dim);
+    font-family: var(--mono); font-size: 9px; letter-spacing: 1.5px;
+    padding: 4px 10px; cursor: pointer; transition: all .2s;
+  }
+  .fin-mode-btn:hover, .fin-sm-btn:hover { border-color: var(--cyan); color: var(--cyan); }
+  .fin-mode-btn.active { border-color: var(--gold); color: var(--gold); background: rgba(255,215,0,.08); }
+  .fin-lock-btn { border-color: rgba(255,180,84,.5); color: var(--amber); }
+  .fin-lock-btn:hover { background: rgba(255,180,84,.12); }
+  /* two-way privacy toggle: reveals when locked, hides when visible */
+  .fin-privacy-toggle {
+    background: none; border: 1px solid; font-family: var(--mono);
+    font-size: 9px; letter-spacing: 1.5px; font-weight: 700;
+    padding: 4px 12px; cursor: pointer; transition: all .2s;
+  }
+  .fin-privacy-toggle.on { border-color: var(--amber); color: var(--amber); }
+  .fin-privacy-toggle.on:hover { background: rgba(255,180,84,.14); }
+  .fin-privacy-toggle.off { border-color: var(--green); color: var(--green); }
+  .fin-privacy-toggle.off:hover { background: rgba(61,214,140,.14); }
+  .fin-sm-btn.primary { border-color: rgba(61,214,140,.5); color: var(--green); }
+  .fin-sm-btn.primary:hover { background: rgba(61,214,140,.1); }
+  .fin-sm-btn.danger { border-color: rgba(255,93,93,.5); color: var(--red); }
+  .fin-sm-btn.danger:hover { background: rgba(255,93,93,.1); }
+
+  /* phase 2: manual local entry */
+  .fin-local-note {
+    border: 1px dashed rgba(255,180,84,.45); color: var(--text-dim);
+    font-size: 10px; letter-spacing: .8px; line-height: 1.8; padding: 10px 12px; margin-bottom: 14px;
+  }
+  .fin-entry-bar { display: flex; align-items: flex-end; gap: 14px; margin-bottom: 10px; flex-wrap: wrap; }
+  .fin-form { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; margin-bottom: 12px; }
+  .fin-field { display: flex; flex-direction: column; gap: 4px; }
+  .fin-field-label { font-size: 8px; letter-spacing: 1.5px; color: var(--text-dim); }
+  .fin-input {
+    background: #070c18; border: 1px solid var(--panel-edge); color: var(--text);
+    font-family: var(--mono); font-size: 11px; padding: 6px 8px;
+  }
+  .fin-input:focus { outline: none; border-color: var(--cyan); }
+  .fin-check { font-size: 10px; color: var(--text); padding: 6px 0; }
+  .fin-entry-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .fin-entry-err { color: var(--red); font-size: 10px; letter-spacing: .5px; }
+  .fin-local-group { color: var(--text-dim); font-size: 9px; letter-spacing: 1.5px; margin: 14px 0 4px; border-bottom: 1px solid var(--panel-edge); padding-bottom: 4px; }
+  .fin-local-row {
+    display: grid; grid-template-columns: 1fr 110px 110px auto;
+    gap: 10px; align-items: center; padding: 5px 0; font-size: 11px;
+    border-top: 1px solid rgba(20,32,58,.6);
+  }
+  .fin-row-actions { display: flex; gap: 6px; }
+
+  /* big stats */
+  .stat-row { display: flex; gap: 20px; margin-bottom: 12px; flex-wrap: wrap; }
+  .stat { border-left: 2px solid var(--cyan); padding-left: 10px; }
+  .stat .n { font-size: 24px; color: #fff; }
+  .stat .l { font-size: 9px; letter-spacing: 1.5px; color: var(--text-dim); }
+
+  footer { margin-top: 18px; color: var(--text-dim); font-size: 10px; letter-spacing: 1.5px; text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="mission-title">PURPOSE SPHERE <span class="accent">//</span> COMMAND CENTER</div>
+    <div class="mission-sub" id="header-sub">INITIALIZING…</div>
+  </div>
+  <div class="header-right">
+    <div id="clock">--:--:--</div>
+    <button class="privacy-btn" id="privacyToggle" onclick="togglePrivacy()">🔒 PRIVACY: OFF</button>
+  </div>
+</header>
+
+<div class="status-strip" id="statusStrip"></div>
+<div class="grid" id="grid"></div>
+
+<footer id="footer"></footer>
+
+<script src="data.js"></script>
+<script src="finance-validate.js"></script>
+<script src="finance-data.js"></script>
+<script src="finance-local.js"></script>
+<script src="finance-api-client.js"></script>
+<script src="finance-adapter.js"></script>
+<script src="finance.js"></script>
+<script src="../calendar.js"></script>
+<script>
+"use strict";
+// ---------- defensive helpers: a broken/missing source must never break the page ----------
+const D = (typeof window.DASHBOARD_DATA === "object" && window.DASHBOARD_DATA) || {};
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const money = v => v ? `<span class="money">${esc(v)}</span>` : "";
+const srcOnline = key => { try { return D.sources?.[key]?.status === "online"; } catch { return false; } };
+
+function setPrivacy(on) {
+  document.body.classList.toggle("privacy", !!on);
+  const b = document.getElementById("privacyToggle");
+  b.textContent = on ? "🔒 PRIVACY: ON" : "🔒 PRIVACY: OFF";
+  b.classList.toggle("active", !!on);
+}
+function togglePrivacy() { setPrivacy(!document.body.classList.contains("privacy")); }
+window.setPrivacy = setPrivacy;
+// SECURITY: Privacy Mode starts ON at every load — financial panels boot
+// locked and stay hidden until deliberately revealed. The financial module
+// also re-locks on inactivity and on session expiry (see finance.js).
+setPrivacy(true);
+
+// clock
+setInterval(() => {
+  document.getElementById("clock").textContent = new Date().toLocaleTimeString("en-US", { hour12: false });
+}, 1000);
+document.getElementById("clock").textContent = new Date().toLocaleTimeString("en-US", { hour12: false });
+
+// header sub
+document.getElementById("header-sub").textContent =
+  `PURPOSEOLOGY™ REVENUE OPS · DATA GENERATED ${D.generatedAt || "UNKNOWN"} UTC`;
+
+// ---------- status strip ----------
+(function renderStrip() {
+  const strip = document.getElementById("statusStrip");
+  const srcs = D.sources || {};
+  const keys = Object.keys(srcs);
+  if (!keys.length) { strip.innerHTML = `<div class="src-chip offline-chip"><span class="dot offline"></span>NO SOURCE DATA</div>`; return; }
+  strip.innerHTML = keys.map(k => {
+    const s = srcs[k] || {};
+    const ok = s.status === "online";
+    return `<div class="src-chip ${ok ? "" : "offline-chip"}">
+      <span class="dot ${ok ? "online" : "offline"}"></span>
+      <span>${esc(s.label || k.toUpperCase())}</span>
+      <span class="st">${ok ? "ONLINE" : "OFFLINE"}</span>
+    </div>`;
+  }).join("");
+})();
+
+// ---------- panel factory ----------
+const grid = document.getElementById("grid");
+function panel({ id, title, cls = "", online = true, bodyHTML }) {
+  const el = document.createElement("section");
+  el.className = `panel ${cls}`;
+  el.id = id;
+  el.innerHTML = `
+    <div class="panel-head">
+      <span class="panel-title">${esc(title)}</span>
+      <span class="panel-badge ${online ? "badge-online" : "badge-offline"}">${online ? "● LIVE DATA" : "○ OFFLINE"}</span>
+    </div>
+    <div class="panel-body">${online ? bodyHTML : `<div class="panel-offline-msg">SOURCE OFFLINE — LAST KNOWN DATA UNAVAILABLE<br>PANEL DEGRADED GRACEFULLY</div>`}</div>`;
+  grid.appendChild(el);
+}
+function safe(fn, fallback = "") { try { return fn(); } catch (e) { console.error(e); return fallback; } }
+
+// ---------- 1. AI MORNING BRIEFING ----------
+safe(() => {
+  const b = D.briefing;
+  panel({
+    id: "panel-briefing", title: "★ AI MORNING BRIEFING — " + (b?.date || ""), cls: "wide",
+    online: !!b,
+    bodyHTML: !b ? "" : `
+      <div class="brief-headline">${esc(b.headline)}</div>
+      <div class="brief-summary">${esc(b.summary)}</div>
+      ${(b.actions || []).map(a => `
+        <div class="action">
+          <div class="action-num">${esc(a.priority)}</div>
+          <div>
+            <div class="action-title">${esc(a.title)}</div>
+            <div class="action-detail">${esc(a.detail)}</div>
+            <div class="src-tags">${(a.sources || []).map(s => `<span class="src-tag">${esc(s.toUpperCase())}</span>`).join("")}</div>
+          </div>
+        </div>`).join("")}`
+  });
+});
+
+// ---------- 2. REVENUE PIPELINE ----------
+safe(() => {
+  const p = D.pipeline;
+  panel({
+    id: "panel-pipeline", title: "REVENUE PIPELINE", online: !!p && srcOnline("github"),
+    bodyHTML: !p ? "" : `
+      <table>
+        <tr><th>STREAM</th><th>STAGE</th><th>VALUE</th></tr>
+        ${(p.streams || []).map(s => `
+          <tr>
+            <td class="white">${esc(s.name)}</td>
+            <td><span class="stage ${/DUE|IDLE/.test(s.stage) ? "hot" : "ok"}">${esc(s.stage)}</span></td>
+            <td>${money(s.money)}</td>
+          </tr>`).join("")}
+      </table>`
+  });
+});
+
+// ---------- 3. STRATEGIC PRIORITIES ----------
+safe(() => {
+  const p = D.pipeline;
+  panel({
+    id: "panel-priorities", title: "STRATEGIC PRIORITIES", online: !!(p && p.priorities),
+    bodyHTML: !p ? "" : `
+      <table>
+        ${(p.priorities || []).map(x => `
+          <tr>
+            <td style="width:34px"><span class="action-num" style="min-width:24px;height:24px;font-size:12px;display:inline-flex">${esc(x.rank)}</span></td>
+            <td class="white">${esc(x.name)}</td>
+            <td class="dim">${esc(x.note)}</td>
+          </tr>`).join("")}
+      </table>`
+  });
+});
+
+// ---------- 4. BUSINESS FINANCIAL INTELLIGENCE (rendered by dashboard/finance.js) ----------
+safe(() => window.FinanceModule && window.FinanceModule.render({ grid }));
+
+// ---------- 5. GMAIL COMMS ----------
+safe(() => {
+  const g = D.gmail;
+  panel({
+    id: "panel-gmail", title: "GMAIL // COMMS TRAFFIC", online: srcOnline("gmail") && !!g,
+    bodyHTML: !g ? "" : `
+      <div class="stat-row">
+        <div class="stat"><div class="n">${esc(g.unreadEstimate)}</div><div class="l">UNREAD (EST)</div></div>
+        <div class="stat"><div class="n">${esc(g.draftCount)}</div><div class="l">DRAFTS</div></div>
+      </div>
+      ${(g.alerts || []).map(a => `
+        <div class="alert-line"><span class="alert-type alert-${esc(a.type)}">${esc(a.type)}</span><span class="dim">${esc(a.text)}</span></div>`).join("")}
+      <table style="margin-top:10px">
+        <tr><th>RECENT OUTBOUND</th><th>DATE</th></tr>
+        ${(g.recentSent || []).map(s => `<tr><td class="white">${esc(s.to)} <span class="dim">— ${esc(s.note)}</span></td><td class="dim">${esc(s.date)}</td></tr>`).join("")}
+      </table>`
+  });
+});
+
+// ---------- 6. UNREAD SIGNALS ----------
+safe(() => {
+  const g = D.gmail;
+  panel({
+    id: "panel-unread", title: "GMAIL // TOP UNREAD SIGNALS", online: srcOnline("gmail") && !!g,
+    bodyHTML: !g ? "" : `
+      <table>
+        <tr><th>FROM</th><th>SUBJECT</th><th>DATE</th></tr>
+        ${(g.recentUnread || []).map(u => `
+          <tr><td class="white">${esc(u.from)}</td><td class="dim">${esc(u.subject)}</td><td class="dim">${esc(u.date)}</td></tr>`).join("")}
+      </table>
+      <table style="margin-top:12px">
+        <tr><th>KEY DRAFTS SITTING IDLE</th><th>SINCE</th></tr>
+        ${(g.keyDrafts || []).map(d => `<tr><td class="white">${esc(d.subject)} <span class="dim">— ${esc(d.note)}</span></td><td class="dim">${esc(d.idleSince)}</td></tr>`).join("")}
+      </table>`
+  });
+});
+
+// ---------- 7. LOVABLE WEB PROPERTIES ----------
+safe(() => {
+  const l = D.lovable;
+  panel({
+    id: "panel-lovable", title: "LOVABLE // WEB PROPERTIES", online: srcOnline("lovable") && !!l,
+    bodyHTML: !l ? "" : `
+      <div class="stat-row">
+        <div class="stat"><div class="n">${esc(l.projectCount)}</div><div class="l">PROJECTS</div></div>
+        <div class="stat"><div class="n">${esc(l.publishedCount)}</div><div class="l">PUBLISHED / LIVE</div></div>
+      </div>
+      <table>
+        <tr><th>PROJECT</th><th>STATUS</th><th>LAST EDIT</th></tr>
+        ${(l.projects || []).map(p => `
+          <tr>
+            <td class="white">${esc(p.name)}${p.url ? ` <span class="dim">· ${esc(p.url)}</span>` : ""}${p.note ? ` <span class="dim">— ${esc(p.note)}</span>` : ""}</td>
+            <td><span class="${p.status === "PUBLISHED" ? "tag-pub" : "tag-unpub"}">${esc(p.status)}</span></td>
+            <td class="dim">${esc(p.edited)}</td>
+          </tr>`).join("")}
+      </table>`
+  });
+});
+
+// ---------- 8. GOOGLE DRIVE ----------
+safe(() => {
+  const gd = D.gdrive;
+  panel({
+    id: "panel-gdrive", title: "GOOGLE DRIVE // RECENT ASSETS", online: srcOnline("gdrive") && !!gd,
+    bodyHTML: !gd ? "" : `
+      <table>
+        <tr><th>FILE</th><th>TYPE</th><th>MODIFIED</th></tr>
+        ${(gd.recentFiles || []).map(f => `
+          <tr>
+            <td class="white">${esc(f.title)}${f.note ? ` <span class="dim">— ${esc(f.note)}${f.money ? " " : ""}</span>` : ""}${money(f.money)}</td>
+            <td class="dim">${esc(f.type)}</td>
+            <td class="dim">${esc(f.modified)}</td>
+          </tr>`).join("")}
+      </table>`
+  });
+});
+
+// ---------- 9. GITHUB OPS ----------
+safe(() => {
+  const gh = D.github;
+  panel({
+    id: "panel-github", title: "GITHUB // REVENUE SYSTEM REPO", online: srcOnline("github") && !!gh,
+    bodyHTML: !gh ? "" : `
+      <div class="stat-row">
+        <div class="stat"><div class="n">${esc(gh.assetCounts?.offers ?? "—")}</div><div class="l">OFFER SPECS</div></div>
+        <div class="stat"><div class="n">${esc(gh.assetCounts?.research ?? "—")}</div><div class="l">RESEARCH DOCS</div></div>
+        <div class="stat"><div class="n">${esc(gh.assetCounts?.contentAngles ?? "—")}</div><div class="l">CONTENT ANGLE SETS</div></div>
+        <div class="stat"><div class="n">${esc(gh.openIssues)}</div><div class="l">OPEN ISSUES</div></div>
+        <div class="stat"><div class="n">${esc(gh.openPRs)}</div><div class="l">OPEN PRS</div></div>
+      </div>
+      <table>
+        <tr><th>RECENT COMMITS · ${esc(gh.repo)}</th><th>DATE</th></tr>
+        ${(gh.recentCommits || []).map(c => `<tr><td class="dim">${esc(c.msg)}</td><td class="dim">${esc(c.date)}</td></tr>`).join("")}
+      </table>`
+  });
+});
+
+// ---------- 10. DROPBOX ----------
+safe(() => {
+  const db = D.dropbox;
+  panel({
+    id: "panel-dropbox", title: "DROPBOX // ARCHIVE", online: srcOnline("dropbox") && !!db,
+    bodyHTML: !db ? "" : `
+      <div class="stat-row">
+        <div class="stat"><div class="n">${esc(db.itemCount)}</div><div class="l">ROOT ITEMS</div></div>
+        <div class="stat"><div class="n">${esc(db.fileRequests)}</div><div class="l">FILE REQUESTS</div></div>
+      </div>
+      <div class="dim" style="margin-bottom:8px">${esc(db.note || "")}</div>
+      <table>
+        <tr><th>ENTRY</th><th>MODIFIED</th></tr>
+        ${(db.entries || []).map(e => `<tr><td class="white">${esc(e.name)}</td><td class="dim">${esc(e.modified)}</td></tr>`).join("")}
+      </table>`
+  });
+});// ---------- 11. CALENDAR ----------
+safe(() => {
+  const cal = window.CalendarModule;
+  const events = cal ? cal.getUpcomingEvents() : [];
+  panel({
+    id: "panel-calendar",
+    title: "CALENDAR // UPCOMING EVENTS",
+    online: !!cal,
+    bodyHTML: !cal ? "" : `
+      <table>
+        <tr><th>DATE</th><th>TIME</th><th>EVENT</th></tr>
+        ${events.map(e => `
+          <tr><td class="dim">${esc(e.date)}</td><td class="dim">${esc(e.time)}</td><td class="white">${esc(e.title)}</td></tr>`).join("")}
+      </table>`
+  });
+});
+
+document.getElementById("footer").textContent =
+  `PURPOSE SPHERE COMMAND CENTER · REFRESHED DAILY 07:00 BY dashboard-refresh SKILL · SOURCES: ${Object.keys(D.sources || {}).length} PROBED · NO MOCK DATA`;
+</script>
+
+</body>
+</html>
