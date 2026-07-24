@@ -1,5 +1,24 @@
 # Purposeology IP Intelligence — Architecture (Phase 1)
 
+> ## ⏸ Status: INTENTIONALLY DEFERRED
+>
+> This module is **complete for Phase 1 but intentionally paused.** Per
+> current product direction, the immediate priority is to complete,
+> stabilize, test, document, and merge the **Business Financial
+> Intelligence** module. The IP Intelligence module remains in the codebase
+> as a **deferred capability** and is the designated *next* major
+> development focus once the financial work is merged.
+>
+> While deferred:
+> - **No new features** are added to this module.
+> - **Only critical defects** are fixed.
+> - It must **not interfere** with the Financial Intelligence module
+>   (verified: both render together with zero JavaScript errors; the IP
+>   section renders after the finance section via its own grid sentinel and
+>   shares only the read-only Privacy Mode toggle).
+> - When work resumes, it continues on the **same secure architecture**
+>   described below.
+
 Executive intellectual-property dashboard for PurposeQuest International /
 Purposeology, rendered inside the Purpose Sphere Command Center
 (`dashboard/index.html`) directly below the Business Financial Intelligence
