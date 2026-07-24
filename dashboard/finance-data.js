@@ -1,31 +1,46 @@
 // ============================================================
-// PURPOSE SPHERE COMMAND CENTER — BUSINESS FINANCE DATA MODULE
+// PURPOSE SPHERE COMMAND CENTER — FINANCIAL INTELLIGENCE DATA
+// Phase 1 data contract for the BUSINESS FINANCIAL INTELLIGENCE
+// section. Consumed by dashboard/finance.js.
 //
 // FICTIONAL SAMPLE DATA ONLY. This repo publishes to public
 // GitHub Pages, so every vendor, project, amount, date, and
 // note below is invented for layout/demo purposes and matches
-// no real transaction. Replace this file's output with a real
-// feed only via a secure server-side adapter — never by
-// committing real financial details here.
+// no real transaction.
+//
+// FUTURE PHASES: a secure, authenticated server-side adapter
+// replaces this file by emitting the exact same shape into
+// window.FINANCE_DATA (and setting source.mode = "live").
+// The UI (finance.js) reads only this shape and never changes.
+// See dashboard/FINANCE-ARCHITECTURE.md.
 //
 // SECURITY RULES FOR THIS FILE — it ships to the browser:
 //   - NEVER put bank credentials, account numbers, routing
-//     numbers, card numbers, or banking API keys here.
+//     numbers, card numbers, or banking/accounting API keys
+//     anywhere in this repository.
 //   - NEVER put real vendors, real amounts, real due dates,
 //     or real notes here while the repo/site is public.
 //   - `paymentMethod` is a label only (e.g. "Business credit
 //     card"), never an identifier.
-//   - A future live integration should fetch from an
-//     authenticated server-side source and emit this same
-//     window.FINANCE_DATA shape — the page only reads the shape.
 // ============================================================
 window.FINANCE_DATA = {
+  schemaVersion: 1,
   generatedAt: "2026-07-24T00:00:00Z",
 
-  // mode "sample" makes the panel badge itself as SAMPLE DATA.
-  // A live adapter should set mode: "live" and its own label.
+  // mode "sample" makes every finance panel badge itself as
+  // SAMPLE DATA. A live adapter sets mode: "live" + own label.
   source: { mode: "sample", label: "FICTIONAL SAMPLE ENTRIES — NOT REAL FINANCIAL DATA" },
 
+  // ---- 1. EXECUTIVE SNAPSHOT ----
+  // cashAvailable stays null until a secure bank link exists
+  // (Phase 2+). Everything else is derived by finance.js from
+  // the payments / subscriptions / revenue sections below.
+  snapshot: {
+    cashAvailable: null,
+    cashNote: "AWAITING SECURE BANK LINK (PHASE 2)"
+  },
+
+  // ---- 2. PAYMENT TRACKER ----
   categories: [
     "Training & Education",
     "Software & AI Tools",
@@ -36,7 +51,6 @@ window.FINANCE_DATA = {
     "Professional Services",
     "Other Business Expenses"
   ],
-
   // status: leave null/"AUTO" to auto-calc from dueDate
   // (OVERDUE / DUE SOON / DUE). Only "PAID" and "CANCELLED"
   // are honored as manual overrides. paidDate applies to PAID.
@@ -142,7 +156,8 @@ window.FINANCE_DATA = {
       business: "Demo Platform Project",
       paymentMethod: "Business credit card",
       notes: "Auto-renew ON — confirm card on file",
-      receiptRef: "—"
+      receiptRef: "—",
+      calendarType: "DOMAIN"
     },
     {
       id: "PAY-008",
@@ -198,7 +213,8 @@ window.FINANCE_DATA = {
       business: "Demo Ventures LLC",
       paymentMethod: "Business credit card",
       notes: "Renewal notice received — not yet paid",
-      receiptRef: "—"
+      receiptRef: "—",
+      calendarType: "ANNUAL"
     },
     {
       id: "PAY-012",
@@ -256,6 +272,156 @@ window.FINANCE_DATA = {
       paymentMethod: "—",
       notes: "Declined — overlaps with existing tools",
       receiptRef: "—"
+    },
+    {
+      id: "PAY-016",
+      vendor: "SupplyBox",
+      description: "Office & shipping supplies",
+      category: "Other Business Expenses",
+      amount: 32.75,
+      dueDate: "2026-07-08",
+      frequency: "ONE-TIME",
+      status: "PAID",
+      paidDate: "2026-07-08",
+      business: "Demo Ventures LLC",
+      paymentMethod: "Business credit card",
+      notes: "",
+      receiptRef: "RCPT-SB-0708"
+    },
+    {
+      id: "PAY-017",
+      vendor: "BrightPen Writing Services",
+      description: "Ghostwriting contractor — monthly invoice",
+      category: "Professional Services",
+      amount: 220.00,
+      dueDate: "2026-08-20",
+      frequency: "MONTHLY",
+      status: null,
+      business: "Project Beacon Media",
+      paymentMethod: "Bank transfer (ACH)",
+      notes: "Contractor invoice, NET-30 terms",
+      receiptRef: "—"
     }
-  ]
+  ],
+
+  // ---- 3. EXPENSE INTELLIGENCE ----
+  // Payment categories roll up into these reporting groups.
+  expenseGroups: [
+    "Software & AI",
+    "Marketing",
+    "Training & Education",
+    "Business Operations",
+    "Travel & Speaking",
+    "Technology",
+    "Contractors",
+    "Miscellaneous"
+  ],
+  categoryGroups: {
+    "Software & AI Tools": "Software & AI",
+    "Marketing & Advertising": "Marketing",
+    "Training & Education": "Training & Education",
+    "Business Operations": "Business Operations",
+    "Travel, Speaking & Events": "Travel & Speaking",
+    "Website & Technology": "Technology",
+    "Professional Services": "Contractors",
+    "Other Business Expenses": "Miscellaneous"
+  },
+
+  // ---- 4. SUBSCRIPTION MANAGER ----
+  // purposeTags drive automatic duplicate detection: two or
+  // more active subscriptions sharing a tag are flagged as
+  // possible duplicates.
+  subscriptions: [
+    {
+      id: "SUB-001", vendor: "Acme AI Suite", description: "AI writing & automation tools",
+      monthlyCost: 89.00, annualCost: 890.00, renewalDate: "2026-08-01", lastPayment: "2026-07-01",
+      autoRenew: true, purpose: "AI-assisted writing and workflow automation", purposeTags: ["ai-writing"]
+    },
+    {
+      id: "SUB-002", vendor: "QuillGenius", description: "AI writing assistant",
+      monthlyCost: 29.00, annualCost: 290.00, renewalDate: "2026-08-09", lastPayment: "2026-07-09",
+      autoRenew: true, purpose: "AI drafting for newsletters", purposeTags: ["ai-writing"]
+    },
+    {
+      id: "SUB-003", vendor: "ClipCraft Studio", description: "Video editing & clip tool",
+      monthlyCost: 24.00, annualCost: 240.00, renewalDate: "2026-08-20", lastPayment: "2026-07-20",
+      autoRenew: true, purpose: "Short-form video production", purposeTags: ["video"]
+    },
+    {
+      id: "SUB-004", vendor: "AvatarWorks", description: "AI presenter video subscription",
+      monthlyCost: 35.00, annualCost: 350.00, renewalDate: "2026-08-18", lastPayment: "2026-07-18",
+      autoRenew: true, purpose: "AI avatar promo videos", purposeTags: ["video"]
+    },
+    {
+      id: "SUB-005", vendor: "MeetStream", description: "Webinars & coaching calls",
+      monthlyCost: 18.99, annualCost: 189.90, renewalDate: "2026-08-25", lastPayment: "2026-07-25",
+      autoRenew: true, purpose: "Live webinar delivery", purposeTags: ["meetings"]
+    },
+    {
+      id: "SUB-006", vendor: "SiteForge", description: "Web app builder workspace",
+      monthlyCost: 25.00, annualCost: 250.00, renewalDate: "2026-08-26", lastPayment: "2026-07-26",
+      autoRenew: true, purpose: "Landing page prototypes", purposeTags: ["web-hosting"]
+    },
+    {
+      id: "SUB-007", vendor: "MailBloom", description: "Email marketing platform",
+      monthlyCost: 42.00, annualCost: 420.00, renewalDate: "2026-08-31", lastPayment: null,
+      autoRenew: true, purpose: "Email sequences & broadcasts", purposeTags: ["email-marketing"]
+    },
+    {
+      id: "SUB-008", vendor: "LearnSphere Academy", description: "Leadership masterclass",
+      monthlyCost: 129.00, annualCost: 1290.00, renewalDate: "2026-08-28", lastPayment: "2026-06-28",
+      autoRenew: false, purpose: "Executive skill development", purposeTags: ["training"]
+    },
+    {
+      id: "SUB-009", vendor: "ShieldSure Insurance", description: "Business liability policy",
+      monthlyCost: 92.50, annualCost: 1110.00, renewalDate: "2026-10-01", lastPayment: "2026-07-10",
+      autoRenew: true, purpose: "Liability coverage", purposeTags: ["insurance"]
+    }
+  ],
+
+  // ---- 5. REVENUE DASHBOARD ----
+  // Placeholder streams. Phase 2 connects real sales platforms
+  // through the secure backend; the shape stays identical.
+  revenue: {
+    period: "THIS MONTH",
+    streams: [
+      { name: "Book Sales",            monthTotal: 1240.00, source: "SAMPLE" },
+      { name: "Speaking Revenue",      monthTotal: 2500.00, source: "SAMPLE" },
+      { name: "Coaching Revenue",      monthTotal: 1800.00, source: "SAMPLE" },
+      { name: "Certification Revenue", monthTotal: 950.00,  source: "SAMPLE" },
+      { name: "Digital Products",      monthTotal: 430.00,  source: "SAMPLE" },
+      { name: "Webinar Revenue",       monthTotal: 380.00,  source: "SAMPLE" },
+      { name: "Membership Revenue",    monthTotal: 620.00,  source: "SAMPLE" },
+      { name: "Consulting Revenue",    monthTotal: 1500.00, source: "SAMPLE" }
+    ]
+  },
+
+  // ---- 6. FINANCIAL CALENDAR ----
+  // Extra dated events beyond bills/renewals (which finance.js
+  // derives automatically from payments + subscriptions).
+  calendarEvents: [
+    { date: "2026-09-15", label: "Q3 estimated quarterly taxes", type: "TAX",       amountEstimate: 1200.00 },
+    { date: "2026-10-01", label: "Business insurance annual policy renewal", type: "INSURANCE", amountEstimate: 1110.00 },
+    { date: "2026-11-05", label: "LearnSphere annual-plan decision point", type: "ANNUAL", amountEstimate: null },
+    { date: "2027-01-15", label: "Q4 estimated quarterly taxes", type: "TAX",       amountEstimate: 1200.00 }
+  ],
+
+  // ---- 7. AI FINANCIAL INSIGHTS ----
+  // Reserved for a future AI analysis engine (Phase 3). The
+  // engine will write findings into `items` using the same
+  // shape finance.js already renders. Until then finance.js
+  // shows locally-computed signals (duplicates, overdue, large
+  // upcoming expenses) as a preview.
+  insights: {
+    engineStatus: "RESERVED",
+    planned: [
+      { name: "Unusual spending detection", desc: "Flag out-of-pattern transactions" },
+      { name: "Expense growth trends",      desc: "Categories rising month over month" },
+      { name: "Duplicate subscriptions",    desc: "Overlapping tools doing the same job" },
+      { name: "Savings opportunities",      desc: "Annual-plan & consolidation suggestions" },
+      { name: "Monthly trend report",       desc: "Cash-flow trajectory & seasonality" },
+      { name: "Large expense radar",        desc: "Big bills approaching in 90 days" }
+    ],
+    items: []
+  }
 };
