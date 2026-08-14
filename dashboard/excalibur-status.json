@@ -5,30 +5,31 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-08-14T13:00:54-04:00",
+  "lastUpdated": "2026-08-14T17:01:14-04:00",
   "report": {
     "urgent": [
-      "palmerga15@gmail.com — Capital One: 'You've overdrawn your account' received Aug. 14 at about 12:56 PM ET for account ending 5100. Review the balance and recent transactions immediately to avoid additional fees or declined payments."
+      "palmerga15@gmail.com — Capital One sent another 'You've overdrawn your account' alert at about 3:57 PM ET for account ending 5100. This remains the top end-of-day action: check the balance and fund or review the account before the day ends if it is still negative."
     ],
     "billsAndOutstandingBalances": [
-      "palmerga15@gmail.com — Capital One reports account ending 5100 is overdrawn. Check the amount overdrawn and restore a positive balance as soon as possible."
+      "palmerga15@gmail.com — Capital One reports account ending 5100 is overdrawn. Review the current balance and recent transactions and restore a positive balance as soon as possible if still overdrawn.",
+      "palmerga15@gmail.com — X Premium charged $4.00 today to Discover ending 0879. The receipt shows the subscription automatically renews; no balance is due, but review or cancel only if the charge was not intended."
     ],
     "appointments": [
-      "palmerga15@gmail.com — Santiago Valencia / OnceHub: appointment reminder received Aug. 14 at about 12:03 PM ET stating the appointment starts in approximately 24 hours. Confirm the meeting details and calendar for Aug. 15."
+      "palmerga15@gmail.com — Santiago Valencia / OnceHub: today's reminder indicates an appointment on Aug. 15. Verify the exact time, meeting type, and joining details tonight if not already confirmed."
     ],
     "speakingGigsAndOpportunities": [],
     "sameDayActions": [
-      "Review the Capital One overdraft alert for account ending 5100 and take any needed funding or transaction-review action today.",
-      "Open the OnceHub reminder from Santiago Valencia and verify tomorrow's appointment time, meeting type, and joining details.",
-      "Respond to Delores Zola Rowlette's LinkedIn message if it concerns current professional or business matters; LinkedIn reports one new message awaiting your response."
+      "Address the Capital One overdraft alert for account ending 5100 before the day ends if the account remains negative.",
+      "Verify the Aug. 15 Santiago Valencia / OnceHub appointment details tonight if not already handled.",
+      "Review the $4.00 X Premium recurring subscription only if the charge or automatic renewal was unexpected."
     ],
     "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — LinkedIn: Delores Zola Rowlette MSW, LCADC sent a new message; one response is awaiting you.",
-      "palmerga15@gmail.com — Several relevant employment alerts arrived today, including Clinical Associate Professor at Howard University, Clinical Adjunct Faculty at Morgan State University, Executive Director at Powerback Rehabilitation, and Community Case Manager (Addiction Specialist) at Johns Hopkins Medicine. These are opportunities rather than confirmed invitations."
+      "palmerga15@gmail.com — Indeed confirmed an application for Director of Community Health and Health Equity at about 1:36 PM ET.",
+      "palmerga15@gmail.com — Indeed reported at about 4:22 PM ET that the Two Chairs job/application is no longer available."
     ],
     "accountsChecked": [
-      "palmerga15@gmail.com — checked successfully for mail received today through about 1:00 PM ET.",
-      "Connected Outlook mailbox — checked successfully for messages received today; no messages were returned."
+      "palmerga15@gmail.com — checked successfully for new mail through about 5:00 PM ET.",
+      "Connected Outlook mailbox — checked for messages received Aug. 14; no messages were returned."
     ],
     "accessIssues": [
       "purposequestinc@gmail.com — not independently accessible through the currently connected Gmail mailbox.",
