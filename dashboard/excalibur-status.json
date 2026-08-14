@@ -5,21 +5,33 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-08-14T05:02:13-04:00",
+  "lastUpdated": "2026-08-14T08:02:57-04:00",
   "report": {
-    "urgent": [],
-    "billsAndOutstandingBalances": [],
+    "urgent": [
+      "palmerga15@gmail.com — Capital One: 'Double-check your transactions for unusual activity' received Aug. 14 at about 6:23 AM ET. Review the flagged transactions promptly.",
+      "palmerga15@gmail.com — Capital One: 'Declined: Purchase exceeds balance' received Aug. 14 at about 6:23 AM ET. Sign in to review the account balance and the declined transaction."
+    ],
+    "billsAndOutstandingBalances": [
+      "palmerga15@gmail.com — Capital One reported a declined purchase because it exceeds the available balance; review the account balance today."
+    ],
     "appointments": [],
     "speakingGigsAndOpportunities": [],
-    "sameDayActions": [],
-    "repliesAndBusinessMatters": [],
+    "sameDayActions": [
+      "Review the two Capital One alerts in palmerga15@gmail.com and confirm whether the unusual activity and declined purchase are recognized."
+    ],
+    "repliesAndBusinessMatters": [
+      "palmerga15@gmail.com — TikTok For Business sent a developer update noting an action required by Sep. 18, 2026 regarding campaign creation permission checks; not a same-day deadline."
+    ],
     "accountsChecked": [
-      "Connected Gmail mailbox: checked for overnight messages; none found in the scan window.",
-      "Connected Outlook mailbox: checked for overnight messages; none found in the scan window."
+      "palmerga15@gmail.com — checked successfully for recent/overnight mail.",
+      "Connected Outlook mailbox — checked successfully for unread mail received since Aug. 13; no unread messages found."
     ],
     "accessIssues": [
-      "The current Gmail connector does not expose enough mailbox identity information to independently confirm separate access to palmerga15@gmail.com, purposequestinc@gmail.com, drpurposeology@gmail.com, purposepoweralliance@gmail.com, and purposespherellc@gmail.com in this run.",
-      "The Outlook connector was reachable, but the connector response did not expose the mailbox address, so palmerga15@hotmail.com could not be independently identity-verified in this run."
+      "purposequestinc@gmail.com — not independently accessible through the currently connected Gmail mailbox.",
+      "drpurposeology@gmail.com — not independently accessible through the currently connected Gmail mailbox.",
+      "purposepoweralliance@gmail.com — not independently accessible through the currently connected Gmail mailbox.",
+      "purposespherellc@gmail.com — not independently accessible through the currently connected Gmail mailbox.",
+      "palmerga15@hotmail.com — the Outlook connector was reachable, but it did not expose the mailbox address, so this address could not be identity-verified in this run."
     ]
   }
 }
