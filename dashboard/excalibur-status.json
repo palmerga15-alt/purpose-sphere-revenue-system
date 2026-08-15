@@ -5,29 +5,30 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-08-15T13:01:46-04:00",
+  "lastUpdated": "2026-08-15T16:58:33-04:00",
   "report": {
     "urgent": [
-      "palmerga15@gmail.com — Santiago Valencia / OnceHub sent an appointment reminder at 11:50 AM ET saying the meeting would start in approximately 10 minutes. By this 1:00 PM scan, the scheduled time had passed; verify whether follow-up or rescheduling is needed.",
-      "palmerga15@gmail.com — Next Level CEO – Casting Call reminder received at 11:01 AM ET for a 12:00 PM ET start today. The scheduled start time had passed by this scan; confirm attendance or any needed follow-up."
+      "palmerga15@gmail.com — Capital One sent another 'You've overdrawn your account' alert at 2:23 PM ET for account ending 5100. Review the balance and restore it to positive before the day ends if it remains overdrawn."
     ],
-    "billsAndOutstandingBalances": [],
-    "appointments": [
-      "palmerga15@gmail.com — Santiago Valencia / OnceHub appointment reminder received at 11:50 AM ET for a meeting beginning around noon today.",
-      "palmerga15@gmail.com — Next Level CEO – Casting Call reminder received at 11:01 AM ET for a 12:00 PM ET start today."
+    "billsAndOutstandingBalances": [
+      "palmerga15@gmail.com — Capital One account ending 5100 remains flagged as overdrawn as of the 2:23 PM ET alert."
     ],
-    "speakingGigsAndOpportunities": [],
+    "appointments": [],
+    "speakingGigsAndOpportunities": [
+      "palmerga15@gmail.com — The Speaker Lab sent 'your next paid gig...' at 2:44 PM ET. This appears to be a promotional/coaching email rather than a confirmed speaking invitation, so no immediate response is required."
+    ],
     "sameDayActions": [
-      "Verify whether the Santiago Valencia / OnceHub appointment occurred; follow up or reschedule today if needed.",
-      "Confirm whether you attended the Next Level CEO – Casting Call; handle any same-day follow-up if needed.",
-      "Review the most relevant new job alerts if you are actively pursuing opportunities today, especially Clinical Director and adjunct-faculty openings."
+      "Check the Capital One account ending 5100 and resolve the overdraft before the day ends if still negative.",
+      "Review the new LinkedIn message from Mark Aquino if the relationship is important; LinkedIn says a response is awaiting you.",
+      "Review the business/legal documents sent by Doriane Palmer this afternoon if they are tied to an active filing, contract, or business-formation task."
     ],
     "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — Multiple automated job alerts arrived between late morning and 1:00 PM for Clinical Director, Clinical Adjunct Faculty, Associate Executive, CEO, and related behavioral-health or academic roles.",
-      "palmerga15@gmail.com — No new bill, balance notice, direct business reply, deadline notice, or speaking invitation requiring a same-day response surfaced in the 1:00 PM scan."
+      "palmerga15@gmail.com — Doriane Palmer sent a series of business and legal documents between about 2:10 PM and 3:04 PM ET, including Business Organization, Business Structure, Single Member LLC/Operating Agreement, Copyright Transfer, Transfer Agreement materials, Contract Template Guide, and related files. No explicit deadline or requested reply is visible in the message snippets.",
+      "palmerga15@gmail.com — LinkedIn reported at 4:23 PM ET that Mark Aquino sent a new message awaiting a response.",
+      "palmerga15@gmail.com — Several automated job alerts arrived this afternoon, including Howard University Clinical Director/Clinical Associate Professor and other behavioral-health roles; these are alerts rather than confirmed employer outreach."
     ],
     "accountsChecked": [
-      "palmerga15@gmail.com — checked successfully through approximately 1:01 PM ET on Aug. 15.",
+      "palmerga15@gmail.com — checked successfully through approximately 4:59 PM ET on Aug. 15.",
       "Connected Outlook mailbox — checked for messages received Aug. 15; no messages were returned."
     ],
     "accessIssues": [
