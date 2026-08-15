@@ -5,31 +5,26 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-08-15T05:02:22-04:00",
+  "lastUpdated": "2026-08-15T08:05:58-04:00",
   "report": {
     "urgent": [
-      "palmerga15@gmail.com — Capital One sent a 'Declined: Purchase exceeds balance' alert at about 2:47 AM ET. Review account ending 5100 immediately, especially because it was reported overdrawn yesterday.",
-      "palmerga15@gmail.com — Temu reported a sign-in at about 1:30 AM ET from Chrome on Android in New Jersey, followed by a verification-code email one minute later. If this was not you, secure the Temu account and review recent activity.",
-      "palmerga15@gmail.com — Google sent a security alert for eaglenationfancave@gmail.com, for which palmerga15@gmail.com is the recovery email. Review the alert promptly if you did not recently authorize the activity referenced in it."
+      "palmerga15@gmail.com — Capital One sent a new declined-purchase alert at about 6:47 AM ET. Review the account balance and recent activity this morning."
     ],
     "billsAndOutstandingBalances": [
-      "palmerga15@gmail.com — Capital One declined a purchase because it exceeded the available balance. This follows yesterday's overdraft alerts for account ending 5100.",
-      "palmerga15@gmail.com — Google Play confirmed a renewal from Perplexity AI Inc. dated Aug. 14 at 11:29 PM ET. Review only if the renewal was not expected.",
-      "palmerga15@gmail.com — Tax Alchemy sent payment receipts shortly after 4:00 AM ET confirming a successful payment; no outstanding balance is indicated in the email preview."
+      "palmerga15@gmail.com — A new Capital One alert indicates a purchase was declined because it exceeded the available balance."
     ],
     "appointments": [],
     "speakingGigsAndOpportunities": [],
     "sameDayActions": [
-      "Check the Capital One balance and recent transactions now because a purchase was declined overnight and the account was previously overdrawn.",
-      "Confirm whether the 1:30 AM Temu sign-in from New Jersey was yours; secure the account if not.",
-      "Review the Google security alert for eaglenationfancave@gmail.com and confirm the referenced activity was authorized."
+      "Review the Capital One balance and recent activity this morning.",
+      "Review the Accreditation Now training notice for Recovery Center of Maryland because the listed CARF items appear overdue."
     ],
     "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — LinkedIn reports a new message from Marquie Walker, FMP (ΦΒΣ) awaiting a response; not flagged as urgent for this early-morning run.",
-      "palmerga15@gmail.com — Several overnight job-alert emails arrived, including Howard University, Signet Health, and other leadership/behavioral-health roles; these are job alerts rather than direct employer correspondence."
+      "palmerga15@gmail.com — Accreditation Now sent a scheduled-items notice for Recovery Center of Maryland listing CARF trainings requiring completion; the preview shows a due date in June 2026, indicating overdue compliance work.",
+      "palmerga15@gmail.com — Automated job alerts arrived for several leadership and behavioral-health openings; none appears to require an immediate reply."
     ],
     "accountsChecked": [
-      "palmerga15@gmail.com — checked successfully for overnight mail through about 5:02 AM ET on Aug. 15.",
+      "palmerga15@gmail.com — checked successfully through about 8:05 AM ET on Aug. 15.",
       "Connected Outlook mailbox — checked for messages received Aug. 15; no messages were returned."
     ],
     "accessIssues": [
