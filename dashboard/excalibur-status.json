@@ -5,26 +5,29 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-08-15T08:05:58-04:00",
+  "lastUpdated": "2026-08-15T13:01:46-04:00",
   "report": {
     "urgent": [
-      "palmerga15@gmail.com — Capital One sent a new declined-purchase alert at about 6:47 AM ET. Review the account balance and recent activity this morning."
+      "palmerga15@gmail.com — Santiago Valencia / OnceHub sent an appointment reminder at 11:50 AM ET saying the meeting would start in approximately 10 minutes. By this 1:00 PM scan, the scheduled time had passed; verify whether follow-up or rescheduling is needed.",
+      "palmerga15@gmail.com — Next Level CEO – Casting Call reminder received at 11:01 AM ET for a 12:00 PM ET start today. The scheduled start time had passed by this scan; confirm attendance or any needed follow-up."
     ],
-    "billsAndOutstandingBalances": [
-      "palmerga15@gmail.com — A new Capital One alert indicates a purchase was declined because it exceeded the available balance."
+    "billsAndOutstandingBalances": [],
+    "appointments": [
+      "palmerga15@gmail.com — Santiago Valencia / OnceHub appointment reminder received at 11:50 AM ET for a meeting beginning around noon today.",
+      "palmerga15@gmail.com — Next Level CEO – Casting Call reminder received at 11:01 AM ET for a 12:00 PM ET start today."
     ],
-    "appointments": [],
     "speakingGigsAndOpportunities": [],
     "sameDayActions": [
-      "Review the Capital One balance and recent activity this morning.",
-      "Review the Accreditation Now training notice for Recovery Center of Maryland because the listed CARF items appear overdue."
+      "Verify whether the Santiago Valencia / OnceHub appointment occurred; follow up or reschedule today if needed.",
+      "Confirm whether you attended the Next Level CEO – Casting Call; handle any same-day follow-up if needed.",
+      "Review the most relevant new job alerts if you are actively pursuing opportunities today, especially Clinical Director and adjunct-faculty openings."
     ],
     "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — Accreditation Now sent a scheduled-items notice for Recovery Center of Maryland listing CARF trainings requiring completion; the preview shows a due date in June 2026, indicating overdue compliance work.",
-      "palmerga15@gmail.com — Automated job alerts arrived for several leadership and behavioral-health openings; none appears to require an immediate reply."
+      "palmerga15@gmail.com — Multiple automated job alerts arrived between late morning and 1:00 PM for Clinical Director, Clinical Adjunct Faculty, Associate Executive, CEO, and related behavioral-health or academic roles.",
+      "palmerga15@gmail.com — No new bill, balance notice, direct business reply, deadline notice, or speaking invitation requiring a same-day response surfaced in the 1:00 PM scan."
     ],
     "accountsChecked": [
-      "palmerga15@gmail.com — checked successfully through about 8:05 AM ET on Aug. 15.",
+      "palmerga15@gmail.com — checked successfully through approximately 1:01 PM ET on Aug. 15.",
       "Connected Outlook mailbox — checked for messages received Aug. 15; no messages were returned."
     ],
     "accessIssues": [
