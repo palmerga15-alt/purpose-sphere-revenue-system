@@ -5,31 +5,32 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-08-14T17:01:14-04:00",
+  "lastUpdated": "2026-08-15T05:02:22-04:00",
   "report": {
     "urgent": [
-      "palmerga15@gmail.com — Capital One sent another 'You've overdrawn your account' alert at about 3:57 PM ET for account ending 5100. This remains the top end-of-day action: check the balance and fund or review the account before the day ends if it is still negative."
+      "palmerga15@gmail.com — Capital One sent a 'Declined: Purchase exceeds balance' alert at about 2:47 AM ET. Review account ending 5100 immediately, especially because it was reported overdrawn yesterday.",
+      "palmerga15@gmail.com — Temu reported a sign-in at about 1:30 AM ET from Chrome on Android in New Jersey, followed by a verification-code email one minute later. If this was not you, secure the Temu account and review recent activity.",
+      "palmerga15@gmail.com — Google sent a security alert for eaglenationfancave@gmail.com, for which palmerga15@gmail.com is the recovery email. Review the alert promptly if you did not recently authorize the activity referenced in it."
     ],
     "billsAndOutstandingBalances": [
-      "palmerga15@gmail.com — Capital One reports account ending 5100 is overdrawn. Review the current balance and recent transactions and restore a positive balance as soon as possible if still overdrawn.",
-      "palmerga15@gmail.com — X Premium charged $4.00 today to Discover ending 0879. The receipt shows the subscription automatically renews; no balance is due, but review or cancel only if the charge was not intended."
+      "palmerga15@gmail.com — Capital One declined a purchase because it exceeded the available balance. This follows yesterday's overdraft alerts for account ending 5100.",
+      "palmerga15@gmail.com — Google Play confirmed a renewal from Perplexity AI Inc. dated Aug. 14 at 11:29 PM ET. Review only if the renewal was not expected.",
+      "palmerga15@gmail.com — Tax Alchemy sent payment receipts shortly after 4:00 AM ET confirming a successful payment; no outstanding balance is indicated in the email preview."
     ],
-    "appointments": [
-      "palmerga15@gmail.com — Santiago Valencia / OnceHub: today's reminder indicates an appointment on Aug. 15. Verify the exact time, meeting type, and joining details tonight if not already confirmed."
-    ],
+    "appointments": [],
     "speakingGigsAndOpportunities": [],
     "sameDayActions": [
-      "Address the Capital One overdraft alert for account ending 5100 before the day ends if the account remains negative.",
-      "Verify the Aug. 15 Santiago Valencia / OnceHub appointment details tonight if not already handled.",
-      "Review the $4.00 X Premium recurring subscription only if the charge or automatic renewal was unexpected."
+      "Check the Capital One balance and recent transactions now because a purchase was declined overnight and the account was previously overdrawn.",
+      "Confirm whether the 1:30 AM Temu sign-in from New Jersey was yours; secure the account if not.",
+      "Review the Google security alert for eaglenationfancave@gmail.com and confirm the referenced activity was authorized."
     ],
     "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — Indeed confirmed an application for Director of Community Health and Health Equity at about 1:36 PM ET.",
-      "palmerga15@gmail.com — Indeed reported at about 4:22 PM ET that the Two Chairs job/application is no longer available."
+      "palmerga15@gmail.com — LinkedIn reports a new message from Marquie Walker, FMP (ΦΒΣ) awaiting a response; not flagged as urgent for this early-morning run.",
+      "palmerga15@gmail.com — Several overnight job-alert emails arrived, including Howard University, Signet Health, and other leadership/behavioral-health roles; these are job alerts rather than direct employer correspondence."
     ],
     "accountsChecked": [
-      "palmerga15@gmail.com — checked successfully for new mail through about 5:00 PM ET.",
-      "Connected Outlook mailbox — checked for messages received Aug. 14; no messages were returned."
+      "palmerga15@gmail.com — checked successfully for overnight mail through about 5:02 AM ET on Aug. 15.",
+      "Connected Outlook mailbox — checked for messages received Aug. 15; no messages were returned."
     ],
     "accessIssues": [
       "purposequestinc@gmail.com — not independently accessible through the currently connected Gmail mailbox.",
