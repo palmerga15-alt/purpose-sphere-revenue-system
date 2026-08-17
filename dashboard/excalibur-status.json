@@ -5,28 +5,28 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-08-16T17:02:28-04:00",
+  "lastUpdated": "2026-08-17T04:59:16-04:00",
   "report": {
     "urgent": [
-      "palmerga15@gmail.com — Capital One sent another overdraft alert at about 2:29 PM ET. Check the balance and restore it to positive before the day ends if it remains overdrawn.",
-      "palmerga15@gmail.com — Weather alerts around 4:43-4:47 PM ET reported a Severe Thunderstorm Watch for the District of Columbia. Use caution with any evening travel or outdoor plans."
+      "palmerga15@gmail.com — An overnight payment attempt failed and a backup payment method was charged instead. Review the related account and recent transactions this morning.",
+      "palmerga15@gmail.com — A subscription was paused after the final payment retry failed. Update the payment method today only if you want to keep the subscription active."
     ],
     "billsAndOutstandingBalances": [
-      "palmerga15@gmail.com — Capital One remains flagged as overdrawn."
+      "palmerga15@gmail.com — One overnight payment attempt failed and was shifted to a backup payment method.",
+      "palmerga15@gmail.com — One subscription is paused because its final payment retry failed."
     ],
     "appointments": [],
     "speakingGigsAndOpportunities": [],
     "sameDayActions": [
-      "palmerga15@gmail.com — Resolve the Capital One overdraft before the day ends if the account is still negative.",
-      "palmerga15@gmail.com — Note the Severe Thunderstorm Watch for DC before driving or making evening plans."
+      "palmerga15@gmail.com — Review the failed payment and confirm the backup charge was expected.",
+      "palmerga15@gmail.com — Decide whether to keep the paused subscription and update its payment method today if needed."
     ],
     "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — Automated job alerts this afternoon included Executive Director at Ascension Recovery Services and other director/behavioral-health openings. These appear to be job-board alerts rather than direct employer outreach, so no same-day reply is required.",
-      "palmerga15@gmail.com — Howard University MSW Online Enrollment sent an application reminder with an August 24 deadline. This is not due today but may be worth reviewing if relevant."
+      "palmerga15@gmail.com — Overnight mail was dominated by automated job alerts. No direct employer reply, deadline, appointment notice, or speaking invitation requiring immediate action surfaced before 5:00 AM."
     ],
     "accountsChecked": [
-      "palmerga15@gmail.com — checked successfully through approximately 5:02 PM ET on Aug. 16.",
-      "Connected Outlook mailbox — checked for messages received Aug. 16; no messages were returned."
+      "palmerga15@gmail.com — checked successfully for overnight messages through approximately 4:59 AM ET on Aug. 17.",
+      "Connected Outlook mailbox — checked for messages received Aug. 17; no messages were returned."
     ],
     "accessIssues": [
       "purposequestinc@gmail.com — not independently accessible through the currently connected Gmail mailbox.",
