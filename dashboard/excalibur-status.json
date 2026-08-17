@@ -5,38 +5,15 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-08-17T13:03:00-04:00",
+  "lastUpdated": "2026-08-17T16:57:58-04:00",
   "report": {
-    "urgent": [
-      "palmerga15@gmail.com — GrowthHub365 Onboarding is scheduled today, Monday, Aug. 17, from 3:00 PM to 5:00 PM ET. This begins in under two hours and should be treated as the immediate same-day appointment priority."
-    ],
-    "billsAndOutstandingBalances": [
-      "palmerga15@gmail.com — No new bill or balance notice arrived after the 8:00 AM check. The earlier Link/Capital One payment failure remains unresolved from the available email record, so confirm the backup charge and Capital One balance if not already handled."
-    ],
-    "appointments": [
-      "palmerga15@gmail.com — GrowthHub365 Onboarding today, Aug. 17, 3:00 PM–5:00 PM ET via Skool/Growth Hub 365.",
-      "palmerga15@gmail.com — Growth Hub 365 also sent a notice for two events tomorrow, Aug. 18, including Tech Office Hours from 11:00 AM–12:30 PM ET."
-    ],
+    "urgent": ["palmerga15@gmail.com — Capital One sent a new declined-purchase alert at about 2:28 PM ET. Review the account balance and recent transactions before the day ends."],
+    "billsAndOutstandingBalances": ["palmerga15@gmail.com — Capital One reported another declined purchase because it exceeded the available balance."],
+    "appointments": ["palmerga15@gmail.com — GrowthHub365 Onboarding was scheduled today from 3:00 PM to 5:00 PM ET; confirm completion and any follow-up steps.", "palmerga15@gmail.com — A job-matching service sent an email titled 'URGENT: APPOINTMENT for Gregory Palmer' around 2:18 PM ET. Verify legitimacy before clicking links or providing information."],
     "speakingGigsAndOpportunities": [],
-    "sameDayActions": [
-      "palmerga15@gmail.com — Prepare for and attend the GrowthHub365 Onboarding beginning at 3:00 PM ET today.",
-      "palmerga15@gmail.com — Galaxy of Stars announced a $1,000 social-media grant opportunity tied to posting a short business video and tagging the organization; review the rules and deadline today if interested.",
-      "palmerga15@gmail.com — If not already resolved, confirm the Link backup-payment charge and review the Capital One balance/activity."
-    ],
-    "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — Galaxy of Stars sent a new $1,000 social-media grant opportunity at about 12:50 PM ET. The message says businesses can earn up to three entries by posting a short video and tagging Galaxy of Stars on Instagram, Facebook, and TikTok.",
-      "palmerga15@gmail.com — New mail between the morning and 1:00 PM scan was otherwise dominated by automated job alerts and promotional messages. No verified direct employer reply, speaking invitation, new bill, or deadline requiring a same-day response surfaced."
-    ],
-    "accountsChecked": [
-      "palmerga15@gmail.com — Gmail checked successfully for new mail through approximately 1:03 PM ET on Aug. 17.",
-      "Connected Outlook mailbox — checked for Aug. 17 messages; no messages were returned."
-    ],
-    "accessIssues": [
-      "purposequestinc@gmail.com — not independently accessible through the currently connected Gmail connection.",
-      "drpurposeology@gmail.com — not independently accessible through the currently connected Gmail connection.",
-      "purposepoweralliance@gmail.com — not independently accessible through the currently connected Gmail connection.",
-      "purposespherellc@gmail.com — not independently accessible through the currently connected Gmail connection.",
-      "palmerga15@hotmail.com — not connected to the available Outlook connector; the available Outlook mailbox returned no Aug. 17 messages and cannot be verified as this Hotmail account."
-    ]
+    "sameDayActions": ["palmerga15@gmail.com — Review the Capital One balance and recent activity.", "palmerga15@gmail.com — Confirm GrowthHub365 Onboarding completion and capture follow-up items.", "palmerga15@gmail.com — Consider replying to Jenn Tobin at Medworks Staffing about a Clinical Therapist opening.", "palmerga15@gmail.com — Consider replying to Jayme Chamberlain at Amergis about an LMHC/LCSW travel-contract opportunity if relevant."],
+    "repliesAndBusinessMatters": ["palmerga15@gmail.com — Jenn Tobin at Medworks Staffing wrote directly around 3:59 PM ET after reviewing your resume and asked whether you are evaluating new opportunities for a Clinical Therapist opening.", "palmerga15@gmail.com — Jayme Chamberlain at Amergis wrote directly around 1:53 PM ET about an LMHC/LCSW travel-contract opportunity with Washington Corrections Center.", "palmerga15@gmail.com — Google Workspace sent an action-required notice about Meet automatic note-taking controls before September 21, 2026; this is not due today.", "palmerga15@gmail.com — Other afternoon mail was mostly automated job alerts and promotions; no verified speaking invitation or new business deadline requiring action before day-end surfaced."],
+    "accountsChecked": ["palmerga15@gmail.com — Gmail checked successfully through approximately 4:57 PM ET on Aug. 17.", "Connected Outlook mailbox — checked for Aug. 17 messages; no messages were returned."],
+    "accessIssues": ["purposequestinc@gmail.com — not independently accessible through the currently connected Gmail connection.", "drpurposeology@gmail.com — not independently accessible through the currently connected Gmail connection.", "purposepoweralliance@gmail.com — not independently accessible through the currently connected Gmail connection.", "purposespherellc@gmail.com — not independently accessible through the currently connected Gmail connection.", "palmerga15@hotmail.com — not independently verified through the available Outlook connection; the connected Outlook mailbox returned no Aug. 17 messages."]
   }
 }
