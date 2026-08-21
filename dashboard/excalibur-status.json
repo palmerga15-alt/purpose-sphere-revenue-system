@@ -5,41 +5,46 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-08-21T07:57:55-04:00",
+  "lastUpdated": "2026-08-21T12:57:42-04:00",
   "report": {
     "urgent": [
-      "palmerga15@gmail.com — The unresolved Capital One issue from the early-morning review remains important: a $476.65 payment submitted Aug. 20 from savings account ending 4870 was not completed because of insufficient available funds. No later resolution email was found by the 8:00 AM scan."
+      "palmerga15@gmail.com — Capital One sent two overdraft alerts this morning for account ending 5100, at approximately 10:09 AM and 10:37 AM ET. Review the account immediately and restore a positive balance if still overdrawn.",
+      "palmerga15@gmail.com — Google sent an account-recovery confirmation and a new-sign-in security alert at approximately 11:30 AM ET. If you did not initiate the recovery/sign-in, secure the Google account immediately."
     ],
     "billsAndOutstandingBalances": [
-      "palmerga15@gmail.com — Capital One payment failure remains unresolved in email: $476.65 from savings ending 4870 was not completed for insufficient available funds."
+      "palmerga15@gmail.com — Capital One reports account ending 5100 is overdrawn. This is the primary outstanding balance requiring same-day attention.",
+      "palmerga15@gmail.com — The earlier $476.65 Capital One payment failure from savings ending 4870 remains unresolved in email; no later completion notice was found by this scan."
     ],
     "appointments": [
-      "palmerga15@gmail.com — AI Advantage Consultation with Derrick Yazwa is scheduled today, Friday, Aug. 21, 2:00–3:00 PM ET.",
-      "palmerga15@gmail.com — Kick Off Meeting with Pete Aguilera is scheduled today, Friday, Aug. 21, at 3:45 PM ET via Zoom."
+      "palmerga15@gmail.com — 15 Minute Meeting with Chris O'Brien is scheduled today at 1:30 PM ET; the Calendly reminder arrived at 12:30 PM ET.",
+      "palmerga15@gmail.com — AI Advantage Consultation with Derrick Yazwa is scheduled today from 2:00–3:00 PM ET.",
+      "palmerga15@gmail.com — Kick Off Meeting with Pete Aguilera is scheduled today at 3:45 PM ET via Zoom.",
+      "palmerga15@gmail.com — 4 Step AI Revenue System / Expertise to Enterprise workshop is confirmed for Sunday, Aug. 23 at 3:00 PM ET."
     ],
     "speakingGigsAndOpportunities": [
-      "palmerga15@gmail.com — Speaking Opportunity Watch reported five new high-value opportunities this morning. The strongest immediate matches identified are the 2026 MAT Conference, Building Business Capability 2027, and NAIRO 2027. Review the full opportunity alert today for deadlines and fit."
+      "palmerga15@gmail.com — The five high-value speaking opportunities identified this morning remain active for review, with strongest matches including the 2026 MAT Conference, Building Business Capability 2027, and NAIRO 2027. No newer direct speaking invitation was found by the 1:00 PM scan."
     ],
     "sameDayActions": [
-      "palmerga15@gmail.com — Review the unresolved $476.65 Capital One payment issue this morning.",
-      "palmerga15@gmail.com — Review the five new speaking opportunities, especially the 2026 MAT Conference, Building Business Capability 2027, and NAIRO 2027.",
-      "palmerga15@gmail.com — Manus sent an ACTION REQUIRED notice saying there is 1 day left to back up Gregory A Palmer for future restoration. Preserve the backup if Manus remains part of the workflow.",
-      "palmerga15@gmail.com — Keep today's 2:00 PM AI Advantage Consultation and 3:45 PM Pete Aguilera meeting on the schedule."
+      "palmerga15@gmail.com — Address the Capital One overdraft and unresolved $476.65 payment issue today.",
+      "palmerga15@gmail.com — Join or prepare for the 1:30 PM Chris O'Brien meeting, followed by the 2:00 PM AI Advantage Consultation and 3:45 PM Pete Aguilera meeting.",
+      "palmerga15@gmail.com — Verify the Google account recovery and new sign-in were yours; if not, secure the account immediately.",
+      "palmerga15@gmail.com — Review the five current speaking opportunities for deadlines and fit."
     ],
     "repliesAndBusinessMatters": [
-      "No new direct business reply requiring an immediate response was found in the 5:00–8:00 AM ET window.",
-      "palmerga15@gmail.com — Several automated job alerts arrived, including director-level and clinical openings; none appeared to be a direct recruiter reply requiring immediate action."
+      "palmerga15@gmail.com — City of Alexandria confirmed receipt of your application. No reply is required at this stage.",
+      "palmerga15@gmail.com — AI Advantage Club sent onboarding/first-steps information; this is informational rather than an urgent reply.",
+      "palmerga15@gmail.com — No new direct business reply requiring an immediate response was found in the late-morning scan."
     ],
     "accountsChecked": [
-      "palmerga15@gmail.com — directly connected and checked successfully through approximately 7:58 AM ET on Aug. 21.",
-      "Connected Outlook mailbox — checked for unread mail received Aug. 20–21; no messages were returned."
+      "palmerga15@gmail.com — directly connected and checked successfully through approximately 12:57 PM ET on Aug. 21.",
+      "Connected Outlook mailbox — checked for Aug. 21 messages; no messages were returned."
     ],
     "accessIssues": [
-      "purposequestinc@gmail.com — not independently readable from the current Gmail connector; new mail can only be seen here if it is successfully forwarded into palmerga15@gmail.com, and no identifiable forwarded message for this account was found in this scan.",
-      "drpurposeology@gmail.com — not independently readable from the current Gmail connector; no identifiable forwarded message for this account was found in this scan.",
-      "purposepoweralliance@gmail.com — not independently readable from the current Gmail connector; no identifiable forwarded message for this account was found in this scan.",
-      "purposespherellc@gmail.com — not independently readable from the current Gmail connector; no identifiable forwarded message for this account was found in this scan.",
-      "palmerga15@hotmail.com — the connected Outlook mailbox returned no unread Aug. 20–21 messages, but the connector does not expose enough mailbox identity information to confirm independently that it is this exact Hotmail address."
+      "purposequestinc@gmail.com — not independently readable through the current Gmail connector. A targeted search of palmerga15@gmail.com found no Aug. 21 message identifiable as forwarded from this address.",
+      "drpurposeology@gmail.com — not independently readable through the current Gmail connector. No Aug. 21 forwarded message identifiable as addressed to this account was found.",
+      "purposepoweralliance@gmail.com — not independently readable through the current Gmail connector. No Aug. 21 forwarded message identifiable as addressed to this account was found.",
+      "purposespherellc@gmail.com — not independently readable through the current Gmail connector. No Aug. 21 forwarded message identifiable as addressed to this account was found.",
+      "palmerga15@hotmail.com — the connected Outlook mailbox returned no Aug. 21 messages, but the connector still does not expose enough mailbox identity information to confirm independently that it is this exact Hotmail address."
     ]
   }
 }
