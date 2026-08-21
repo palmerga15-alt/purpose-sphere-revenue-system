@@ -5,42 +5,40 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-08-20T16:57:10-04:00",
+  "lastUpdated": "2026-08-21T04:59:16-04:00",
   "report": {
     "urgent": [
-      "palmerga15@gmail.com — Capital One sent a new overdraft alert for account ending 5100 at approximately 4:30 PM ET. Review the account before day end and cover the negative balance if still outstanding.",
-      "palmerga15@gmail.com — Podia reported a new login to the account at 4:38 PM ET from Chrome on Mac 10.15.7. If this was not your login, secure the Podia account immediately."
+      "palmerga15@gmail.com — Capital One reported that a $476.65 payment submitted Aug. 20 from savings account ending 4870 was not completed because there was not enough money available. Review the account balance and the intended payment this morning."
     ],
     "billsAndOutstandingBalances": [
-      "palmerga15@gmail.com — Capital One reports account ending 5100 is overdrawn. This remains the primary financial item requiring attention before the day ends."
+      "palmerga15@gmail.com — Capital One payment failure: $476.65 from savings ending 4870 was declined for insufficient available funds."
     ],
     "appointments": [
-      "palmerga15@gmail.com — AI Advantage Consultation with Derrick Yazwa is confirmed for Friday, Aug. 21, 2026, 2:00–3:00 PM ET.",
-      "palmerga15@gmail.com — Kick Off Meeting with Pete Aguilera is scheduled for Friday, Aug. 21, 2026, at 3:45 PM ET via Zoom."
+      "palmerga15@gmail.com — AI Advantage Consultation with Derrick Yazwa is scheduled today, Friday, Aug. 21, 2:00–3:00 PM ET.",
+      "palmerga15@gmail.com — Kick Off Meeting with Pete Aguilera is scheduled today, Friday, Aug. 21, at 3:45 PM ET via Zoom."
     ],
     "speakingGigsAndOpportunities": [
-      "No new direct speaking invitation arrived in the late-afternoon review.",
-      "palmerga15@gmail.com — Talks sent a visibility/podcast-booking update encouraging podcast outreach; this is a platform/marketing opportunity rather than a direct speaking invitation."
+      "No new direct speaking invitation requiring immediate action arrived overnight.",
+      "palmerga15@gmail.com — The Speaker Lab sent a speaker-development email overnight; it appears educational/marketing rather than a direct paid speaking opportunity."
     ],
     "sameDayActions": [
-      "palmerga15@gmail.com — Address the Capital One overdraft for account ending 5100 before the day ends.",
-      "palmerga15@gmail.com — Verify the Podia login at 4:38 PM ET was yours; if not, change the password and review account access immediately.",
-      "palmerga15@gmail.com — Note tomorrow's AI Advantage Consultation at 2:00 PM ET and Pete Aguilera Kick Off Meeting at 3:45 PM ET so they are not missed."
+      "palmerga15@gmail.com — Review the failed $476.65 Capital One payment and decide whether to transfer funds or resubmit the intended payment.",
+      "palmerga15@gmail.com — Keep today's 2:00 PM AI Advantage Consultation and 3:45 PM Pete Aguilera meeting on the schedule.",
+      "palmerga15@gmail.com — Several automated leadership/clinical job alerts arrived overnight, including Assistant Director, Center for Adult Services at the City of Alexandria ($150,000–$207,000), Howard University Clinical Associate Professor, and Signet Health Director/Senior Director of Admissions. Review only if pursuing these roles today."
     ],
     "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — Compass Health Center advised that it will not proceed with your candidacy for the current opening; no reply was requested.",
-      "palmerga15@gmail.com — Several late-afternoon leadership/clinical opportunities arrived, including Clinical Director at Psychiatric Institute of Washington, Clinical Director at The Jude House, and Clinical Associate Professor at Howard University. These are automated opportunity alerts, not direct recruiter replies."
+      "No new direct business reply requiring immediate action was found overnight in the readable Gmail or connected Outlook inbox."
     ],
     "accountsChecked": [
-      "palmerga15@gmail.com — checked successfully through approximately 4:57 PM ET on Aug. 20.",
-      "Connected Outlook mailbox — checked for unread Aug. 20 mail; no messages were returned."
+      "palmerga15@gmail.com — directly connected and checked successfully for overnight mail through approximately 4:59 AM ET on Aug. 21.",
+      "Connected Outlook mailbox — checked for unread mail received Aug. 20–21; no messages were returned."
     ],
     "accessIssues": [
-      "purposequestinc@gmail.com — not independently readable from the current Gmail connector; targeted search found no new forwarded messages identifiable as addressed to this account today.",
-      "drpurposeology@gmail.com — not independently readable from the current Gmail connector; targeted search found no new forwarded messages identifiable as addressed to this account today.",
-      "purposepoweralliance@gmail.com — not independently readable from the current Gmail connector; targeted search found no new forwarded messages identifiable as addressed to this account today.",
-      "purposespherellc@gmail.com — not independently readable from the current Gmail connector; targeted search found no new forwarded messages identifiable as addressed to this account today.",
-      "palmerga15@hotmail.com — the connected Outlook mailbox returned no unread Aug. 20 messages, but the connector still cannot be independently verified as this exact Hotmail address."
+      "purposequestinc@gmail.com — not independently readable from the current Gmail connector; targeted overnight search in palmerga15@gmail.com found no forwarded messages identifiable as addressed to this account.",
+      "drpurposeology@gmail.com — not independently readable from the current Gmail connector; targeted overnight search found no forwarded messages identifiable as addressed to this account.",
+      "purposepoweralliance@gmail.com — not independently readable from the current Gmail connector; targeted overnight search found no forwarded messages identifiable as addressed to this account.",
+      "purposespherellc@gmail.com — not independently readable from the current Gmail connector; targeted overnight search found no forwarded messages identifiable as addressed to this account.",
+      "palmerga15@hotmail.com — the connected Outlook mailbox returned no unread Aug. 20–21 messages, but the connector does not expose enough account identity information to verify independently that it is this exact Hotmail address."
     ]
   }
 }
