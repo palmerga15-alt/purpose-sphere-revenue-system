@@ -1,0 +1,81 @@
+{
+  "service": "Centurion Revenue Operations",
+  "status": "implementation-required",
+  "commandCenterMode": "non-sensitive operational tracking",
+  "lastUpdated": "2026-08-22T16:45:00-04:00",
+  "revenueSystem": {
+    "primaryObjective": "Create a measurable path from qualified attention to collected revenue and continued customer value.",
+    "funnelStages": [
+      "attention",
+      "leadCapture",
+      "qualification",
+      "offer",
+      "checkout",
+      "onboarding",
+      "delivery",
+      "followUp",
+      "nextOffer"
+    ],
+    "immediateStreams": [
+      {
+        "name": "Purposeful AI Starter Kit",
+        "role": "entry offer",
+        "readiness": "build-and-connect",
+        "nextRequiredActions": [
+          "finalize deliverable",
+          "create product record",
+          "connect checkout",
+          "write buyer confirmation",
+          "create delivery handoff",
+          "connect next-offer sequence"
+        ]
+      },
+      {
+        "name": "AI With Purpose Workshop",
+        "role": "paid public offer",
+        "readiness": "schedule-and-connect",
+        "nextRequiredActions": [
+          "lock date and capacity",
+          "create registration product",
+          "connect checkout",
+          "create reminders",
+          "prepare delivery materials",
+          "create post-event follow-up"
+        ]
+      },
+      {
+        "name": "Purpose-Centered AI Alignment Workshop™",
+        "role": "organizational flagship",
+        "readiness": "sales-system-build",
+        "nextRequiredActions": [
+          "finalize scope",
+          "create qualification form",
+          "create briefing registration",
+          "create proposal template",
+          "define payment milestones",
+          "create onboarding checklist",
+          "create delivery and evidence package"
+        ]
+      }
+    ],
+    "managementControls": {
+      "weeklyMetrics": [
+        "qualified leads",
+        "briefing registrations",
+        "executive conversations",
+        "proposals sent",
+        "sales won",
+        "cash collected",
+        "delivery cost",
+        "gross margin",
+        "next-offer conversions"
+      ],
+      "privacyBoundary": "No customer identities, assessments, credentials, payment details, or private pricing belong in the public repository.",
+      "systemOfRecordStatus": "not selected",
+      "checkoutStatus": "not connected",
+      "customerTrackingStatus": "not connected",
+      "emailAutomationStatus": "partially designed",
+      "commandCenterIntegrationStatus": "operating architecture added; live source connections pending"
+    }
+  }
+}
