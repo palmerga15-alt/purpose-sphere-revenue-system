@@ -2,7 +2,7 @@
   "service": "Centurion Revenue Operations",
   "status": "implementation-required",
   "commandCenterMode": "non-sensitive operational tracking",
-  "lastUpdated": "2026-08-22T17:35:00-04:00",
+  "lastUpdated": "2026-08-22T17:40:00-04:00",
   "revenueSystem": {
     "primaryObjective": "Create a measurable path from qualified attention to collected revenue and continued customer value.",
     "funnelStages": [
@@ -288,6 +288,7 @@
       "resolutionRule": "Create or correct the supporting sales record, match the transaction to evidence, verify category and financial status, and document who resolved it and when. Never manufacture a sales record solely to force a match."
     },
     "primaryFinancialControlIssues": [
+      "Pre-Engagement Budget Approval",
       "Invoice and Deposit Compliance",
       "Sales Record Completeness",
       "Revenue Category and Financial Status Classification",
@@ -368,6 +369,93 @@
         "updated sales record",
         "documented verifier and verification date"
       ]
-    }
+    },
+    "preEngagementBudgetControl": {
+      "principle": "Centurion prepares a short engagement budget for Dr. G’s written approval before travel is booked, external costs are committed or engagement delivery begins.",
+      "appliesTo": [
+        "organizational workshops",
+        "seminars",
+        "keynotes",
+        "speaking appearances",
+        "advisory engagements",
+        "private experiences",
+        "in-person public workshops",
+        "any engagement with travel, contractors, production or reimbursable costs"
+      ],
+      "revenueInputs": [
+        "contracted service fee",
+        "approved add-on fees",
+        "approved reimbursable expenses billed to client",
+        "sponsorship or partner contribution tied to engagement",
+        "deposit collected",
+        "remaining balance",
+        "payment due dates"
+      ],
+      "costInputs": [
+        "airfare, rail or other intercity transportation",
+        "local transportation, rental vehicle, fuel, mileage, tolls and parking",
+        "lodging, occupancy taxes, resort/destination fees and internet",
+        "meals, per diem and approved hospitality",
+        "venue rental, room setup, security and permits",
+        "audio/visual, internet, streaming, recording and technical support",
+        "printing, workbooks, participant materials, supplies and shipping",
+        "contractors, facilitators, assistants, photographers, videographers and editors",
+        "accessibility services such as captioning or interpretation",
+        "insurance, licensing or required event fees",
+        "payment-processing and platform fees",
+        "marketing or audience-acquisition costs directly attributable to the engagement",
+        "preparation labor, travel time, delivery time and follow-up time for internal profitability analysis",
+        "tax reserve shown separately from direct delivery cost",
+        "contingency allowance",
+        "other engagement-specific committed cost"
+      ],
+      "requiredCalculations": [
+        "total contracted revenue",
+        "cash collected before engagement",
+        "cash still due",
+        "total direct cash costs",
+        "internal labor hours and assigned internal value",
+        "gross cash profit = contracted revenue minus direct cash costs",
+        "economic contribution = contracted revenue minus direct cash costs minus internal labor value",
+        "gross cash margin percentage",
+        "economic contribution margin percentage",
+        "profit per delivery hour",
+        "break-even revenue",
+        "cash required before reimbursement or final payment",
+        "expected payment and expense timing"
+      ],
+      "approvalFields": [
+        "engagement name",
+        "client reference",
+        "event date and location",
+        "budget version",
+        "prepared by Centurion",
+        "date prepared",
+        "Dr. G decision: Approved / Approved with Conditions / Revise / Declined",
+        "approval date",
+        "approval conditions",
+        "maximum authorized spend"
+      ],
+      "prohibitedActions": [
+        "booking travel before approval",
+        "committing contractors before approval",
+        "incurring unbudgeted material expenses without approval",
+        "delivering when required deposit or budget approval is missing"
+      ],
+      "varianceRule": "Reapproval is required when total expected cost increases by more than 10%, any unbudgeted single cost exceeds $250, expected revenue decreases, expected margin materially declines, or travel/scope changes.",
+      "closeoutRule": "Within five business days after delivery, Centurion compares budget to actual revenue and costs, explains variances, calculates final profitability and records lessons for future pricing."
+    },
+    "engagementBudgetStatusValues": [
+      "Draft",
+      "Awaiting Documentation",
+      "Awaiting Dr. G Approval",
+      "Approved",
+      "Approved with Conditions",
+      "Revise",
+      "Declined",
+      "Reapproval Required",
+      "Delivered — Awaiting Closeout",
+      "Closed and Reconciled"
+    ]
   }
 }
