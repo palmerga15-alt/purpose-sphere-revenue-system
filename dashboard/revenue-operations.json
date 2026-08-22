@@ -2,7 +2,7 @@
   "service": "Centurion Revenue Operations",
   "status": "implementation-required",
   "commandCenterMode": "non-sensitive operational tracking",
-  "lastUpdated": "2026-08-22T17:05:00-04:00",
+  "lastUpdated": "2026-08-22T17:20:00-04:00",
   "revenueSystem": {
     "primaryObjective": "Create a measurable path from qualified attention to collected revenue and continued customer value.",
     "funnelStages": [
@@ -84,7 +84,90 @@
         "The PurposeSphere Command Center displays sanitized, verified summaries for monitoring, variance review and management confirmation."
       ],
       "commandCenterRole": "Management confirmation and check-and-balance layer only; not the legal ledger, payment processor, bank record or accounting system of record.",
-      "reconciliationRule": "Command Center totals must be traceable to and periodically reconciled against Podia, Stripe, bank and accounting records. Differences are flagged until resolved."
-    }
+      "reconciliationRule": "Command Center totals must be traceable to and periodically reconciled against Podia, Stripe, bank and accounting records. Differences are flagged until resolved.",
+      "categoryPostingRule": "Assign each transaction to exactly one standardized revenue category. Do not create alternate labels or new categories without documented approval. Track products and offers separately from the accounting category."
+    },
+    "standardRevenueCategories": [
+      {
+        "code": "R01",
+        "category": "Digital Products",
+        "postingRule": "Downloadable kits, templates, workbooks and other stand-alone digital purchases."
+      },
+      {
+        "code": "R02",
+        "category": "Courses and Educational Programs",
+        "postingRule": "Self-paced or instructor-led educational programs sold as courses."
+      },
+      {
+        "code": "R03",
+        "category": "Public Workshops and Seminars",
+        "postingRule": "Open-enrollment workshops, seminars, webinars and paid public training."
+      },
+      {
+        "code": "R04",
+        "category": "Organizational Workshops and Training",
+        "postingRule": "Services delivered to one contracting organization, including Purpose-Centered AI Alignment Workshop™."
+      },
+      {
+        "code": "R05",
+        "category": "Advisory and Consulting Services",
+        "postingRule": "Strategy, implementation guidance, retainers, Fiverr consulting and multi-session advisory engagements."
+      },
+      {
+        "code": "R06",
+        "category": "Certification and Credentialing",
+        "postingRule": "Purposeologist™ certification, credentialing, practicum and approved renewal fees."
+      },
+      {
+        "code": "R07",
+        "category": "Memberships and Subscriptions",
+        "postingRule": "Recurring membership, community or subscription revenue."
+      },
+      {
+        "code": "R08",
+        "category": "Assessments and Evaluations",
+        "postingRule": "Paid assessments, organizational evaluations and related interpretation services."
+      },
+      {
+        "code": "R09",
+        "category": "Speaking and Appearances",
+        "postingRule": "Keynotes, panels, guest teaching, speaking engagements and appearance fees."
+      },
+      {
+        "code": "R10",
+        "category": "Books and Publishing",
+        "postingRule": "Printed books, ebooks, audiobooks, workbooks and publishing-related sales."
+      },
+      {
+        "code": "R11",
+        "category": "Licensing and Intellectual Property",
+        "postingRule": "Authorized licensing of curricula, media, characters, methods, content or other intellectual property."
+      },
+      {
+        "code": "R12",
+        "category": "Sponsorships and Partnerships",
+        "postingRule": "Sponsorship payments and paid partnership arrangements not earned through another service category."
+      },
+      {
+        "code": "R13",
+        "category": "Premium and Private Experiences",
+        "postingRule": "Private Purposeology® experiences and other bespoke premium engagements."
+      },
+      {
+        "code": "R14",
+        "category": "Merchandise and Physical Products",
+        "postingRule": "Branded merchandise, physical products and heirloom products such as The Book of Purpose."
+      },
+      {
+        "code": "R15",
+        "category": "Grants and Contributions",
+        "postingRule": "Grant awards and contributions legally received by an eligible entity; not customer sales."
+      },
+      {
+        "code": "R16",
+        "category": "Other Operating Revenue",
+        "postingRule": "Rare operating income that cannot reasonably be classified elsewhere; requires Centurion review before use."
+      }
+    ]
   }
 }
