@@ -2,7 +2,7 @@
   "service": "Centurion Revenue Operations",
   "status": "implementation-required",
   "commandCenterMode": "non-sensitive operational tracking",
-  "lastUpdated": "2026-08-22T17:20:00-04:00",
+  "lastUpdated": "2026-08-22T17:25:00-04:00",
   "revenueSystem": {
     "primaryObjective": "Create a measurable path from qualified attention to collected revenue and continued customer value.",
     "funnelStages": [
@@ -168,6 +168,58 @@
         "category": "Other Operating Revenue",
         "postingRule": "Rare operating income that cannot reasonably be classified elsewhere; requires Centurion review before use."
       }
+    ],
+    "financialClassificationPrinciple": "Every record must have exactly one standardized revenue category (R01–R16) and exactly one current financial-status classification (F01–F04). Revenue categories and financial statuses are separate dimensions and must never be blended.",
+    "standardFinancialStatuses": [
+      {
+        "code": "F01",
+        "status": "Projected",
+        "definition": "A planning target or forecast not tied to an active customer commitment.",
+        "evidenceRequired": "Approved budget, forecast or planning assumption."
+      },
+      {
+        "code": "F02",
+        "status": "Pipeline",
+        "definition": "A specific active sales opportunity without a fully executed customer agreement.",
+        "evidenceRequired": "Identified prospect, offer, estimated value, stage, probability, next action and due date."
+      },
+      {
+        "code": "F03",
+        "status": "Booked but Uncollected",
+        "definition": "An amount supported by a signed agreement, confirmed order or enforceable invoice that has not yet been received.",
+        "evidenceRequired": "Executed agreement, confirmed order or valid invoice plus payment due date."
+      },
+      {
+        "code": "F04",
+        "status": "Collected",
+        "definition": "Funds actually received and confirmed through the approved payment processor or bank.",
+        "evidenceRequired": "Processor transaction and/or bank settlement record."
+      }
+    ],
+    "nonBlendingRules": [
+      "Do not report projected revenue as pipeline, booked revenue or collected cash.",
+      "Do not report pipeline value as booked revenue or collected cash.",
+      "Do not report a verbal commitment as booked revenue.",
+      "Do not report an invoice as collected until payment is confirmed.",
+      "When part of a signed contract is paid, classify the paid portion as F04 Collected and the remaining enforceable balance as F03 Booked but Uncollected.",
+      "Do not add F01, F02, F03 and F04 together to state total revenue.",
+      "Report each amount by standardized category and financial status, with source evidence and last verification date.",
+      "Any record missing a category, status or required evidence is Unclassified and excluded from official totals until corrected."
+    ],
+    "requiredRecordFields": [
+      "record ID",
+      "legal entity",
+      "standard revenue category code",
+      "product or service name",
+      "customer or opportunity reference",
+      "financial status code",
+      "amount",
+      "evidence source",
+      "transaction or agreement date",
+      "due date when applicable",
+      "last verified date",
+      "responsible owner",
+      "notes"
     ]
   }
 }
