@@ -2,7 +2,7 @@
   "service": "Centurion Revenue Operations",
   "status": "implementation-required",
   "commandCenterMode": "non-sensitive operational tracking",
-  "lastUpdated": "2026-08-22T17:25:00-04:00",
+  "lastUpdated": "2026-08-22T17:30:00-04:00",
   "revenueSystem": {
     "primaryObjective": "Create a measurable path from qualified attention to collected revenue and continued customer value.",
     "funnelStages": [
@@ -85,7 +85,8 @@
       ],
       "commandCenterRole": "Management confirmation and check-and-balance layer only; not the legal ledger, payment processor, bank record or accounting system of record.",
       "reconciliationRule": "Command Center totals must be traceable to and periodically reconciled against Podia, Stripe, bank and accounting records. Differences are flagged until resolved.",
-      "categoryPostingRule": "Assign each transaction to exactly one standardized revenue category. Do not create alternate labels or new categories without documented approval. Track products and offers separately from the accounting category."
+      "categoryPostingRule": "Assign each transaction to exactly one standardized revenue category. Do not create alternate labels or new categories without documented approval. Track products and offers separately from the accounting category.",
+      "manualInterimProcedure": "Until Podia, Stripe, bank and accounting feeds are securely connected, perform the unmatched-transaction check during the Friday financial close and notify Dr. G of every exception."
     },
     "standardRevenueCategories": [
       {
@@ -220,6 +221,71 @@
       "last verified date",
       "responsible owner",
       "notes"
-    ]
+    ],
+    "salesRecordControl": {
+      "principle": "No transaction may be treated as official revenue, receivable, refund or customer credit without a matching sales record.",
+      "requiredFor": [
+        "customer payment",
+        "deposit",
+        "invoice",
+        "signed contract amount",
+        "refund",
+        "chargeback",
+        "credit",
+        "installment",
+        "balance due",
+        "externally collected sale"
+      ],
+      "minimumSalesRecordFields": [
+        "sales record ID",
+        "legal entity",
+        "customer or organization reference",
+        "standard revenue category code",
+        "financial status code",
+        "product or service",
+        "contract or order date",
+        "total agreed price",
+        "amount invoiced",
+        "amount collected",
+        "amount outstanding",
+        "due date",
+        "payment source",
+        "supporting evidence",
+        "responsible owner",
+        "last verified date"
+      ],
+      "exceptionStatus": "Unmatched — Investigation Required",
+      "reportingRule": "Any financial transaction or expected payment without a matching sales record is excluded from official totals and immediately placed on the Unmatched Transaction Exception Report until resolved."
+    },
+    "unmatchedTransactionExceptionReport": {
+      "notificationRecipient": "Dr. G",
+      "requiredFields": [
+        "exception ID",
+        "date detected",
+        "transaction source",
+        "transaction type",
+        "amount",
+        "currency",
+        "payer or payee if known",
+        "product or service if known",
+        "what is supposed to be paid or refunded",
+        "expected due date",
+        "missing sales record or evidence",
+        "responsible owner",
+        "required corrective action",
+        "resolution deadline",
+        "status"
+      ],
+      "statuses": [
+        "New",
+        "Under Review",
+        "Awaiting Documentation",
+        "Matched and Resolved",
+        "Incorrect or Duplicate",
+        "Escalated"
+      ],
+      "notificationThreshold": "Every unmatched transaction or expected payment, regardless of amount.",
+      "resolutionRule": "Create or correct the supporting sales record, match the transaction to evidence, verify category and financial status, and document who resolved it and when. Never manufacture a sales record solely to force a match."
+    }
   }
 }
