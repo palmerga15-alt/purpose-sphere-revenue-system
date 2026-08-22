@@ -5,39 +5,38 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-08-22T05:02:09-04:00",
+  "lastUpdated": "2026-08-22T07:58:53-04:00",
   "report": {
     "urgent": [
-      "No new verified urgent email requiring immediate action was found in the readable inboxes during the overnight/early-morning scan."
+      "palmerga15@gmail.com — Nextdoor reported a structure fire at 4408 Georgia Ave NW, described as within 0.1 mile of your home. Treat this as a local safety alert and avoid the immediate area if responders are active."
     ],
     "billsAndOutstandingBalances": [
-      "palmerga15@gmail.com — Google Play sent an Aug. 22 receipt confirming renewal of an OpenAI OpCo, LLC subscription. Review only if the renewal was unexpected.",
-      "No new verified past-due or outstanding-balance notice was found in the readable inboxes during this scan."
+      "No new verified bill, past-due notice, or outstanding-balance alert requiring immediate action was found in the readable inboxes since the 5:00 AM review."
     ],
     "appointments": [
-      "No new verified appointment requiring immediate attention was found in the readable inboxes during this scan."
+      "No new verified appointment requiring immediate attention was found since the 5:00 AM review."
     ],
     "speakingGigsAndOpportunities": [
-      "No new direct speaking invitation or verified speaking-gig opportunity requiring immediate attention was found in the readable inboxes during this scan."
+      "palmerga15@gmail.com — Speaking Opportunity Watch reported three new high-value opportunities, including Throughline Conference 2027 — ‘Ambiguity as Opportunity.’ Review the full opportunity report for fit and deadlines."
     ],
     "sameDayActions": [
-      "palmerga15@gmail.com — If the Google Play/OpenAI subscription renewal was not expected, review the subscription today.",
-      "palmerga15@gmail.com — Several automated leadership/clinical job alerts arrived overnight, including Director of Clinical Quality at Equip Health and Clinical Associate Professor at Howard University; review only if actively pursuing these roles."
+      "palmerga15@gmail.com — Recovery Center of Maryland/Accreditation Now reports four CARF-related trainings still needing completion: Confidentiality, Unique Needs of Persons Served, Workplace Violence Prevention, and Applying Substance Abuse Confidentiality Regulations to Health Information Exchange. Each shows a due date of June 14, 2026, so these are overdue and should be reviewed today.",
+      "palmerga15@gmail.com — Review the new three-opportunity speaking report and prioritize any submission with a near-term deadline."
     ],
     "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — No new direct business reply requiring immediate attention was found. Several custom leather bookbinding inquiry emails remain saved as drafts; they were not treated as incoming business replies.",
-      "palmerga15@gmail.com — Wharton Executive Education sent a reminder that an Executive Presence and Influence enrollment/application is incomplete; this is an enrollment reminder rather than an urgent business matter."
+      "palmerga15@gmail.com — No new direct business reply requiring an immediate response was found since the 5:00 AM review.",
+      "palmerga15@gmail.com — Several automated job alerts arrived, including a $240K/year Senior Director Talent Acquisition listing in Washington, DC and Howard University-related openings; these were treated as job alerts rather than direct recruiter outreach."
     ],
     "accountsChecked": [
-      "palmerga15@gmail.com — directly connected and checked successfully for Aug. 21–22 mail through approximately 5:02 AM ET on Aug. 22.",
-      "Connected Outlook mailbox — checked for Aug. 21–22 mail; no messages were returned."
+      "palmerga15@gmail.com — directly connected and checked successfully for overnight/early-morning mail through approximately 7:58 AM ET on Aug. 22.",
+      "Connected Outlook mailbox — checked for unread Aug. 22 mail; no messages were returned."
     ],
     "accessIssues": [
-      "purposequestinc@gmail.com — not independently readable through the current Gmail connector. A targeted search of palmerga15@gmail.com found no Aug. 22 message identifiable as forwarded/addressed to this account.",
-      "drpurposeology@gmail.com — not independently readable through the current Gmail connector. No Aug. 22 forwarded message identifiable as addressed to this account was found.",
-      "purposepoweralliance@gmail.com — not independently readable through the current Gmail connector. No Aug. 22 forwarded message identifiable as addressed to this account was found.",
-      "purposespherellc@gmail.com — not independently readable through the current Gmail connector. No Aug. 22 forwarded message identifiable as addressed to this account was found.",
-      "palmerga15@hotmail.com — the connected Outlook mailbox returned no Aug. 21–22 messages, but the connector does not expose enough mailbox identity information to independently confirm that it is this exact Hotmail address."
+      "purposequestinc@gmail.com — not independently readable through the current Gmail connector. A targeted search of palmerga15@gmail.com found no overnight message identifiable as forwarded/addressed to this account.",
+      "drpurposeology@gmail.com — not independently readable through the current Gmail connector. No overnight forwarded message identifiable as addressed to this account was found.",
+      "purposepoweralliance@gmail.com — not independently readable through the current Gmail connector. No overnight forwarded message identifiable as addressed to this account was found.",
+      "purposespherellc@gmail.com — not independently readable through the current Gmail connector. No overnight forwarded message identifiable as addressed to this account was found.",
+      "palmerga15@hotmail.com — the connected Outlook mailbox returned no unread Aug. 22 messages, but the connector does not expose enough mailbox identity information to independently confirm that it is this exact Hotmail address."
     ]
   }
 }
