@@ -2,7 +2,7 @@
   "service": "Centurion Revenue Operations",
   "status": "implementation-required",
   "commandCenterMode": "non-sensitive operational tracking",
-  "lastUpdated": "2026-08-22T17:30:00-04:00",
+  "lastUpdated": "2026-08-22T17:35:00-04:00",
   "revenueSystem": {
     "primaryObjective": "Create a measurable path from qualified attention to collected revenue and continued customer value.",
     "funnelStages": [
@@ -286,6 +286,88 @@
       ],
       "notificationThreshold": "Every unmatched transaction or expected payment, regardless of amount.",
       "resolutionRule": "Create or correct the supporting sales record, match the transaction to evidence, verify category and financial status, and document who resolved it and when. Never manufacture a sales record solely to force a match."
+    },
+    "primaryFinancialControlIssues": [
+      "Invoice and Deposit Compliance",
+      "Sales Record Completeness",
+      "Revenue Category and Financial Status Classification",
+      "Unmatched Transaction Resolution",
+      "Payment Verification and Reconciliation"
+    ],
+    "invoiceAndDepositControl": {
+      "principle": "Every transaction must have a documented invoice or approved checkout receipt and an explicit deposit status. Blank invoice or deposit fields are prohibited.",
+      "applicability": [
+        {
+          "transactionType": "Organizational, custom, speaking, advisory and contracted services",
+          "invoiceRule": "Written agreement and formal invoice required before delivery.",
+          "depositRule": "Deposit required to reserve capacity unless a written exception is approved in Special Agreements."
+        },
+        {
+          "transactionType": "Low-cost digital products, public workshop registrations and other pay-in-full checkout sales",
+          "invoiceRule": "Podia order plus Stripe receipt may serve as the invoice/receipt record.",
+          "depositRule": "Mark Not Applicable — Paid in Full; do not leave blank."
+        },
+        {
+          "transactionType": "Installment or payment-plan sales",
+          "invoiceRule": "Order, total obligation and installment schedule required.",
+          "depositRule": "Record first installment as deposit only when the agreement expressly defines it as a deposit; otherwise classify it as an installment."
+        },
+        {
+          "transactionType": "Complimentary services",
+          "invoiceRule": "No invoice required, but an approved zero-dollar sales/service record is required.",
+          "depositRule": "Mark Not Applicable — Complimentary; do not leave blank."
+        }
+      ],
+      "standardServiceDepositRule": "Unless changed by a written, approved concession, contracted services require a 50% nonrefundable deposit at signing to reserve the date, with the remaining balance due five business days before delivery. Counsel and the Provider’s accountant must review this rule before contractual use.",
+      "requiredFields": [
+        "invoice required status",
+        "invoice number or checkout receipt ID",
+        "invoice date",
+        "invoice amount",
+        "deposit required status",
+        "deposit amount required",
+        "deposit due date",
+        "deposit amount received",
+        "deposit received date",
+        "remaining balance",
+        "remaining balance due date",
+        "exception approval and reason if applicable",
+        "last verified date"
+      ],
+      "prohibitedConditions": [
+        "invoice field blank",
+        "deposit status blank",
+        "deposit exception without written approval",
+        "delivery marked ready when a required deposit is missing",
+        "collected amount reported without receipt or processor evidence"
+      ]
+    },
+    "invoiceDepositExceptionAlert": {
+      "priority": "Primary — Action Required",
+      "trigger": "Any missing, incomplete, overdue, inconsistent or unverified invoice or deposit entry.",
+      "notificationRecipient": "Dr. G",
+      "notificationFields": [
+        "client or organization reference",
+        "service or product",
+        "total agreed amount",
+        "invoice required and current status",
+        "invoice amount and due date",
+        "deposit required and current status",
+        "deposit amount and due date",
+        "amount collected",
+        "balance outstanding",
+        "missing entry or evidence",
+        "responsible owner",
+        "required corrective action",
+        "resolution deadline"
+      ],
+      "actionRule": "Notify Dr. G when the issue becomes known; flag the record until corrected; do not mark the service ready for delivery when a required agreement, invoice or deposit is missing.",
+      "resolutionEvidence": [
+        "created or corrected invoice/receipt record",
+        "verified deposit or approved written exception",
+        "updated sales record",
+        "documented verifier and verification date"
+      ]
     }
   }
 }
