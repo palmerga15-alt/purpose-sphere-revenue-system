@@ -2,7 +2,7 @@
   "service": "Centurion Revenue Operations",
   "status": "implementation-required",
   "commandCenterMode": "non-sensitive operational tracking",
-  "lastUpdated": "2026-08-22T17:40:00-04:00",
+  "lastUpdated": "2026-08-22T17:45:00-04:00",
   "revenueSystem": {
     "primaryObjective": "Create a measurable path from qualified attention to collected revenue and continued customer value.",
     "funnelStages": [
@@ -456,6 +456,49 @@
       "Reapproval Required",
       "Delivered — Awaiting Closeout",
       "Closed and Reconciled"
-    ]
+    ],
+    "profitabilityGateBeforeSignature": {
+      "principle": "If an engagement does not produce a reasonable expected margin, adjust the scope, price or delivery model before signing.",
+      "preliminaryMarginStandards": [
+        {
+          "status": "Green — Financially Acceptable",
+          "grossCashMargin": "60% or greater",
+          "action": "May proceed when all other controls are satisfied."
+        },
+        {
+          "status": "Gold — Conditional Review",
+          "grossCashMargin": "40%–59.9%",
+          "action": "Centurion must explain the strategic justification, margin weakness and corrective options; Dr. G’s written approval is required."
+        },
+        {
+          "status": "Red — Do Not Sign",
+          "grossCashMargin": "Below 40%",
+          "action": "Do not sign until price, scope, cost or delivery design is corrected, unless Dr. G documents an exceptional mission or strategic reason."
+        }
+      ],
+      "correctiveLevers": [
+        "increase the quoted price",
+        "reduce or clarify deliverables",
+        "shift from in-person to virtual or hybrid delivery",
+        "require the client to pay or directly arrange travel, lodging, venue, printing or production",
+        "reduce unnecessary travel days or lodging nights",
+        "limit participant count or charge for additional participants",
+        "reduce contractor or production complexity",
+        "standardize materials instead of custom-producing everything",
+        "separate optional services into paid add-ons",
+        "change payment timing to protect cash flow",
+        "decline the engagement when acceptable economics cannot be achieved"
+      ],
+      "exceptionRule": "An engagement below the margin floor may proceed only with Dr. G’s written exception stating the mission, relationship, market-entry or evidence-building purpose, the maximum authorized subsidy and why the exception is worthwhile.",
+      "signatureGateFields": [
+        "expected gross cash margin",
+        "expected economic contribution margin",
+        "Centurion recommendation",
+        "corrective action taken",
+        "Dr. G approval or exception",
+        "approval date"
+      ],
+      "accountingReviewNote": "These preliminary management thresholds should be reviewed with the Provider’s accountant and refined using actual delivery-cost history."
+    }
   }
 }
