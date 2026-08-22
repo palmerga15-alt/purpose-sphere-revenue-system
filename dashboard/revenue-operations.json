@@ -2,7 +2,7 @@
   "service": "Centurion Revenue Operations",
   "status": "implementation-required",
   "commandCenterMode": "non-sensitive operational tracking",
-  "lastUpdated": "2026-08-22T16:45:00-04:00",
+  "lastUpdated": "2026-08-22T17:05:00-04:00",
   "revenueSystem": {
     "primaryObjective": "Create a measurable path from qualified attention to collected revenue and continued customer value.",
     "funnelStages": [
@@ -75,7 +75,16 @@
       "checkoutStatus": "not connected",
       "customerTrackingStatus": "not connected",
       "emailAutomationStatus": "partially designed",
-      "commandCenterIntegrationStatus": "operating architecture added; live source connections pending"
+      "commandCenterIntegrationStatus": "operating architecture added; live source connections pending",
+      "financialRecordHierarchy": [
+        "Podia records the customer order, product or enrollment.",
+        "Stripe records payment authorization, processing, fees, refunds and payout status.",
+        "The business bank account confirms settlement of funds.",
+        "The accounting system classifies transactions and serves as the formal reconciled financial record.",
+        "The PurposeSphere Command Center displays sanitized, verified summaries for monitoring, variance review and management confirmation."
+      ],
+      "commandCenterRole": "Management confirmation and check-and-balance layer only; not the legal ledger, payment processor, bank record or accounting system of record.",
+      "reconciliationRule": "Command Center totals must be traceable to and periodically reconciled against Podia, Stripe, bank and accounting records. Differences are flagged until resolved."
     }
   }
 }
