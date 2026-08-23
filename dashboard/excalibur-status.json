@@ -5,39 +5,41 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-08-23T07:58:14-04:00",
+  "lastUpdated": "2026-08-23T13:01:57-04:00",
   "report": {
     "urgent": [
-      "No new verified urgent email requiring immediate action was found between the 5:00 AM and 8:00 AM scans."
+      "palmerga15@gmail.com — Capital One sent a new overdraft alert for account ending 5100 at approximately 9:55 AM ET, after an earlier declined-purchase alert at approximately 9:17 AM ET stating that a purchase exceeded the available balance. Review the account today."
     ],
     "billsAndOutstandingBalances": [
-      "palmerga15@gmail.com — Capital One confirmed that a $204.00 transfer from Savings Now ending 7240 completed successfully this morning.",
-      "No new past-due or outstanding-balance notice arrived after the 5:00 AM review."
+      "palmerga15@gmail.com — Capital One account ending 5100 is overdrawn; a purchase was also declined because it exceeded the available balance. This is the primary financial issue requiring same-day attention."
     ],
     "appointments": [
-      "palmerga15@gmail.com — PrintScan confirmed an FBI Criminal History fingerprinting appointment for Thursday, August 27, 2026 at 2:00 PM at PrintScan | UPS Store 0535, 3503 Connecticut Ave NW, Washington, DC 20008. Bring the confirmation and two forms of ID; at least one must be a primary ID and match the current name and address."
+      "palmerga15@gmail.com — Doriane Palmer forwarded a Homeaglow reminder confirming a cleaning appointment for Tuesday, August 25 at 10:00 AM with Audrys.",
+      "palmerga15@gmail.com — The AI Agents Course sent a reminder for AI Agents Live on Monday, August 24 from 9:00 AM to 4:00 PM ET.",
+      "palmerga15@gmail.com — Growth Hub 365 sent a reminder for Ask Adura on Monday, August 24 from 10:00 AM to 11:30 AM ET."
     ],
     "speakingGigsAndOpportunities": [
-      "palmerga15@gmail.com — Speaking Opportunity Watch reported four new strong speaking opportunities not included in prior reports. Two were flagged as especially high-priority because they align closely with addiction leadership and AI/human responsibility."
+      "No new direct speaking invitation arrived between the 8:00 AM and 1:00 PM scans. The four strong speaking opportunities identified earlier today remain the current opportunities to review."
     ],
     "sameDayActions": [
-      "palmerga15@gmail.com — Review the four newly identified speaking opportunities and prioritize the two high-fit opportunities for submission planning.",
-      "palmerga15@gmail.com — Google reported that Coursera was granted access to some Google Account data after a Sign in with Google action at 5:13 AM. If you did not authorize this, review Google Account security access today.",
-      "palmerga15@gmail.com — Save the PrintScan appointment confirmation and plan to bring two acceptable IDs to the August 27 fingerprinting appointment."
+      "palmerga15@gmail.com — Review and address the Capital One overdraft and declined-purchase issue today.",
+      "palmerga15@gmail.com — FuturIQ sent a reminder for a live AI session at 3:00 PM ET today and stated there will be no replay; attend today if this session is important to your AI work.",
+      "palmerga15@gmail.com — Bawldy reports $190 in store credit is expiring soon; review only if you intend to use the credit."
     ],
     "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — No new direct business reply requiring an immediate response was found between approximately 5:00 AM and 8:00 AM. Most other new mail consisted of automated job alerts and promotional messages."
+      "palmerga15@gmail.com — No new direct business reply requiring an immediate same-day response was found by the 1:00 PM scan. Most new messages were automated job alerts, training notices, and promotions.",
+      "palmerga15@gmail.com — Notable automated career alerts included a Program Director opening at JSSA and an Employee Assistance Program Counselor opening with WMATA; review if actively pursuing those roles."
     ],
     "accountsChecked": [
-      "palmerga15@gmail.com — directly connected to Gmail and checked successfully for new mail through approximately 7:58 AM ET on August 23.",
-      "Connected Outlook mailbox — checked successfully. The Outlook profile identifies the connected account as palmerga15@gmail.com; recent messages were primarily older OneDrive sharing notifications, with no new urgent overnight item identified."
+      "palmerga15@gmail.com — directly connected to Gmail and checked successfully for August 23 mail through approximately 1:01 PM ET.",
+      "Connected Outlook mailbox — checked for August 23 mail; no messages were returned. The Outlook profile identifies the connected mailbox as palmerga15@gmail.com."
     ],
     "accessIssues": [
       "purposequestinc@gmail.com — not independently readable through the current Gmail connector. A targeted August 23 search of palmerga15@gmail.com found no forwarded inbox message identifiable as addressed to this account.",
       "drpurposeology@gmail.com — not independently readable through the current Gmail connector. No August 23 forwarded inbox message identifiable as addressed to this account was found.",
       "purposepoweralliance@gmail.com — not independently readable through the current Gmail connector. No August 23 forwarded inbox message identifiable as addressed to this account was found.",
       "purposespherellc@gmail.com — not independently readable through the current Gmail connector. No August 23 forwarded inbox message identifiable as addressed to this account was found.",
-      "palmerga15@hotmail.com — not connected to the available Outlook connector. The Outlook connector profile identifies its mailbox as palmerga15@gmail.com, so this Hotmail inbox could not be checked."
+      "palmerga15@hotmail.com — could not be checked because the available Outlook connector profile identifies the connected mailbox as palmerga15@gmail.com, not the Hotmail account."
     ]
   }
 }
