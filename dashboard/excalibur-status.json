@@ -5,33 +5,30 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-08-23T13:01:57-04:00",
+  "lastUpdated": "2026-08-23T17:00:43-04:00",
   "report": {
     "urgent": [
-      "palmerga15@gmail.com — Capital One sent a new overdraft alert for account ending 5100 at approximately 9:55 AM ET, after an earlier declined-purchase alert at approximately 9:17 AM ET stating that a purchase exceeded the available balance. Review the account today."
+      "palmerga15@gmail.com — LinkedIn sent two security alerts stating that the profile name was changed on August 23 at approximately 2:28 PM and 2:33 PM ET, from Chrome on Mac OS X, with approximate locations shown as Washington, DC and Ashburn, VA. If these changes were not yours, use LinkedIn's account-security recovery path and reset the password immediately."
     ],
     "billsAndOutstandingBalances": [
-      "palmerga15@gmail.com — Capital One account ending 5100 is overdrawn; a purchase was also declined because it exceeded the available balance. This is the primary financial issue requiring same-day attention."
+      "No new verified bill, past-due notice, or outstanding-balance message requiring end-of-day action was found after the 1:00 PM review."
     ],
     "appointments": [
-      "palmerga15@gmail.com — Doriane Palmer forwarded a Homeaglow reminder confirming a cleaning appointment for Tuesday, August 25 at 10:00 AM with Audrys.",
-      "palmerga15@gmail.com — The AI Agents Course sent a reminder for AI Agents Live on Monday, August 24 from 9:00 AM to 4:00 PM ET.",
-      "palmerga15@gmail.com — Growth Hub 365 sent a reminder for Ask Adura on Monday, August 24 from 10:00 AM to 11:30 AM ET."
+      "No new verified appointment reminder or scheduling change requiring attention before the day ends was found after the 1:00 PM review."
     ],
     "speakingGigsAndOpportunities": [
-      "No new direct speaking invitation arrived between the 8:00 AM and 1:00 PM scans. The four strong speaking opportunities identified earlier today remain the current opportunities to review."
+      "No new direct speaking invitation or verified speaking-gig opportunity requiring end-of-day action was found after the 1:00 PM review."
     ],
     "sameDayActions": [
-      "palmerga15@gmail.com — Review and address the Capital One overdraft and declined-purchase issue today.",
-      "palmerga15@gmail.com — FuturIQ sent a reminder for a live AI session at 3:00 PM ET today and stated there will be no replay; attend today if this session is important to your AI work.",
-      "palmerga15@gmail.com — Bawldy reports $190 in store credit is expiring soon; review only if you intend to use the credit."
+      "palmerga15@gmail.com — Verify that the two LinkedIn profile-name changes were intentional. If not, secure the LinkedIn account immediately and review active sessions/two-step verification.",
+      "palmerga15@gmail.com — LinkedIn Customer Support acknowledged premium-cancellation case 260823-014520 and said a support representative will follow up. No immediate reply is required, but retain the case number for follow-up."
     ],
     "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — No new direct business reply requiring an immediate same-day response was found by the 1:00 PM scan. Most new messages were automated job alerts, training notices, and promotions.",
-      "palmerga15@gmail.com — Notable automated career alerts included a Program Director opening at JSSA and an Employee Assistance Program Counselor opening with WMATA; review if actively pursuing those roles."
+      "palmerga15@gmail.com — LinkedIn Customer Support sent an auto-response for premium-account cancellation case 260823-014520; the case is open and awaiting a support-team response.",
+      "palmerga15@gmail.com — Other late-afternoon mail was primarily automated job alerts, promotions, and newsletters; no new direct business reply requiring an end-of-day response was found."
     ],
     "accountsChecked": [
-      "palmerga15@gmail.com — directly connected to Gmail and checked successfully for August 23 mail through approximately 1:01 PM ET.",
+      "palmerga15@gmail.com — directly connected to Gmail and checked successfully for August 23 mail through approximately 5:00 PM ET.",
       "Connected Outlook mailbox — checked for August 23 mail; no messages were returned. The Outlook profile identifies the connected mailbox as palmerga15@gmail.com."
     ],
     "accessIssues": [
