@@ -5,30 +5,32 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-08-24T08:06:43-04:00",
+  "lastUpdated": "2026-08-24T13:02:39-04:00",
   "report": {
     "urgent": [
-      "No new verified urgent email requiring immediate action was found between the 5:00 AM and 8:00 AM scans."
+      "palmerga15@gmail.com — Capital One reported that a scheduled $500.00 transfer from 360 Checking ending 5100 to Savings Now ending 7240 failed on August 24 because of an error. The transfer is set to recur every other week; review the account and recreate the transfer if still intended."
     ],
     "billsAndOutstandingBalances": [
-      "No new bill, past-due notice, or outstanding-balance alert arrived after the 5:00 AM review."
+      "palmerga15@gmail.com — Capital One: $500.00 transfer from checking ending 5100 to savings ending 7240 did not go through. This follows earlier balance-related alerts and warrants same-day review."
     ],
     "appointments": [
-      "No new appointment reminder or scheduling change requiring action arrived after the 5:00 AM review."
+      "palmerga15@gmail.com — Gregory A Palmer - 3rd Implementation Call is scheduled for today, Monday, August 24 at 6:15 PM ET."
     ],
     "speakingGigsAndOpportunities": [
-      "No new direct speaking invitation or newly identified speaking-gig opportunity arrived after the 5:00 AM review. The three urgent-deadline opportunities surfaced at 5:00 AM remain the current items to review."
+      "No new direct speaking invitation or newly identified speaking-gig opportunity arrived between the 8:00 AM and 1:00 PM scans."
     ],
     "sameDayActions": [
-      "palmerga15@gmail.com — LinkedIn reports that Judith C sent a new message at approximately 5:49 AM ET. Review the message this morning and respond if it is business-relevant.",
-      "palmerga15@gmail.com — Indeed highlighted a Director of Clinical Compliance role at Eleanor Health at $140,000-$165,000 annually, noting a strong match with addiction counseling and clinical supervision experience. Review today if pursuing leadership opportunities."
+      "Review the failed $500 Capital One transfer and account balance; recreate the transfer only if it is still intended.",
+      "palmerga15@gmail.com — LinkedIn reports that Malika Carey Jordan sent two new messages awaiting a response. Review them today for business relevance.",
+      "palmerga15@gmail.com — Maryland OneStop sent an email-verification message after creation of a OneStop Portal account. Complete verification today if the account setup was intentional.",
+      "Prepare for the 6:15 PM 3rd Implementation Call."
     ],
     "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — Judith C sent a new LinkedIn message awaiting review.",
-      "palmerga15@gmail.com — Indeed surfaced a Director of Clinical Compliance opening at Eleanor Health with a listed salary range of $140,000-$165,000. This is an automated opportunity alert, not a direct recruiter reply."
+      "palmerga15@gmail.com — Malika Carey Jordan has two new LinkedIn messages awaiting review; the email digest does not expose the message text.",
+      "palmerga15@gmail.com — Why Before AI outreach emails were sent today to the Greater Washington Board of Trade, DC Chamber of Commerce, and Prince George's Chamber of Commerce. No reply from those recipients was visible by the 1:00 PM scan."
     ],
     "accountsChecked": [
-      "palmerga15@gmail.com — directly connected to Gmail and checked successfully through approximately 8:06 AM ET on August 24.",
+      "palmerga15@gmail.com — directly connected to Gmail and checked successfully through approximately 1:02 PM ET on August 24.",
       "Connected Outlook mailbox — checked for August 24 mail; no messages were returned. The Outlook profile identifies the connected mailbox as palmerga15@gmail.com."
     ],
     "accessIssues": [
