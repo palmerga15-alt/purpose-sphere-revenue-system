@@ -5,40 +5,42 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-08-25T08:07:13-04:00",
+  "lastUpdated": "2026-08-25T12:57:45-04:00",
   "report": {
     "urgent": [
-      "palmerga15@gmail.com — The overnight Bluehost past-due payment issue and Capital One declined-purchase alerts remain important; no resolution email was found in the 8:00 AM scan. Review both this morning.",
-      "palmerga15@gmail.com — Speaking Opportunity Watch reported four new speaking opportunities with urgent deadlines at approximately 5:15 AM ET, including NAATP National 2027. Review the opportunity report this morning so short submission windows are not missed."
+      "palmerga15@gmail.com — Capital One sent two new overdraft alerts this morning for checking account ending 5100, at approximately 10:23 AM and 10:27 AM ET. Review the balance and cover the overdraft if it remains outstanding."
     ],
     "billsAndOutstandingBalances": [
-      "palmerga15@gmail.com — No new billing alert arrived after the 5:00 AM run, but the Bluehost past-due payment and Capital One insufficient-balance/declined-purchase issues remain unresolved in email."
+      "palmerga15@gmail.com — Capital One reports checking account ending 5100 is overdrawn. This is the primary same-day financial issue in the midday scan.",
+      "palmerga15@gmail.com — The previously reported Bluehost past-due payment issue still has no resolution email visible in the connected inbox."
     ],
     "appointments": [
-      "No new verified appointment reminder or scheduling change requiring immediate 8:00 AM attention was found after the 5:00 AM run."
+      "palmerga15@gmail.com — Zocdoc sent a reminder for a video visit with Dr. Richard McClendon, MD tomorrow, Wednesday, August 26 at 9:00 AM EDT.",
+      "palmerga15@gmail.com — A Google Calendar notification arrived for a Cardio CT Scan scheduled today from 9:30 AM to 10:30 AM ET; that appointment window has already passed by this scan."
     ],
     "speakingGigsAndOpportunities": [
-      "palmerga15@gmail.com — Speaking Opportunity Watch reported four newly identified, currently open speaking opportunities with urgent deadlines; the visible report specifically includes NAATP National 2027. Review and prioritize these opportunities today."
+      "No new direct speaking invitation or verified speaking-gig opportunity requiring same-day action was found between the 8:00 AM and 1:00 PM scans."
     ],
     "sameDayActions": [
-      "Review the four new speaking opportunities and their deadlines this morning.",
-      "Resolve or verify the outstanding Bluehost past-due payment issue and Capital One balance/declined-purchase alerts if they have not already been addressed.",
-      "palmerga15@gmail.com — Catherine E Trotter sent a LinkedIn message at approximately 7:28 AM ET; the LinkedIn digest says one new message awaits your response. Review it today if business-relevant."
+      "Review and address the Capital One overdraft for checking account ending 5100.",
+      "palmerga15@gmail.com — Lauren V at Kevin Martin Law replied to the estate-planning and intellectual-property consultation request with rescheduling options: September 9 at 10:00 AM or 12:00 PM ET; September 10 at 10:00 AM, 12:00 PM, or 2:00 PM ET. Choose a time and reply if you want to reschedule.",
+      "Confirm tomorrow's 9:00 AM Zocdoc video visit with Dr. Richard McClendon, MD is still on your schedule."
     ],
     "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — Catherine E Trotter sent a new LinkedIn message awaiting review and possible response.",
-      "No other new direct business reply requiring immediate action was identified between the 5:00 AM and 8:00 AM scans."
+      "palmerga15@gmail.com — Lauren V at Kevin Martin Law sent a direct reply with dates and times to reschedule the estate-planning and intellectual-property consultation.",
+      "palmerga15@gmail.com — Mehak Salhotra, a program advisor for Harvard Medical School Executive Education, followed up regarding your interest in the AI in Health Care: From Strategies to Implementation program. The message was addressed to both palmerga15@hotmail.com and palmerga15@gmail.com; review if you are considering the program.",
+      "palmerga15@gmail.com — Growth Hub 365 sent notice of two events tomorrow, including Coach J — Intermediate from 1:00 PM to 2:30 PM ET."
     ],
     "accountsChecked": [
-      "palmerga15@gmail.com — directly connected to Gmail and checked successfully through approximately 8:07 AM ET on August 25.",
-      "Connected Outlook mailbox — checked for unread August 25 mail; no messages were returned. The Outlook profile identifies the connected mailbox as palmerga15@gmail.com."
+      "palmerga15@gmail.com — directly connected to Gmail and checked successfully through approximately 12:57 PM ET on August 25.",
+      "Connected Outlook mailbox — checked for August 25 mail; no messages were returned. The Outlook profile identifies the connected mailbox as palmerga15@gmail.com."
     ],
     "accessIssues": [
-      "purposequestinc@gmail.com — not independently readable through the current Gmail connector. A targeted recent-mail search of palmerga15@gmail.com found no forwarded inbox message identifiable as addressed to this account.",
-      "drpurposeology@gmail.com — not independently readable through the current Gmail connector. No recent forwarded inbox message identifiable as addressed to this account was found.",
-      "purposepoweralliance@gmail.com — not independently readable through the current Gmail connector. No recent forwarded inbox message identifiable as addressed to this account was found.",
-      "purposespherellc@gmail.com — not independently readable through the current Gmail connector. No recent forwarded inbox message identifiable as addressed to this account was found.",
-      "palmerga15@hotmail.com — could not be checked because the available Outlook connector profile identifies the connected mailbox as palmerga15@gmail.com, not the Hotmail account."
+      "purposequestinc@gmail.com — not independently readable through the current Gmail connector. A targeted August 25 search of palmerga15@gmail.com found no forwarded inbox message identifiable as addressed to this account.",
+      "drpurposeology@gmail.com — not independently readable through the current Gmail connector. No August 25 forwarded inbox message identifiable as addressed to this account was found.",
+      "purposepoweralliance@gmail.com — not independently readable through the current Gmail connector. No August 25 forwarded inbox message identifiable as addressed to this account was found.",
+      "purposespherellc@gmail.com — not independently readable through the current Gmail connector. No August 25 forwarded inbox message identifiable as addressed to this account was found.",
+      "palmerga15@hotmail.com — could not be checked independently because the available Outlook connector profile identifies the connected mailbox as palmerga15@gmail.com, not the Hotmail account."
     ]
   }
 }
