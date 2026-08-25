@@ -5,40 +5,40 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-08-24T17:04:00-04:00",
+  "lastUpdated": "2026-08-25T05:02:19-04:00",
   "report": {
     "urgent": [
-      "No new verified urgent email requiring immediate end-of-day action arrived after the 1:00 PM review.",
-      "palmerga15@gmail.com — The earlier failed $500.00 Capital One transfer from checking ending 5100 to savings ending 7240 remains unresolved in email and should still be reviewed before the day ends."
+      "palmerga15@gmail.com — Bluehost reported at 3:29 AM ET that payment for your services failed and the account is now past due. Review the Bluehost Account Manager and update payment promptly to avoid service disruption.",
+      "palmerga15@gmail.com — Capital One sent declined-purchase alerts overnight because the purchase amount exceeded the available balance. Review the account balance before attempting additional purchases."
     ],
     "billsAndOutstandingBalances": [
-      "palmerga15@gmail.com — No new bill or balance alert arrived after 1:00 PM. The previously reported failed $500.00 Capital One transfer remains the main outstanding financial item."
+      "palmerga15@gmail.com — Bluehost payment failure: account now past due; payment method or balance requires attention.",
+      "palmerga15@gmail.com — Capital One declined purchases due to insufficient available balance; no later resolution notice was found in this scan."
     ],
     "appointments": [
-      "palmerga15@gmail.com — Gregory A Palmer - 3rd Implementation Call remains scheduled for today, Monday, August 24 at 6:15 PM ET."
+      "No new verified appointment or scheduling change requiring immediate 5:00 AM attention was found overnight."
     ],
     "speakingGigsAndOpportunities": [
-      "No new direct speaking invitation or verified speaking-gig opportunity requiring action before day end was found after the 1:00 PM review."
+      "No new direct speaking invitation or verified speaking-gig opportunity requiring immediate attention was found overnight."
     ],
     "sameDayActions": [
-      "Review the unresolved failed $500 Capital One transfer before the day ends.",
-      "Prepare for the 6:15 PM 3rd Implementation Call.",
-      "palmerga15@gmail.com — District Dogs reported that Jalen's Bordetella vaccine record expired July 14, 2026, with Rabies and DHLPP listed to expire September 12, 2026. Update the vaccination record or arrange renewal soon if not already completed."
+      "Review and resolve the Bluehost past-due payment issue to reduce the risk of website or service interruption.",
+      "Review the Capital One balance and the overnight declined-purchase alerts before making additional purchases or payments.",
+      "palmerga15@gmail.com — Google reported that Sign in with Google was used to sign in to Claude at 11:50 PM on August 24 and shared basic profile information. If you did not authorize this, review Google Account security access; if you did, no action is needed."
     ],
     "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — Prestige Healthcare Resources sent an automated Clinical Director recruiting/job message at about 4:20 PM ET; review only if the role is of interest.",
-      "palmerga15@gmail.com — Karenthia A. Barber accepted your LinkedIn invitation. This is a networking update, not a same-day response requirement.",
-      "No new direct business reply requiring an end-of-day response was found after the 1:00 PM review."
+      "palmerga15@gmail.com — Derek White replied, 'Thank you and I will.' No response appears necessary.",
+      "palmerga15@gmail.com — USAA sent an insurance payment confirmation overnight; no action appears required unless the payment was unexpected."
     ],
     "accountsChecked": [
-      "palmerga15@gmail.com — directly connected to Gmail and checked successfully through approximately 5:04 PM ET on August 24.",
-      "Connected Outlook mailbox — checked for August 24 mail; no messages were returned. The Outlook profile identifies the connected mailbox as palmerga15@gmail.com."
+      "palmerga15@gmail.com — directly connected to Gmail and checked successfully through approximately 5:02 AM ET on August 25.",
+      "Connected Outlook mailbox — checked for mail received since August 24; no messages were returned. The Outlook profile identifies the connected mailbox as palmerga15@gmail.com."
     ],
     "accessIssues": [
-      "purposequestinc@gmail.com — not independently readable through the current Gmail connector. A targeted August 24 search of palmerga15@gmail.com found no forwarded inbox message identifiable as addressed to this account.",
-      "drpurposeology@gmail.com — not independently readable through the current Gmail connector. No forwarded August 24 inbox message identifiable as addressed to this account was found.",
-      "purposepoweralliance@gmail.com — not independently readable through the current Gmail connector. No forwarded August 24 inbox message identifiable as addressed to this account was found.",
-      "purposespherellc@gmail.com — not independently readable through the current Gmail connector. No forwarded August 24 inbox message identifiable as addressed to this account was found.",
+      "purposequestinc@gmail.com — not independently readable through the current Gmail connector. A targeted August 24-25 search of palmerga15@gmail.com found no forwarded inbox message identifiable as addressed to this account.",
+      "drpurposeology@gmail.com — not independently readable through the current Gmail connector. No forwarded August 24-25 inbox message identifiable as addressed to this account was found.",
+      "purposepoweralliance@gmail.com — not independently readable through the current Gmail connector. No forwarded August 24-25 inbox message identifiable as addressed to this account was found.",
+      "purposespherellc@gmail.com — not independently readable through the current Gmail connector. No forwarded August 24-25 inbox message identifiable as addressed to this account was found.",
       "palmerga15@hotmail.com — could not be checked because the available Outlook connector profile identifies the connected mailbox as palmerga15@gmail.com, not the Hotmail account."
     ]
   }
