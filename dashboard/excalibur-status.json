@@ -5,36 +5,41 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-08-27T08:00:54-04:00",
+  "lastUpdated": "2026-08-27T12:57:44-04:00",
   "report": {
     "urgent": [
-      "palmerga15@gmail.com — Multiple Purposeology community outreach emails sent this morning failed or were blocked. Failed recipients include ewalton@penn-north.org, nishan@newlifenewday.com, akelly@toastmastersd47.org, krichardson@peakehealthcatonmanor.com, and Maryland.gov recipients gordon.outlaw@maryland.gov and janice.issac@maryland.gov. Correct or replace these addresses before the next outreach round.",
-      "palmerga15@gmail.com — WordPress.com says renewal is required for the plan on purpose-property.com. Review the renewal status today if that site must remain active."
+      "palmerga15@gmail.com — Capital One reports a $476.65 payment submitted August 26 from savings ending 4870 was not completed because there was not enough money available. Review the account and the intended payment today.",
+      "palmerga15@gmail.com — Capitol Primary Care says the August 26 appointment was missed and asks you to call 202-810-7822 to reschedule; a separate new secure portal message from the doctor's office is also waiting for review."
     ],
     "billsAndOutstandingBalances": [
-      "palmerga15@gmail.com — WordPress.com sent an Action Required renewal notice for the plan on purpose-property.com. Review the renewal charge/status today to avoid loss of plan features.",
-      "No new verified overdraft, past-due balance, or other urgent billing alert was found between the 5:00 AM and 8:00 AM scans."
+      "palmerga15@gmail.com — Capital One: $476.65 payment from savings ending 4870 failed for insufficient available funds.",
+      "palmerga15@gmail.com — Google Play Pass renewed for $4.99/month using a backup payment method because the primary payment method ending 0879 could not be used.",
+      "palmerga15@gmail.com — The WordPress.com renewal notice for purpose-property.com reported in the morning remains an outstanding same-day review item; no resolution email was found by midday."
     ],
     "appointments": [
-      "No new verified appointment reminder or scheduling change requiring morning action was found after the 5:00 AM scan."
+      "palmerga15@gmail.com — Capitol Primary Care reports the appointment scheduled for Wednesday, August 26 was missed. Call 202-810-7822 or use online scheduling to reschedule.",
+      "palmerga15@gmail.com — A new secure message from Capitol Primary Care is waiting in the patient portal and should be reviewed today.",
+      "palmerga15@gmail.com — Growth Hub 365 reports onboarding tomorrow, Friday August 28, from 3:00 PM to 5:00 PM ET; The AI Agents Course reports office hours tomorrow from 10:00 AM to 11:00 AM ET."
     ],
     "speakingGigsAndOpportunities": [
-      "No new direct speaking invitation arrived after the 5:00 AM scan. The four high-value speaking opportunities already reported earlier this morning, including the ACMP DC Chapter opportunity, remain the current items to review."
+      "palmerga15@gmail.com — Four high-value speaking opportunities identified earlier today remain active for review, including the ACMP DC Chapter call for speakers/workshop hosts serving the Washington, D.C./Maryland/Virginia area. No newer direct speaking invitation arrived by midday."
     ],
     "sameDayActions": [
-      "Correct or replace the failed Purposeology outreach addresses before resending; several invitations did not deliver or were blocked.",
-      "Review the WordPress.com renewal notice for purpose-property.com and renew today if continued plan features are needed.",
-      "Continue review of the four high-value speaking opportunities surfaced earlier this morning.",
-      "The CareFirst sponsorship address failure reported at 5:00 AM remains unresolved; obtain a corrected CareFirst contact before follow-up."
+      "Review the failed $476.65 Capital One payment and determine whether the payment still needs to be made today.",
+      "Reschedule the missed Capitol Primary Care appointment and open the new secure patient-portal message.",
+      "Review the four speaking opportunities surfaced today, especially the ACMP DC Chapter opportunity.",
+      "The CareFirst sponsorship address failure from the morning remains unresolved; obtain a corrected CareFirst contact before resending.",
+      "The failed Purposeology community outreach addresses and the WordPress.com renewal for purpose-property.com reported this morning remain unresolved in email."
     ],
     "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — Delivery failures from the Purposeology community outreach are the main new business matter since the 5:00 AM run. No new direct reply from a business contact requiring immediate response was found.",
-      "palmerga15@gmail.com — The CareFirst sponsorship email delivery failure from the earlier run remains unresolved."
+      "palmerga15@gmail.com — No new direct sponsorship or business reply requiring an immediate response was found by midday.",
+      "palmerga15@gmail.com — Automated job alerts included Howard University/clinical faculty and other healthcare or behavioral-health openings; these are opportunity alerts rather than direct recruiter replies.",
+      "palmerga15@gmail.com — An Agentic AI Intensive invitation was received and enrollment closes today; review only if the program is a current priority."
     ],
     "accountsChecked": [
-      "palmerga15@gmail.com — directly connected to Gmail and checked successfully through approximately 8:00 AM ET on August 27.",
+      "palmerga15@gmail.com — directly connected to Gmail and checked successfully through approximately 12:57 PM ET on August 27.",
       "Available Outlook mailbox connection — checked for August 27 mail; no messages were returned.",
-      "A targeted Gmail search for messages addressed to purposequestinc@gmail.com, drpurposeology@gmail.com, purposepoweralliance@gmail.com, purposespherellc@gmail.com, and palmerga15@hotmail.com returned no August 27 messages."
+      "A targeted Gmail search for messages addressed to purposequestinc@gmail.com, drpurposeology@gmail.com, purposepoweralliance@gmail.com, and purposespherellc@gmail.com returned no August 27 messages."
     ],
     "accessIssues": [
       "purposequestinc@gmail.com — not independently readable through the current Gmail connector; no August 27 message identifiable as addressed to this account was found in the connected Gmail inbox.",
