@@ -5,49 +5,43 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-08-27T16:59:52-04:00",
+  "lastUpdated": "2026-08-28T05:02:10-04:00",
   "report": {
     "urgent": [
-      "palmerga15@gmail.com — A Severe Thunderstorm Watch was issued for the District of Columbia this afternoon. Review current local conditions before evening travel or outdoor activity.",
-      "palmerga15@gmail.com — The earlier Capital One $476.65 payment failure from savings ending 4870 still has no resolution email visible by the 5:00 PM review; review the account before day end if the payment remains due."
+      "palmerga15@gmail.com — Ally Auto reported that the vehicle payment scheduled for August 18, 2026 on auto account ending 1759 was returned because the selected payment account had insufficient funds. Review the balance and resubmit or make other arrangements today.",
+      "palmerga15@gmail.com — Microsoft 365 Personal renewal could not use the primary payment method, so Google Play charged backup card Discover ending 0014 for $10.59/month. Update the primary payment method if you do not want future renewals to fall back to the backup card."
     ],
     "billsAndOutstandingBalances": [
-      "palmerga15@gmail.com — Newly reported a $25.00 subscription payment was unsuccessful and asks that the payment method be updated to continue the subscription.",
-      "palmerga15@gmail.com — The earlier Capital One $476.65 payment failure remains unresolved in email.",
-      "palmerga15@gmail.com — The earlier WordPress.com renewal notice for purpose-property.com remains an unresolved review item; no later resolution email was found."
+      "palmerga15@gmail.com — Ally Auto vehicle payment scheduled for August 18 was returned for insufficient funds; auto account ending 1759.",
+      "palmerga15@gmail.com — Microsoft 365 Personal renewed at $9.99/month plus $0.60 tax, total $10.59/month, using backup card Discover ending 0014 after the primary payment method failed."
     ],
     "appointments": [
-      "palmerga15@gmail.com — Capitol Primary Care confirmed a new appointment for September 23, 2026 at 3:20 PM EDT at 1100 H St NW, Suite 1100, Washington, DC 20005.",
-      "palmerga15@gmail.com — Trupanion completed preapproval 57597025 for Jalen's veterinary care dated August 27, 2026; retain the approval details and review any owner-responsible amount before care is completed.",
-      "palmerga15@gmail.com — A District Dogs reservation for Jalen beginning August 28 at 7:00 AM was successfully cancelled."
+      "No new appointment reminder, cancellation, or schedule change requiring immediate 5:00 AM attention was found overnight."
     ],
     "speakingGigsAndOpportunities": [
-      "No new direct speaking invitation or newly identified speaking-gig opportunity arrived after the midday review. The four high-value opportunities surfaced earlier today, including the ACMP DC Chapter call for speakers/workshop hosts, remain the current opportunities to review."
+      "palmerga15@gmail.com — Speaking Opportunity Watch reported three new opportunities overnight. The alert specifically identifies AI NOW. NEXT. BEYOND. 2027, scheduled March 29–30, 2027 in Greensboro, North Carolina. Review the full alert this morning for the other two opportunities and proposal deadlines."
     ],
     "sameDayActions": [
-      "Review the Severe Thunderstorm Watch before evening travel or outdoor activity.",
-      "Resolve or confirm the earlier $476.65 Capital One payment failure if the payment is still due.",
-      "Update the payment method for the $25.00 Newly subscription only if you intend to continue it.",
-      "Note the rescheduled Capitol Primary Care appointment for September 23 at 3:20 PM EDT.",
-      "Retain and review Trupanion preapproval 57597025 for Jalen's August 27 veterinary care.",
-      "The CareFirst sponsorship email address failure remains unresolved; a corrected CareFirst contact is still needed before resending outreach."
+      "Review the Ally Auto returned payment on account ending 1759 and resubmit or make other arrangements if still due.",
+      "Review the Microsoft 365 renewal and primary payment method; $10.59 was charged to backup card Discover ending 0014.",
+      "Open the Speaking Opportunity Watch alert and review all three new opportunities and their submission deadlines.",
+      "SHRM Howard County acknowledged receipt of the Why Before AI outreach and advised that its volunteer-monitored mailbox may take a few days to respond; no immediate reply is required."
     ],
     "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — No new direct sponsorship or business reply requiring an end-of-day response was found after the midday review.",
-      "palmerga15@gmail.com — Trupanion completed Jalen's preapproval request; this is the most consequential new service-related update from the afternoon.",
-      "palmerga15@gmail.com — Afternoon traffic otherwise consisted mainly of automated job alerts and promotional messages rather than direct recruiter or client replies."
+      "palmerga15@gmail.com — SHRM Howard County sent an automated acknowledgment to the Why Before AI outreach. The request was received and may take a few days for a volunteer response.",
+      "palmerga15@gmail.com — Overnight inbox traffic otherwise consisted mainly of automated job alerts and promotional messages rather than direct client, sponsor, or recruiter replies requiring immediate action."
     ],
     "accountsChecked": [
-      "palmerga15@gmail.com — directly connected to Gmail and checked successfully through approximately 5:00 PM ET on August 27.",
-      "Available Outlook mailbox connection — checked for August 27 mail; no messages were returned.",
-      "A targeted Gmail search for messages addressed to purposequestinc@gmail.com, drpurposeology@gmail.com, purposepoweralliance@gmail.com, and purposespherellc@gmail.com found no messages in the current afternoon review window."
+      "palmerga15@gmail.com — directly connected to Gmail and checked successfully through approximately 5:02 AM ET on August 28, 2026.",
+      "Available Outlook mailbox connection — searched for mail received August 28; no messages were returned.",
+      "A targeted Gmail search for messages addressed to purposequestinc@gmail.com, drpurposeology@gmail.com, purposepoweralliance@gmail.com, purposespherellc@gmail.com, or palmerga15@hotmail.com found no messages in the overnight review window."
     ],
     "accessIssues": [
-      "purposequestinc@gmail.com — not independently readable through the current Gmail connector; no new message identifiable as addressed to this account was found in the afternoon review window.",
-      "drpurposeology@gmail.com — not independently readable through the current Gmail connector; no new identifiable message was found.",
-      "purposepoweralliance@gmail.com — not independently readable through the current Gmail connector; no new identifiable message was found.",
-      "purposespherellc@gmail.com — not independently readable through the current Gmail connector; no new identifiable message was found.",
-      "palmerga15@hotmail.com — could not be independently verified as the mailbox behind the available Outlook connection; the Outlook search returned no August 27 messages."
+      "purposequestinc@gmail.com — not independently readable through the current Gmail connector; no overnight message identifiable as addressed to this account was found.",
+      "drpurposeology@gmail.com — not independently readable through the current Gmail connector; no overnight identifiable message was found.",
+      "purposepoweralliance@gmail.com — not independently readable through the current Gmail connector; no overnight identifiable message was found.",
+      "purposespherellc@gmail.com — not independently readable through the current Gmail connector; no overnight identifiable message was found.",
+      "palmerga15@hotmail.com — could not be independently verified as the mailbox behind the available Outlook connection; the August 28 Outlook search returned no messages."
     ]
   }
 }
