@@ -5,37 +5,35 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-08-29T17:00:29-04:00",
+  "lastUpdated": "2026-08-30T05:00:19-04:00",
   "report": {
     "urgent": [
-      "palmerga15@gmail.com — Accreditation Now: CARF training items for Recovery Center of Maryland remain overdue, with listed due dates of June 14, 2026. Review before day end because this is a compliance-related item.",
-      "No new emergency message arrived after the midday scan."
+      "No new overnight email requiring immediate emergency action was identified in the directly readable inbox.",
+      "Carryover: the previously reported overdue CARF training items for Recovery Center of Maryland remain an important compliance matter; no new completion or resolution email was found overnight."
     ],
     "billsAndOutstandingBalances": [
-      "No new verified failed-payment or past-due notice addressed to Gregory Palmer was identified after the midday scan.",
-      "A Verizon past-due notice received at palmerga15@gmail.com is addressed to 'Doriane' and is therefore not being treated as Gregory Palmer's balance."
+      "palmerga15@gmail.com — Google Play/MLB Advanced Media: MLB+ Monthly Trial renewed at $6.35/month ($5.99 plus $0.36 tax) on August 29; the listed payment method is PayPal: palmerga15@hotmail.com.",
+      "palmerga15@gmail.com — PayPal/Paramount+: $9.53 payment completed successfully on August 29 using Discover debit ending 0879; this resolves the prior failed Paramount+ payment notice if it refers to the same subscription."
     ],
     "appointments": [
-      "palmerga15@gmail.com — District Veterinary Hospital's vaccination/treatment reminder for Jalen remains an open action item; review the due services and schedule if needed.",
-      "No new appointment cancellation or scheduling change requiring same-day action arrived after the midday scan."
+      "No new overnight appointment reminder, cancellation, or scheduling change requiring immediate attention was identified."
     ],
     "speakingGigsAndOpportunities": [
-      "No new direct keynote, conference, workshop, panel, or speaker invitation arrived after the midday scan.",
-      "The four high-value speaking opportunities surfaced earlier today remain the current opportunities to review, including the Joint Meeting on Youth Prevention, Treatment, and Recovery in Baltimore."
+      "No new direct keynote, conference, workshop, panel, or call-for-speakers invitation arrived overnight after the August 29 evening review.",
+      "The previously reported four high-value speaking opportunities remain the current pipeline items; no newer Speaking Opportunity Watch alert was found overnight."
     ],
     "sameDayActions": [
-      "Review the overdue CARF training items for Recovery Center of Maryland and determine the completion plan.",
-      "Review Jalen's District Veterinary Hospital vaccination/treatment reminder and schedule any due services.",
-      "Review the four speaking opportunities surfaced earlier today and prioritize any with near-term submission deadlines.",
-      "No new direct sponsor, client, or chamber reply requires an end-of-day response."
+      "Review the new MLB+ $6.35/month auto-renewal and cancel or change the subscription only if it was not intended.",
+      "No action is needed on the $9.53 Paramount+ payment if the charge is recognized; the payment completed successfully.",
+      "Continue the overdue CARF training follow-up because no overnight resolution message was found."
     ],
     "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — No new direct sponsor, chamber, client, or business reply requiring an end-of-day response was identified.",
-      "palmerga15@gmail.com — Several automated job alerts arrived after midday, including roles associated with Howard University, Signet Health, Trinity Health, Maryland Treatment Centers, UMCP, and others; these appear to be job-board alerts rather than direct recruiter outreach."
+      "palmerga15@gmail.com — No new direct sponsor, chamber, client, or business reply requiring immediate early-morning action was identified.",
+      "palmerga15@gmail.com — Overnight traffic was dominated by automated job alerts, including Howard University, Signet Health, Johns Hopkins Medicine, NAFSA, and behavioral-health roles; no direct recruiter outreach requiring immediate response was identified."
     ],
     "accountsChecked": [
-      "palmerga15@gmail.com — directly connected to Gmail and checked successfully through approximately 5:00 PM ET on August 29, 2026.",
-      "Available Outlook connection — searched for August 29 mail; no messages were returned. The connected Outlook profile is palmerga15@gmail.com.",
+      "palmerga15@gmail.com — directly connected to Gmail and checked successfully through approximately 5:00 AM ET on August 30, 2026.",
+      "Available Outlook connection — searched for mail received since August 29; no messages were returned. The connected Outlook profile is palmerga15@gmail.com.",
       "Targeted Gmail search found no recent messages addressed to purposequestinc@gmail.com, drpurposeology@gmail.com, purposepoweralliance@gmail.com, purposespherellc@gmail.com, or palmerga15@hotmail.com."
     ],
     "accessIssues": [
@@ -43,7 +41,7 @@
       "drpurposeology@gmail.com — not independently readable through the current Gmail connection.",
       "purposepoweralliance@gmail.com — not independently readable through the current Gmail connection.",
       "purposespherellc@gmail.com — not independently readable through the current Gmail connection.",
-      "palmerga15@hotmail.com — not independently connected through Outlook; the available Outlook profile is palmerga15@gmail.com."
+      "palmerga15@hotmail.com — not independently connected through Outlook; the available Outlook profile is palmerga15@gmail.com. Note: the new Google Play receipt lists PayPal: palmerga15@hotmail.com as a payment method, but that does not make the Hotmail inbox readable."
     ]
   }
 }
