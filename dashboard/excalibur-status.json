@@ -5,50 +5,49 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-08-31T17:00:07-04:00",
+  "lastUpdated": "2026-09-01T05:01:29-04:00",
   "report": {
     "urgent": [
-      "palmerga15@gmail.com — Google Security Alert carryover: an 'Untitled project' was granted access to some Google Account data. If you did not authorize this access, review Google Account activity and revoke the connection before day end.",
-      "Carryover: overdue CARF training items for Recovery Center of Maryland remain unresolved based on available email.",
-      "Carryover: Microsoft Azure requires an upgrade by September 6, 2026, to preserve Azure data and services associated with the free account."
+      "palmerga15@gmail.com — Capital One: a transfer-complete notification arrived overnight. If you did not initiate or expect a transfer, review the account activity immediately.",
+      "Carryover: the Google Security Alert regarding an 'Untitled project' being granted access to some Google Account data remains important; revoke the access if it was not authorized.",
+      "Carryover: Microsoft Azure requires an upgrade by September 6, 2026, to preserve associated Azure data and services."
     ],
     "billsAndOutstandingBalances": [
-      "No new bill, failed-payment notice, or past-due balance requiring end-of-day action was identified after the 1:00 PM scan.",
-      "Carryover: ESPN payment did not go through; review the subscription/payment method if continued access is wanted.",
-      "Carryover: Google Play/MLB+ $6.35/month renewal remains active unless intentionally canceled."
+      "palmerga15@gmail.com — PayPal: $16.71 USD was paid to Meta Platforms, Inc. on September 1, 2026. Verify the charge if it was not expected or authorized.",
+      "palmerga15@gmail.com — X/Stripe: a new X receipt (#2749-3737-3763) arrived overnight with receipt and invoice PDFs attached; review the receipt if the charge is not recognized.",
+      "Carryover: ESPN payment did not go through; review the subscription/payment method if continued access is wanted."
     ],
     "appointments": [
-      "No new appointment cancellation or scheduling change requiring end-of-day action was identified after the 1:00 PM scan.",
-      "Carryover for Tuesday, September 1: Growth Hub 365 has two events scheduled; one confirmed event is Tech Office Hours from 11:00 AM to 12:30 PM ET."
+      "No new overnight appointment cancellation or scheduling change requiring immediate attention was identified.",
+      "Today, September 1: Growth Hub 365 has two previously reported events scheduled; one confirmed event is Tech Office Hours from 11:00 AM to 12:30 PM ET."
     ],
     "speakingGigsAndOpportunities": [
-      "No new direct keynote, workshop, panel, conference invitation, call-for-speakers opportunity, or TEDx reply requiring end-of-day action was identified after the 1:00 PM scan.",
-      "Carryover: six previously identified speaking opportunities remain active for review and deadline prioritization."
+      "palmerga15@gmail.com — Speaking Opportunity Watch: two new high-value speaking opportunities were identified at approximately 5:01 AM ET. One is ACMP Global's 2027 Call for Speakers, including Change Denver 2027 and Global Connect; review the opportunity details and deadline today.",
+      "The same Speaking Opportunity Watch reported a second new high-value opportunity; review the full alert today so both opportunities can be prioritized for fit and deadline."
     ],
     "sameDayActions": [
-      "Verify the Google 'Untitled project' account-data access and revoke it immediately if you did not authorize it.",
-      "palmerga15@gmail.com — LinkedIn: Gabrielle Bosché sent a new message at approximately 2:55 PM ET that is awaiting your response; review before day end because it is direct networking/business correspondence.",
-      "palmerga15@gmail.com — Tax Alchemy / 2026 S-Election EA - PCG Agreement carryover: the agreement is ready for signature; review and sign if it is the intended engagement.",
-      "palmerga15@gmail.com — Atlassian/Loom Business + AI trial ends September 3, 2026; decide whether to add payment details or allow the trial to end.",
-      "Continue follow-up on overdue CARF training and review the Azure account before September 6, 2026."
+      "Verify the overnight Capital One transfer notification if you did not initiate or expect the transfer.",
+      "Review the $16.71 Meta Platforms PayPal charge and the new X receipt if either is unexpected.",
+      "Open the Speaking Opportunity Watch alert and prioritize the two new high-value speaking opportunities, including ACMP Global's 2027 Call for Speakers.",
+      "Review or revoke the Google 'Untitled project' account-data authorization if it was not authorized.",
+      "Review the Azure account before the September 6, 2026 preservation deadline."
     ],
     "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — LinkedIn: Gabrielle Bosché sent a direct message at approximately 2:55 PM ET; one new message is awaiting your response.",
-      "palmerga15@gmail.com — Atlassian: Loom Business + AI trial ends September 3, 2026; payment details are needed only if you want to continue the service.",
-      "Automated job alerts continued this afternoon, including Signet Health, Howard University, Ashley Addiction Treatment, and other roles; these were not treated as direct recruiter or business replies.",
-      "No new direct sponsor, client, chamber, partner, or speaking-related reply requiring an end-of-day response was identified."
+      "No new direct sponsor, client, chamber, partner, or speaking-related reply requiring an immediate 5:00 AM response was identified in the connected Gmail inbox.",
+      "palmerga15@gmail.com — Indeed/ERP International: Greg Pugh wants to discuss a Clinical Psychologist opportunity with a $10,000 sign-on bonus; this is recruiter/job outreach rather than a Purposeology business matter.",
+      "Other overnight mail was predominantly automated job alerts and promotional messages and was not elevated."
     ],
     "accountsChecked": [
-      "palmerga15@gmail.com — directly connected to Gmail and checked successfully through approximately 5:00 PM ET on August 31, 2026.",
-      "Available Outlook connection — searched for mail received August 31; no messages were returned.",
-      "Targeted Gmail search found no August 31 messages addressed to purposequestinc@gmail.com, drpurposeology@gmail.com, purposepoweralliance@gmail.com, purposespherellc@gmail.com, or palmerga15@hotmail.com."
+      "palmerga15@gmail.com — directly connected to Gmail and checked successfully through approximately 5:01 AM ET on September 1, 2026.",
+      "Available Outlook connection — searched for mail received September 1; no messages were returned.",
+      "Targeted Gmail search found no September 1 messages addressed to purposequestinc@gmail.com, drpurposeology@gmail.com, purposepoweralliance@gmail.com, purposespherellc@gmail.com, or palmerga15@hotmail.com."
     ],
     "accessIssues": [
       "purposequestinc@gmail.com — not independently readable through the current Gmail connection.",
       "drpurposeology@gmail.com — not independently readable through the current Gmail connection.",
       "purposepoweralliance@gmail.com — not independently readable through the current Gmail connection.",
       "purposespherellc@gmail.com — not independently readable through the current Gmail connection.",
-      "palmerga15@hotmail.com — not independently confirmed as a readable Outlook mailbox in the available connection; the August 31 Outlook search returned no messages."
+      "palmerga15@hotmail.com — not independently confirmed as a readable Outlook mailbox in the available connection; the September 1 Outlook search returned no messages."
     ]
   }
 }
