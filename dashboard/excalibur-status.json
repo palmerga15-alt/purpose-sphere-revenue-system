@@ -5,43 +5,42 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-09-05T05:03:01-04:00",
+  "lastUpdated": "2026-09-05T08:02:14-04:00",
   "report": {
     "urgent": [
-      "No new email requiring immediate emergency action was identified in the overnight 5:00 AM scan.",
-      "palmerga15@gmail.com — Lovable: a low-balance warning arrived overnight, followed minutes later by a $31.80 paid receipt; verify the workspace balance only if service still appears limited or interrupted."
+      "palmerga15@gmail.com — Accreditation Now / Recovery Center of Maryland, LLC: multiple required CARF trainings remain listed with past-due dates of June 14, 2026; review and complete or reconcile the overdue training items promptly."
     ],
     "billsAndOutstandingBalances": [
-      "palmerga15@gmail.com — Lovable Labs: $31.80 payment receipt marked paid September 5, 2026, received shortly after the low-balance warning.",
-      "palmerga15@gmail.com — Capital One: $100.00 transfer completed; review the current checking balance if this transfer was intended to resolve the prior overdraft.",
-      "palmerga15@gmail.com — PayPal/Google: $1.05 payment dated September 4, 2026; verify only if unrecognized."
+      "palmerga15@gmail.com — Lovable Labs: a new $31.80 paid receipt (#2553-5399) was received after the 5:00 AM scan on September 5, 2026; this is a distinct receipt from the earlier Lovable receipt."
     ],
     "appointments": [
-      "No new overnight appointment cancellation, rescheduling notice, or appointment matter requiring immediate attention was identified."
+      "No new appointment cancellation, rescheduling notice, or appointment issue requiring attention was identified between the 5:00 AM and 8:00 AM scans."
     ],
     "speakingGigsAndOpportunities": [
-      "No new direct speaking invitation or call-for-speakers email requiring immediate attention was identified overnight.",
+      "palmerga15@gmail.com — Speaking Opportunity Watch: two new opportunities were surfaced after 5:00 AM: the 51st Annual Alabama School of Alcohol and Other Drug Studies (ASADS) Conference in Tuscaloosa, Alabama, March 15–19, 2027, and the 2027 NCDA Global Career Development Conference in Anaheim, California, June 29–July 1, 2027.",
+      "ASADS is a strong Purposeology/addiction-recovery fit; abstracts close September 30, 2026 and accepted formats include 3-hour workshops, 1.5-hour breakouts, and posters.",
+      "NCDA has opened its 2027 call for proposals; its theme is Advancing Opportunity: Career Development as a Catalyst for Social and Economic Justice.",
       "Carryover: Maryland Product Symposium 2026 remains the nearest known speaking deadline on September 7, 2026."
     ],
     "sameDayActions": [
-      "Confirm the Lovable workspace balance if Purposeology/PET services show any interruption; a $31.80 payment receipt followed the low-balance alert.",
-      "Check whether the completed $100 Capital One transfer resolved the prior account overdraft.",
-      "Continue or complete the Maryland Product Symposium 2026 proposal before the September 7 deadline.",
-      "Review the $1.05 PayPal/Google transaction only if it is not recognized."
+      "Review the Accreditation Now overdue CARF training list for Recovery Center of Maryland and determine which items still require completion or administrative reconciliation.",
+      "Prioritize the Maryland Product Symposium 2026 proposal before the September 7 deadline.",
+      "Begin or queue an ASADS abstract before the September 30, 2026 deadline; Purposeology and Treating Addiction / purpose-centered recovery is a strong fit.",
+      "Review the NCDA 2027 call for proposals for a Purposeology career-development or purpose-and-work submission.",
+      "Confirm the new Lovable $31.80 receipt is expected."
     ],
     "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — In Pursuit of Purposeology: confirmation received that the Live Purposeology Certification Cohort application was submitted successfully.",
-      "palmerga15@gmail.com — Zoom: notice received regarding changes to Zoom Scheduler Basic; no immediate overnight action was identified from the message summary.",
-      "No new sponsor, chamber, client, partner, or conference-organizer reply requiring immediate attention was identified overnight."
+      "palmerga15@gmail.com — Go Birds Weekly Production: the complete 19½-minute Go Birds 2026 production package is ready for DrG approval.",
+      "No new sponsor, chamber, client, partner, or conference-organizer reply requiring an immediate response was identified in this scan."
     ],
     "accountsChecked": [
-      "Direct Access: master Gmail inbox palmerga15@gmail.com checked successfully through approximately 5:03 AM ET on September 5, 2026.",
-      "Centralized Forwarding Access: purposequestinc@gmail.com remains verified through the master inbox; PQI label is present, and no new overnight message was attributable by label or original-recipient search.",
-      "Centralized Forwarding Access: drpurposeology@gmail.com remains verified through the master inbox; Dr Purposeology label is present, and no new overnight message was attributable by original-recipient search."
+      "Direct Access: master Gmail inbox palmerga15@gmail.com checked successfully through approximately 8:02 AM ET on September 5, 2026.",
+      "Centralized Forwarding Access: purposequestinc@gmail.com remains verified through the master inbox; PQI label is present, and no new message was attributable by label or original-recipient search in this run.",
+      "Centralized Forwarding Access: drpurposeology@gmail.com remains verified through the master inbox; Dr Purposeology label is present, and no new message was attributable by label or original-recipient search in this run."
     ],
     "accessIssues": [
-      "purposepoweralliance@gmail.com forwarding/indirect access remains unverified; the Purpose Power Alliance label contains no messages and no forwarded mail from that address was confirmed in this run.",
-      "purposespherellc@gmail.com forwarding/indirect access remains unverified; the PurposeSphere LLC label contains no messages and no forwarded mail from that address was confirmed in this run."
+      "purposepoweralliance@gmail.com forwarding/indirect access remains unverified; the Purpose Power Alliance label contains 0 messages and no forwarded mail from that address was confirmed in this run.",
+      "purposespherellc@gmail.com forwarding/indirect access remains unverified; the PurposeSphere LLC label contains 0 messages and no forwarded mail from that address was confirmed in this run."
     ]
   }
 }
