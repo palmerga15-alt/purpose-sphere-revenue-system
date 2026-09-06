@@ -5,38 +5,41 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-09-06T04:59:08-04:00",
+  "lastUpdated": "2026-09-06T08:00:00-04:00",
   "report": {
     "urgent": [
-      "palmerga15@gmail.com — MLB.com Account Service: a sign-in verification code was issued at approximately 8:25 PM ET on September 5. If this sign-in was not initiated by the user, review MLB account security and change the password.",
-      "No other new overnight email requiring immediate emergency action was identified."
+      "palmerga15@gmail.com — ESPN: payment failure notice received at approximately 6:07 AM ET on September 6. Review the payment method if the service should remain active.",
+      "palmerga15@gmail.com — WordPress.com: action-required renewal notice received for purpose-property.com. Review the plan renewal to avoid loss of paid features.",
+      "palmerga15@gmail.com — Microsoft Azure: free credit expired September 6, 2026; Azure states that related resources were deleted following expiration. Review only if those Azure resources are still needed."
     ],
     "billsAndOutstandingBalances": [
-      "palmerga15@gmail.com — PayPal / Google: a $16.95 USD payment to Google was reported on September 5, 2026. Verify the charge if it is not recognized.",
-      "No new overdue bill, failed payment, or additional overdraft alert requiring immediate action was identified overnight."
+      "palmerga15@gmail.com — ESPN: payment did not go through; update the payment method if the subscription should continue.",
+      "palmerga15@gmail.com — WordPress.com: purpose-property.com plan renewal requires attention.",
+      "No new attributable bill or outstanding-balance message was identified for the centralized business addresses in this run."
     ],
     "appointments": [
-      "No new overnight appointment cancellation, rescheduling notice, or appointment issue requiring immediate attention was identified."
+      "palmerga15@gmail.com — FSPHP Executive Director Linda Bresnahan: confirmed meeting scheduled for September 18, 2026 from 1:00 PM to 1:45 PM ET. Location/contact number listed in the invite is +1 301-875-1218."
     ],
     "speakingGigsAndOpportunities": [
-      "No new direct speaking invitation or call-for-speakers email requiring immediate attention was identified overnight.",
+      "palmerga15@gmail.com — Speaking Opportunity Watch reported three meaningful new opportunities, including the Federation of State Physician Health Programs 2027 Annual Education Conference. Review the alert for proposal details and deadlines.",
       "Carryover: Maryland Product Symposium 2026 remains the nearest known speaking deadline on September 7, 2026.",
       "Carryover: ASADS 51st Annual Conference abstracts close September 30, 2026, and the 2027 NCDA Global Career Development Conference call for proposals remains open."
     ],
     "sameDayActions": [
-      "Review the MLB sign-in verification email if the login was not initiated by the user.",
-      "Verify the $16.95 Google payment through PayPal if it is unfamiliar.",
-      "Continue or complete the Maryland Product Symposium 2026 proposal before the September 7 deadline.",
-      "No immediate action is required on the Palmer v. Hewitt matter unless counsel requests additional information; counsel expects a response from the insurance side within roughly two weeks."
+      "Review the ESPN failed payment if continued service is desired.",
+      "Review and renew the WordPress.com plan for purpose-property.com if the site features should remain active.",
+      "Review whether any deleted Azure resources are still needed following expiration of the free credit.",
+      "Confirm the September 18 FSPHP Executive Director meeting is on the working calendar and prepare talking points around 30 years of SUD and mental health experience and Purposeology.",
+      "Continue or complete the Maryland Product Symposium 2026 proposal before the September 7 deadline."
     ],
     "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — D.J. Stark / Morgan & Morgan, Palmer v. Hewitt: counsel reported that the demand letter was sent to the insurance company and copied to its attorney after the recent discussion. Counsel expects to hear back within approximately two weeks.",
-      "No new substantive sponsor, chamber, client, partner, or conference-organizer reply requiring immediate action was identified overnight."
+      "palmerga15@gmail.com — Linda Bresnahan / FSPHP: meeting confirmation received for September 18 at 1:00 PM ET with the FSPHP Executive Director.",
+      "No new substantive sponsor, chamber, client, partner, or other conference-organizer reply requiring immediate response was identified in the 8:00 AM scan."
     ],
     "accountsChecked": [
-      "Direct Access: master Gmail inbox palmerga15@gmail.com checked successfully through approximately 5:00 AM ET on September 6, 2026.",
-      "Centralized Forwarding Access: purposequestinc@gmail.com remains verified through the master inbox; PQI label is present with 15 total messages and no new overnight message attributable to this address by label or original-recipient search.",
-      "Centralized Forwarding Access: drpurposeology@gmail.com remains verified through the master inbox; Dr Purposeology label is present with 1 total message and no new overnight message attributable to this address by label or original-recipient search."
+      "Direct Access: master Gmail inbox palmerga15@gmail.com checked successfully through approximately 8:00 AM ET on September 6, 2026.",
+      "Centralized Forwarding Access: purposequestinc@gmail.com remains verified through the master inbox; PQI label is present with 15 total messages and no new incoming message attributable to this address in this run by label or original-recipient search.",
+      "Centralized Forwarding Access: drpurposeology@gmail.com remains verified through the master inbox; Dr Purposeology label is present with 1 total message and no new incoming message attributable to this address in this run by label or original-recipient search."
     ],
     "accessIssues": [
       "purposepoweralliance@gmail.com forwarding/indirect access remains unverified; the Purpose Power Alliance label contains 0 messages and no forwarded mail from that address was confirmed in this run.",
