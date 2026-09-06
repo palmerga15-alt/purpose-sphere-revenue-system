@@ -5,39 +5,38 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-09-05T17:01:49-04:00",
+  "lastUpdated": "2026-09-06T04:59:08-04:00",
   "report": {
     "urgent": [
-      "No new urgent email requiring immediate action was identified after the 1:00 PM scan.",
-      "Carryover: palmerga15@gmail.com — Capital One overdraft alert remains a day-end action unless the balance has already been corrected."
+      "palmerga15@gmail.com — MLB.com Account Service: a sign-in verification code was issued at approximately 8:25 PM ET on September 5. If this sign-in was not initiated by the user, review MLB account security and change the password.",
+      "No other new overnight email requiring immediate emergency action was identified."
     ],
     "billsAndOutstandingBalances": [
-      "No new bill, failed payment, overdraft alert, or outstanding-balance notice requiring action was identified after the 1:00 PM scan.",
-      "Carryover: verify the previously reported Meta Platforms payment through PayPal if it has not yet been confirmed as expected."
+      "palmerga15@gmail.com — PayPal / Google: a $16.95 USD payment to Google was reported on September 5, 2026. Verify the charge if it is not recognized.",
+      "No new overdue bill, failed payment, or additional overdraft alert requiring immediate action was identified overnight."
     ],
     "appointments": [
-      "No legitimate new appointment cancellation, rescheduling notice, or same-day appointment issue was identified in the late-day scan. An ESP Chat message titled 'Third Attempt: APPOINTMENT for Gregory' was promotional/spiritual marketing and was not treated as a real appointment."
+      "No new overnight appointment cancellation, rescheduling notice, or appointment issue requiring immediate attention was identified."
     ],
     "speakingGigsAndOpportunities": [
-      "No new speaking invitation or call-for-speakers message requiring action was identified after the 1:00 PM scan.",
+      "No new direct speaking invitation or call-for-speakers email requiring immediate attention was identified overnight.",
       "Carryover: Maryland Product Symposium 2026 remains the nearest known speaking deadline on September 7, 2026.",
       "Carryover: ASADS 51st Annual Conference abstracts close September 30, 2026, and the 2027 NCDA Global Career Development Conference call for proposals remains open."
     ],
     "sameDayActions": [
-      "Resolve the Capital One overdraft before day-end if the account remains negative.",
+      "Review the MLB sign-in verification email if the login was not initiated by the user.",
+      "Verify the $16.95 Google payment through PayPal if it is unfamiliar.",
       "Continue or complete the Maryland Product Symposium 2026 proposal before the September 7 deadline.",
-      "No immediate response is needed to Leadership Greater Washington tonight; Emika Abe's automatic reply indicates she is out through Monday, September 7 and will respond after her return.",
-      "No immediate response is needed to the Harvard Medical School Executive Education program advisor tonight; the automatic reply indicates the advisor returns September 8."
+      "No immediate action is required on the Palmer v. Hewitt matter unless counsel requests additional information; counsel expects a response from the insurance side within roughly two weeks."
     ],
     "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — Leadership Greater Washington: Emika Abe sent an automatic reply to the Why Before AI outreach, stating she is out through Monday, September 7 and will respond after her return.",
-      "palmerga15@gmail.com — Harvard Medical School Executive Education / Emeritus: Mehak Salhotra sent an automatic reply to the AI in Health Care program inquiry, indicating she returns September 8; alternate learner-success contact and scheduling options were provided.",
-      "No new substantive sponsor, chamber, client, partner, or conference-organizer reply requiring a same-day response was identified."
+      "palmerga15@gmail.com — D.J. Stark / Morgan & Morgan, Palmer v. Hewitt: counsel reported that the demand letter was sent to the insurance company and copied to its attorney after the recent discussion. Counsel expects to hear back within approximately two weeks.",
+      "No new substantive sponsor, chamber, client, partner, or conference-organizer reply requiring immediate action was identified overnight."
     ],
     "accountsChecked": [
-      "Direct Access: master Gmail inbox palmerga15@gmail.com checked successfully through approximately 5:01 PM ET on September 5, 2026.",
-      "Centralized Forwarding Access: purposequestinc@gmail.com remains verified through the master inbox; PQI label is present and no new attributable late-day message was identified by label or original-recipient search.",
-      "Centralized Forwarding Access: drpurposeology@gmail.com remains verified through the master inbox; Dr Purposeology label is present and no new attributable late-day message was identified by label or original-recipient search."
+      "Direct Access: master Gmail inbox palmerga15@gmail.com checked successfully through approximately 5:00 AM ET on September 6, 2026.",
+      "Centralized Forwarding Access: purposequestinc@gmail.com remains verified through the master inbox; PQI label is present with 15 total messages and no new overnight message attributable to this address by label or original-recipient search.",
+      "Centralized Forwarding Access: drpurposeology@gmail.com remains verified through the master inbox; Dr Purposeology label is present with 1 total message and no new overnight message attributable to this address by label or original-recipient search."
     ],
     "accessIssues": [
       "purposepoweralliance@gmail.com forwarding/indirect access remains unverified; the Purpose Power Alliance label contains 0 messages and no forwarded mail from that address was confirmed in this run.",
