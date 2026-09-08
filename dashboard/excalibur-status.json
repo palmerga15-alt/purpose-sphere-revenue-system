@@ -5,34 +5,31 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-09-07T16:59:18-04:00",
+  "lastUpdated": "2026-09-08T04:59:17-04:00",
   "report": {
     "urgent": [
-      "No new urgent email requiring immediate action was identified in the late-day scan.",
-      "Capital One follow-up: the transfer that previously failed is now reported as complete at approximately 4:42 PM ET."
+      "palmerga15@gmail.com — Google Account: security alert reports Microsoft apps & services were granted access to some Google Account data. If this access was not authorized, review and revoke it immediately.",
+      "palmerga15@gmail.com — Google Account: account recovery was reported successful overnight. If this recovery was not initiated by the account owner, review Google Account security immediately."
     ],
     "billsAndOutstandingBalances": [
-      "palmerga15@gmail.com — PayPal / Meta Platforms, Inc.: $45.00 payment reported September 7, 2026. Verify the charge if unfamiliar.",
-      "No new confirmed overdue bill or balance notice requiring same-day action was identified for the monitored business addresses."
+      "palmerga15@gmail.com — Google Play / YouTube Premium: Mastercard ending 7833 could not be used; a backup payment method was used successfully on September 8, 2026. Review the primary payment method if continued service is intended."
     ],
     "appointments": [
-      "No new appointment cancellation, rescheduling notice, or same-day appointment issue was identified in the late-day scan."
+      "No new overnight appointment cancellation, rescheduling notice, or appointment issue requiring immediate attention was identified."
     ],
     "speakingGigsAndOpportunities": [
-      "No new direct speaking invitation or call-for-speakers message requiring action before day-end was identified.",
-      "Carryover: Maryland Product Symposium 2026 proposal deadline is today, September 7, 2026; ASADS 51st Annual Conference abstracts close September 30, 2026; FSPHP 2027 and NCDA 2027 remain active opportunities."
+      "No new direct speaking invitation or call-for-speakers message requiring immediate attention was identified overnight."
     ],
     "sameDayActions": [
-      "Verify the $45.00 Meta Platforms / PayPal payment if unfamiliar.",
-      "Submit the Maryland Product Symposium 2026 proposal today if it remains outstanding.",
-      "Capital One: no further action on the previously failed transfer is indicated by email because a completion notice was received; check the account balance only if the recent overdraft issue remains unresolved."
+      "Confirm that the Google Account recovery and Microsoft apps & services access were authorized; if not, secure the account and revoke unauthorized access immediately.",
+      "Review the YouTube Premium payment method because Mastercard ending 7833 failed and a backup payment method was charged."
     ],
     "repliesAndBusinessMatters": [
-      "No new substantive sponsor, chamber, client, partner, conference-organizer, or other business reply requiring a same-day response was identified.",
-      "No message received today was attributable by original-recipient search to purposequestinc@gmail.com, drpurposeology@gmail.com, purposepoweralliance@gmail.com, or purposespherellc@gmail.com."
+      "No new substantive sponsor, chamber, client, partner, conference-organizer, or other business reply requiring immediate attention was identified overnight.",
+      "No overnight message was attributable by original-recipient search to purposequestinc@gmail.com, drpurposeology@gmail.com, purposepoweralliance@gmail.com, or purposespherellc@gmail.com."
     ],
     "accountsChecked": [
-      "Direct Access: master Gmail inbox palmerga15@gmail.com checked successfully through approximately 5:00 PM ET on September 7, 2026.",
+      "Direct Access: master Gmail inbox palmerga15@gmail.com checked successfully through approximately 5:00 AM ET on September 8, 2026.",
       "Centralized Forwarding Access: purposequestinc@gmail.com remains verified through the master inbox; PQI label is present with 15 total messages and no new attributable message this run.",
       "Centralized Forwarding Access: drpurposeology@gmail.com remains verified through the master inbox; Dr Purposeology label is present with 1 total message and no new attributable message this run."
     ],
