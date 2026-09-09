@@ -5,43 +5,44 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-09-09T13:01:16-04:00",
+  "lastUpdated": "2026-09-09T16:59:40-04:00",
   "report": {
     "urgent": [
-      "purposequestinc@gmail.com via centralized forwarding/recovery access in palmerga15@gmail.com — Carryover Google Critical Security Alert: the password to the linked PurposeQuest Inc Google Account was found in a non-Google data breach. Immediate action remains to change the purposequestinc@gmail.com password and review recent security activity if this has not already been completed.",
-      "palmerga15@gmail.com — Google Account notice at approximately 12:30 PM ET states that Sign in with Google was used with sessionize.com and some Google Account data was shared. If this was not authorized, review connected-app access and revoke sessionize.com immediately."
+      "palmerga15@gmail.com — Capital One sent a new overdraft alert this afternoon. Review the balance and resolve it before day-end if still negative.",
+      "palmerga15@gmail.com — WordPress.com reports purpose-property.com remains expired and associated website/email services are unavailable. Renew or recover it promptly if still needed.",
+      "purposequestinc@gmail.com via centralized access — Earlier Google account-security alert remains a priority if not yet resolved."
     ],
     "billsAndOutstandingBalances": [
-      "palmerga15@gmail.com — PayPal / Meta Platforms, Inc.: $45.00 USD payment posted September 9, 2026. Verify the charge if it was not expected.",
-      "palmerga15@gmail.com — State Filings: the earlier $199 registered-agent service payment decline remains an open same-day item unless already resolved.",
-      "palmerga15@gmail.com — ESPN: the earlier failed subscription payment remains open if the service is to be retained."
+      "palmerga15@gmail.com — New Capital One overdraft alert received this afternoon.",
+      "palmerga15@gmail.com — purpose-property.com remains expired and may require renewal or recovery payment.",
+      "Earlier payment items remain open only if not already resolved: State Filings, ESPN, and the Meta/PayPal charge requiring verification if unexpected."
     ],
     "appointments": [
-      "No new appointment cancellation, rescheduling notice, or same-day appointment issue requiring action was identified in the 1:00 PM scan."
+      "No verified appointment cancellation, rescheduling notice, or same-day appointment issue requiring action was identified in the late-day scan."
     ],
     "speakingGigsAndOpportunities": [
-      "No new direct speaking invitation, conference-organizer reply, or speaking-gig opportunity requiring same-day action was identified in the 1:00 PM scan."
+      "No new direct speaking invitation or conference-organizer reply requiring action before day-end was identified.",
+      "palmerga15@gmail.com — VA Office of Small & Disadvantaged Business Utilization announced advance registration for NVSBE 2026, a relevant business-development opportunity rather than a confirmed speaking engagement."
     ],
     "sameDayActions": [
-      "Verify the $45.00 Meta Platforms / PayPal charge if it was not expected.",
-      "Confirm that the sessionize.com Sign in with Google connection at approximately 12:30 PM ET was authorized; revoke access if it was not.",
-      "If not already completed, change the purposequestinc@gmail.com password and review Google security activity because of the earlier breach alert.",
-      "Resolve the $199 State Filings registered-agent payment decline today if the service is still required.",
-      "Review the ESPN failed payment if the subscription should remain active."
+      "Resolve the Capital One overdraft before day-end if the balance remains negative.",
+      "Renew or recover purpose-property.com promptly if the domain is still needed.",
+      "Review Mehak Salhotra's new Harvard Medical School Executive Education AI in Health Care message and respond if appropriate to keep the relationship moving.",
+      "Address the earlier PurposeQuest Inc Google security alert if not already completed."
     ],
     "repliesAndBusinessMatters": [
-      "palmerga15@gmail.com — Google confirmed that Sign in with Google was used with sessionize.com on September 9 at approximately 12:30 PM ET; this is a connected-account/security matter rather than a business-address-attributed message.",
-      "No new substantive sponsor, chamber, client, partner, conference-organizer, or other business reply requiring a same-day response was identified in the 1:00 PM scan.",
-      "No new September 9 message was attributable by original-recipient search or current business labels to purposequestinc@gmail.com, drpurposeology@gmail.com, purposepoweralliance@gmail.com, or purposespherellc@gmail.com."
+      "palmerga15@gmail.com — Mehak Salhotra sent a new message this afternoon regarding Harvard Medical School Executive Education's AI in Health Care program. Review before day-end if you want to keep the conversation moving.",
+      "palmerga15@gmail.com — NVSBE 2026 advance registration is open, providing a potentially useful veteran and small-business networking opportunity.",
+      "No September 9 message was attributable by original-recipient search to the four monitored business addresses in this late-day run."
     ],
     "accountsChecked": [
-      "Direct Access: master Gmail inbox palmerga15@gmail.com checked successfully through approximately 1:01 PM ET on September 9, 2026.",
-      "Centralized Forwarding Access: purposequestinc@gmail.com remains verified through the master inbox; the PQI label is present with 15 total messages and 2 unread. No new September 9 message was attributable to this address by recipient search or label in this run.",
-      "Centralized Forwarding Access: drpurposeology@gmail.com remains verified through the master inbox; the Dr Purposeology label is present with 1 total message and 0 unread. No new September 9 message was attributable to this address by recipient search or label in this run."
+      "Direct Access: palmerga15@gmail.com checked successfully through approximately 5:00 PM ET on September 9, 2026.",
+      "Centralized Forwarding Access: purposequestinc@gmail.com remains verified through the master inbox; PQI label has 15 total messages and 2 unread. No new attributable message this run.",
+      "Centralized Forwarding Access: drpurposeology@gmail.com remains verified through the master inbox; Dr Purposeology label has 1 total message and 0 unread. No new attributable message this run."
     ],
     "accessIssues": [
-      "purposepoweralliance@gmail.com forwarding/indirect access remains unverified; the Purpose Power Alliance label contains 0 messages and no forwarded mail from that address was confirmed in this run.",
-      "purposespherellc@gmail.com forwarding/indirect access remains unverified; the PurposeSphere LLC label contains 0 messages and no forwarded mail from that address was confirmed in this run."
+      "purposepoweralliance@gmail.com forwarding/indirect access remains unverified; Purpose Power Alliance label contains 0 messages.",
+      "purposespherellc@gmail.com forwarding/indirect access remains unverified; PurposeSphere LLC label contains 0 messages."
     ]
   }
 }
