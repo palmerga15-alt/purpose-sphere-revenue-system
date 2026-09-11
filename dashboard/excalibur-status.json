@@ -5,31 +5,35 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-09-11T05:00:45-04:00",
+  "lastUpdated": "2026-09-11T08:02:20-04:00",
   "report": {
     "urgent": [
-      "palmerga15@gmail.com — Capital One sent repeated declined-purchase alerts overnight stating the purchase exceeded the available balance. Review the account balance and resolve the funding issue this morning.",
-      "palmerga15@gmail.com — Google reports that Sign in with Google was used for Kikoff at approximately 12:34 AM on September 11 and some Google Account data was shared. If this was not authorized, revoke Kikoff access and review Google Account security activity immediately."
+      "palmerga15@gmail.com — Capital One sent another declined-purchase alert after the 5:00 AM run stating the purchase exceeded the available balance. Review the account balance and resolve the funding issue this morning.",
+      "palmerga15@gmail.com — Facebook Security reports that a WhatsApp account was added to the same Accounts Center as G Alfred Palmer (Facebook) and drpurposelogy (Instagram). If this change was not authorized, use Facebook's account-security recovery path immediately."
     ],
     "billsAndOutstandingBalances": [
-      "palmerga15@gmail.com — Capital One reports purchases were declined because they exceeded the available balance; review the account balance and any pending obligations this morning."
+      "palmerga15@gmail.com — ESPN reports it was unable to process a payment and says payment information must be updated to maintain access.",
+      "palmerga15@gmail.com — Capital One reports another purchase was declined because it exceeded the available balance."
     ],
     "appointments": [
-      "No new overnight appointment cancellation, rescheduling notice, or appointment issue requiring immediate attention was identified."
+      "palmerga15@gmail.com — PrintScan sent a cancellation notice for the August 27, 2026 2:00 PM appointment at UPS Store 0535 in Washington, DC, marked as a no-show. Reschedule if fingerprinting is still needed."
     ],
     "speakingGigsAndOpportunities": [
-      "No new direct speaking invitation, call-for-speakers message, or conference-organizer reply requiring immediate attention was identified in the overnight scan."
+      "palmerga15@gmail.com — Federation of State Physician Health Programs is accepting presentation proposals for the FSPHP 2027 Annual Education Conference in Oklahoma City, April 14–16, 2027. Oral presentation proposals are due September 30, 2026. This is a direct speaking opportunity relevant to clinician well-being, recovery, administration, and workforce preservation."
     ],
     "sameDayActions": [
       "Review the Capital One account balance and resolve the declined-purchase funding issue.",
-      "Confirm whether the Kikoff Sign in with Google connection was authorized; revoke access and review Google security activity if it was not."
+      "Confirm whether the WhatsApp account added to Facebook Accounts Center was authorized; secure the account immediately if it was not.",
+      "Review and update ESPN payment information if the subscription should remain active.",
+      "Review the FSPHP 2027 call for presentations and decide whether to submit before the September 30 deadline.",
+      "Reschedule the PrintScan appointment if fingerprinting remains outstanding."
     ],
     "repliesAndBusinessMatters": [
-      "No new substantive client, chamber, sponsor, partner, conference-organizer, or other business reply requiring immediate attention was identified overnight.",
-      "No September 11 overnight message was attributable by original-recipient search or monitored Gmail labels to purposequestinc@gmail.com, drpurposeology@gmail.com, purposepoweralliance@gmail.com, or purposespherellc@gmail.com."
+      "No new substantive client, chamber, sponsor, partner, or conference-organizer reply requiring immediate attention was identified between the 5:00 AM and 8:00 AM scans.",
+      "No September 11 message in this run was attributable by original-recipient search to purposequestinc@gmail.com, drpurposeology@gmail.com, purposepoweralliance@gmail.com, or purposespherellc@gmail.com."
     ],
     "accountsChecked": [
-      "Direct Access: palmerga15@gmail.com checked successfully through approximately 5:00 AM ET on September 11, 2026.",
+      "Direct Access: palmerga15@gmail.com checked successfully through approximately 8:02 AM ET on September 11, 2026.",
       "Centralized Forwarding Access: purposequestinc@gmail.com remains verified through the master inbox; PQI label has 15 total messages and 2 unread. No new attributable message this run.",
       "Centralized Forwarding Access: drpurposeology@gmail.com remains verified through the master inbox; Dr Purposeology label has 1 total message and 0 unread. No new attributable message this run."
     ],
