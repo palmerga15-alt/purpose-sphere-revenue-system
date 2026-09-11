@@ -5,14 +5,14 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-09-10T07:57:17-04:00",
+  "lastUpdated": "2026-09-11T05:00:45-04:00",
   "report": {
     "urgent": [
-      "palmerga15@gmail.com — PayPal sent repeated notices between approximately 5:16 AM and 5:34 AM ET that the bank declined an electronic funds transfer. Review the transfer and linked bank funding status this morning."
+      "palmerga15@gmail.com — Capital One sent repeated declined-purchase alerts overnight stating the purchase exceeded the available balance. Review the account balance and resolve the funding issue this morning.",
+      "palmerga15@gmail.com — Google reports that Sign in with Google was used for Kikoff at approximately 12:34 AM on September 11 and some Google Account data was shared. If this was not authorized, revoke Kikoff access and review Google Account security activity immediately."
     ],
     "billsAndOutstandingBalances": [
-      "palmerga15@gmail.com — PayPal reports a bank-declined electronic funds transfer; repeated notices indicate the transfer remains unresolved.",
-      "palmerga15@gmail.com — Atlassian Loom warns the monthly subscription will be deactivated soon unless payment details are added. Review billing if Loom should remain active."
+      "palmerga15@gmail.com — Capital One reports purchases were declined because they exceeded the available balance; review the account balance and any pending obligations this morning."
     ],
     "appointments": [
       "No new overnight appointment cancellation, rescheduling notice, or appointment issue requiring immediate attention was identified."
@@ -21,15 +21,15 @@
       "No new direct speaking invitation, call-for-speakers message, or conference-organizer reply requiring immediate attention was identified in the overnight scan."
     ],
     "sameDayActions": [
-      "Review and resolve the PayPal electronic funds transfer that the linked bank declined.",
-      "Add or update Loom payment details today if the subscription should remain active."
+      "Review the Capital One account balance and resolve the declined-purchase funding issue.",
+      "Confirm whether the Kikoff Sign in with Google connection was authorized; revoke access and review Google security activity if it was not."
     ],
     "repliesAndBusinessMatters": [
-      "No new substantive client, chamber, sponsor, partner, or conference-organizer reply requiring immediate attention was identified overnight.",
-      "No September 10 message in this scan was attributable by original-recipient search to purposequestinc@gmail.com, drpurposeology@gmail.com, purposepoweralliance@gmail.com, or purposespherellc@gmail.com."
+      "No new substantive client, chamber, sponsor, partner, conference-organizer, or other business reply requiring immediate attention was identified overnight.",
+      "No September 11 overnight message was attributable by original-recipient search or monitored Gmail labels to purposequestinc@gmail.com, drpurposeology@gmail.com, purposepoweralliance@gmail.com, or purposespherellc@gmail.com."
     ],
     "accountsChecked": [
-      "Direct Access: palmerga15@gmail.com checked successfully through approximately 8:00 AM ET on September 10, 2026.",
+      "Direct Access: palmerga15@gmail.com checked successfully through approximately 5:00 AM ET on September 11, 2026.",
       "Centralized Forwarding Access: purposequestinc@gmail.com remains verified through the master inbox; PQI label has 15 total messages and 2 unread. No new attributable message this run.",
       "Centralized Forwarding Access: drpurposeology@gmail.com remains verified through the master inbox; Dr Purposeology label has 1 total message and 0 unread. No new attributable message this run."
     ],
