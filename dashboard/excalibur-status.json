@@ -5,29 +5,35 @@
   "repository": "palmerga15-alt/purpose-sphere-revenue-system",
   "branch": "claude/command-center-dashboard-1sutu5",
   "feed": "dashboard/excalibur-status.json",
-  "lastUpdated": "2026-09-14T08:00:00-04:00",
+  "lastUpdated": "2026-09-14T17:00:39-04:00",
   "report": {
     "urgent": [
-      "No new urgent or important email requiring immediate attention was identified overnight through the 8:00 AM scan."
+      "palmerga15@gmail.com — Capital One: a purchase was declined because it exceeds the available balance. Review the account balance and the attempted transaction before day-end.",
+      "palmerga15@gmail.com — X: an $8.00 subscription payment was unsuccessful. Update the payment method today if the subscription should remain active."
     ],
     "billsAndOutstandingBalances": [
-      "No new bill, payment failure, or outstanding-balance notice requiring immediate attention was identified overnight."
+      "palmerga15@gmail.com — X: $8.00 payment unsuccessful; payment-method action is required to continue the subscription.",
+      "palmerga15@gmail.com — Capital One: declined purchase due to insufficient available balance; review available funds and the attempted charge."
     ],
     "appointments": [
-      "No new overnight appointment cancellation, rescheduling notice, or appointment issue requiring immediate attention was identified."
+      "No new same-day appointment cancellation, rescheduling notice, or appointment issue requiring attention was identified in the late-day scan."
     ],
     "speakingGigsAndOpportunities": [
-      "No new direct speaking invitation, call-for-speakers notice, or conference-organizer reply requiring immediate attention was identified overnight."
+      "No new direct speaking invitation or call-for-speakers notice requiring action before day-end was identified in the late-day scan."
     ],
     "sameDayActions": [
-      "No new same-day action was generated from overnight email."
+      "Review the Capital One declined purchase and account balance before the day ends.",
+      "Resolve or intentionally discontinue the $8.00 X subscription payment before the day ends.",
+      "Review the VA NCO 16 virtual business opportunity session registration if federal contracting or VA small-business opportunities are a current priority."
     ],
     "repliesAndBusinessMatters": [
-      "No substantive new client, chamber, sponsor, partner, conference-organizer, or other direct business reply requiring immediate attention was identified overnight.",
-      "No overnight message was attributable by original-recipient search to purposequestinc@gmail.com, drpurposeology@gmail.com, purposepoweralliance@gmail.com, or purposespherellc@gmail.com."
+      "palmerga15@gmail.com — VA Office of Small & Disadvantaged Business Utilization: registration opened for the VA NCO 16 Quarterly Virtual Business Opportunity Session on September 23 for SDVOSBs, VOSBs, and small businesses.",
+      "palmerga15@gmail.com — Operation HOPE: invitation/save-the-date for HOPE Global Forums on December 2–3, 2026, with an invitation request available.",
+      "palmerga15@gmail.com — Indeed: some interview invitations will expire on December 13, 2026; this is not a same-day deadline but should be reviewed if those roles remain of interest.",
+      "No September 14 message was attributable by original-recipient search to purposequestinc@gmail.com, drpurposeology@gmail.com, purposepoweralliance@gmail.com, or purposespherellc@gmail.com."
     ],
     "accountsChecked": [
-      "Direct Access: palmerga15@gmail.com checked successfully through approximately 8:00 AM ET on September 14, 2026.",
+      "Direct Access: palmerga15@gmail.com checked successfully through approximately 5:00 PM ET on September 14, 2026.",
       "Centralized Forwarding Access: purposequestinc@gmail.com remains verified through the master inbox; PQI label has 15 total messages and 2 unread. No new attributable message this run.",
       "Centralized Forwarding Access: drpurposeology@gmail.com remains verified through the master inbox; Dr Purposeology label has 1 total message and 0 unread. No new attributable message this run."
     ],
