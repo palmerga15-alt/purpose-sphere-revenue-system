@@ -21,10 +21,26 @@ The underlying 26-concept framework and Concept Dictionary are proprietary and i
 
 Per the Purpose Council review, the priority is strengthening **proof and delivery infrastructure** before opening new build fronts — i.e., prove the model works and scales before expanding further.
 
-## Immediate Focus: "Purposeology & AI" Webinar (July 15, 2026)
-This is the active go-to-market vehicle. Assets already built: VSL scripts ("The New Reveal" framework), social rollout, email sequences, PowerPoint deck (poster art background), and a HeyGen avatar presentation (native TTS voice, not DrG's own).
+## Current Go-to-Market: "Why Before AI" / "Purpose Before Prompts™" (90-Day Program, Aug 24 – Nov 22, 2026)
+**Supersedes the original free July 15, 2026 "Purposeology & AI" webinar plan below.** As of late August 2026, the active go-to-market motion is a formal 90-day market-development program (see `dashboard/purposeology-market-development.json`) run in three phases:
+1. **Foundation and Launch Readiness** (Aug 24 – Sep 22)
+2. **Validation and Revenue Building** (Sep 23 – Oct 22)
+3. **Pilot, Evidence, and Conversion** (Oct 23 – Nov 22)
 
-**Core thesis:** *"AI gives you information. Purposeology™ gives you the reason to use it."*
+**Positioning lines:** *"Why Before AI"* and *"Purpose Before Prompts™"* — successors to, and consistent with, the original core thesis below.
+
+**Current offer set (priority #1, replacing the free-webinar-first plan):**
+- **Purpose Discovery webinar** — now a **paid** webinar, priced **$47–$97** (previously planned as free with a separate paid workshop).
+- **Purposeful AI Starter Kit** — low-ticket entry offer.
+- **AI With Purpose Workshop** — paid public workshop.
+- **Purpose-Centered AI Alignment Workshop™** — the organizational/enterprise flagship offer, feeding priority #4.
+
+As of the last recorded status (Aug 22 – Sep 14, 2026): checkout was not yet connected, system of record not yet selected, email automation only partially designed, and the Friday financial-review/weekly-priorities cadence (`content/financial-controls/`, `content/market-development/`) was just getting established. **Confirm current status before treating any of the above as live** — this brief should be re-synced whenever the program's phase, offers, or pricing change again.
+
+## Original Immediate Focus (superseded): "Purposeology & AI" Webinar (July 15, 2026)
+This was the first go-to-market vehicle, now superseded by the 90-day program above. Assets built for it: VSL scripts ("The New Reveal" framework), social rollout, email sequences, PowerPoint deck (poster art background), and a HeyGen avatar presentation (native TTS voice, not DrG's own). Some of this content (the five-stage framing, Chronos/Kairos, Purpose Fingerprint™ language) carries forward into the current program; the specific free-webinar/$497–$997-workshop offer structure does not.
+
+**Core thesis (still active):** *"AI gives you information. Purposeology™ gives you the reason to use it."*
 
 This positions Purposeology™ not as competing with AI tools, but as the meaning-and-direction layer that makes AI's output usable and purposeful for the individual.
 
