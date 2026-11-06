@@ -29,22 +29,59 @@ Load tool schemas with ToolSearch first if needed.
 
 Record a UTC `probedAt` per source; `status: "online"` only if its probes succeeded.
 
-### 2. Write the briefing
+### 2. Module health (Finance / Billing / IP Intelligence)
+
+These three modules (`finance.js`, `billing.js`, `ip.js`) ship fictional
+sample data by design — **never** read their sample numbers (revenue,
+invoices, trademark/license records) into the briefing; that would violate
+rule 1. Only real, verifiable facts about the modules' own current state
+belong in `moduleHealth`:
+
+- **Mode**: check whether `dashboard/finance-config.js` / `billing-config.js`
+  / `ip-config.js` exist in the working tree. None are ever committed (see
+  `.gitignore`), so the honest answer on this public branch is always
+  `"sample"` unless that convention has changed.
+- **Test health**: actually run each module's suites fresh this refresh —
+  `node dashboard/tests/{finance,billing,ip}-validate.test.js`, and the
+  three `*-browser.test.js` suites against a local server (see
+  `dashboard/tests/README.md` for exact commands) — and record real
+  pass/total counts. Never carry forward a previous run's numbers.
+- **IP compliance scan** (only once `ip.js` exists on this branch): run
+  `node dashboard/ip-scan.js` fresh and record `{ clean, filesScanned,
+  findings }` from its real output.
+- **If a module's branch isn't merged into this one yet** (check with
+  `git log --oneline -- dashboard/<module>.js`): record
+  `status: "built-not-merged"` plus the branch name instead of a mode —
+  do not claim it is live if it isn't.
+
+Write/update the `moduleHealth` object with a `verifiedAt` timestamp per
+entry.
+
+### 3. Write the briefing
 
 Read `business-brief.md` for strategic priorities. Then write `briefing` with:
 - `date` (long-form weekday date), `headline` (one sentence, the single most urgent thing), `summary` (2–3 sentences).
 - 4–6 `actions`, priority-ordered by revenue urgency, each with `title`, `detail` (specific: names, dates, day-counts of idleness, file paths), and `sources` — the array of source keys the action cross-references. Prefer actions that connect two tools (e.g., a repo offer spec with no matching Gmail outbound).
+- 1–2 additional low-priority entries appended at the end, after the revenue-urgency-ordered ones, surfacing anything notable from step 2's `moduleHealth` (e.g. a module still sample-only, or a built-but-unmerged module) — operational/informational, not revenue-urgent, so they always sort last.
 
 Signals worth flagging every time: unsent drafts and how long they've been idle, bounced outreach, unpublished-but-finished Lovable projects, offer specs with no outbound email activity, verification/blocker emails, warm threads gone quiet >2 weeks.
 
-### 3. Regenerate data.js
+### 4. Regenerate data.js
 
-Overwrite `dashboard/data.js` keeping the exact existing schema (sources, briefing, pipeline, gmail, gdrive, dropbox, lovable, github). Update `generatedAt`. Wrap any dollar amount in the data as a `money` field value so the privacy blur catches it — never put dollar figures in plain `note`/`detail` strings.
+Overwrite `dashboard/data.js` keeping the exact existing schema (sources,
+moduleHealth, briefing, pipeline, gmail, gdrive, dropbox, lovable, github).
+Update the top-level `generatedAt` only when the external-source probes in
+step 1 actually ran; if only `moduleHealth` was refreshed, update its own
+per-entry `verifiedAt` fields instead and leave the top-level `generatedAt`
+alone — it should only ever reflect when gmail/gdrive/dropbox/lovable/github
+were actually re-probed. Wrap any dollar amount in the data as a `money`
+field value so the privacy blur catches it — never put dollar figures in
+plain `note`/`detail` strings.
 
-### 4. Verify, commit, push
+### 5. Verify, commit, push
 
 ```bash
-node -e "global.window={};require('/home/user/purpose-sphere-revenue-system/dashboard/data.js');const d=window.DASHBOARD_DATA;if(!d.sources||!d.briefing)process.exit(1);console.log('OK',Object.keys(d))"
+node -e "global.window={};require('/home/user/purpose-sphere-revenue-system/dashboard/data.js');const d=window.DASHBOARD_DATA;if(!d.sources||!d.briefing||!d.moduleHealth)process.exit(1);console.log('OK',Object.keys(d))"
 ```
 
 Only if that passes: commit `dashboard/data.js` with message `Refresh command center data + morning briefing (<date>)` and push with `git push -u origin claude/command-center-dashboard-1sutu5` (retry up to 4x with 2s/4s/8s/16s backoff on network failure).

@@ -17,6 +17,35 @@ window.DASHBOARD_DATA = {
     github:  { label: "GITHUB",       status: "online", probedAt: "2026-07-23T01:35:00Z", account: "palmerga15-alt" }
   },
 
+  // ---- MODULE HEALTH (Finance/Billing/IP Intelligence — real, verified
+  // facts about these modules' own current state, never their fictional
+  // sample business figures. verifiedAt records when each entry below was
+  // actually checked, independent of the top-level generatedAt above,
+  // which reflects the external-source probes only. ----
+  moduleHealth: {
+    finance: {
+      mode: "sample", // no dashboard/finance-config.js exists — verified, not assumed
+      validatorPassing: 19, validatorTotal: 19,
+      browserPassing: 63, browserTotal: 63,
+      verifiedAt: "2026-11-06T02:10:00Z"
+    },
+    billing: {
+      mode: "sample", // no dashboard/billing-config.js exists — verified, not assumed
+      validatorPassing: 36, validatorTotal: 36,
+      browserPassing: 68, browserTotal: 68,
+      verifiedAt: "2026-11-06T02:10:00Z"
+    },
+    ip: {
+      status: "built-not-merged",
+      branch: "claude/purposeology-ip-intelligence",
+      validatorPassing: 29, validatorTotal: 29,
+      scanPassing: 9, scanTotal: 9,
+      browserPassing: 51, browserTotal: 51,
+      complianceScan: { clean: true, filesScanned: 24, findings: 0 },
+      verifiedAt: "2026-11-06T02:10:00Z"
+    }
+  },
+
   // ---- AI MORNING BRIEFING (cross-referenced across tools) ----
   briefing: {
     date: "Wednesday, July 23, 2026",
@@ -58,6 +87,18 @@ window.DASHBOARD_DATA = {
         title: "Reply check: John Stanko thread",
         detail: "Active mentor/peer correspondence with John Stanko (last exchange July 1–2). Three weeks of silence on a warm relationship thread — worth a touch-base.",
         sources: ["gmail"]
+      },
+      {
+        priority: 7,
+        title: "Finance and Billing are both still sample-only on the public dashboard",
+        detail: "Business Financial Intelligence and Revenue Billing & Accounts Receivable are both live on this branch and fully tested (82/82 and 104/104 checks passing, verified at this refresh) but still shipping in SAMPLE mode — no real backend or local records exist yet. Every number currently shown on the public dashboard for either module is fictional by design.",
+        sources: ["github"]
+      },
+      {
+        priority: 8,
+        title: "Purposeology IP Intelligence (Milestone 3) built and tested, awaiting merge",
+        detail: "IP Asset Registry, Licensing & Certification Tracker, Terminology Compliance Scanner, and IP Protection Calendar are complete on claude/purposeology-ip-intelligence — 89 tests passing, including a real compliance scan of this repo (0 findings across 24 markdown files) — but the branch has not yet been reviewed or merged here.",
+        sources: ["github"]
       }
     ]
   },
