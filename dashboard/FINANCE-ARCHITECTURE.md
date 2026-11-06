@@ -189,6 +189,10 @@ Behavior: **starts ON at every page load**, relocks after inactivity (default
 This is a viewing shield, not encryption — which is exactly why only fictional
 data may ship in the public repo.
 
+See also `dashboard/SECURITY-THREAT-MODEL.md`, which documents the adversarial
+threat model for the whole Command Center (finance, billing, and IP Intelligence
+panels together), not just this module's own boundary table above.
+
 ## Testing
 
 Automated tests live in `dashboard/tests/` and cover the whole module.
@@ -229,7 +233,7 @@ config layer would need to parameterize.
 | **Privacy & session-lock controls** | `body.privacy`, LOCK button, inactivity relock (`FINANCE_CONFIG.inactivitySeconds`), and expiry relock are already generic and config-driven. | Client sets the inactivity window and default-lock policy in config. |
 | **Secure backend separation** | The authenticated backend, its credentials, and `finance-config.js` live entirely outside this repo. The client only ever holds display labels. | Each client points `apiEndpoint` at its own backend; the contract is unchanged. |
 | **Role-based access readiness** | The contract already assumes the **server** decides what a session may see (the client never filters). Adding roles is a backend concern that returns a narrower payload — the UI needs no change to honor it. | Backend attaches a role/scope to the session and returns only authorized records; optionally a `viewerRole` field could hide controls, but this is deferred. |
-| **Clean documentation** | This document describes the contract, adapter states, validation, security boundaries, and the sample-to-live deployment path. | Add a per-client deployment runbook when the first real deployment happens. |
+| **Clean documentation** | This document plus `SECURITY-THREAT-MODEL.md` describe the contract, adapter states, validation, security boundaries, and the sample-to-live deployment path. | Add a per-client deployment runbook when the first real deployment happens. |
 
 ### Where Purposeology-specific assumptions currently live (documented, not changed)
 
