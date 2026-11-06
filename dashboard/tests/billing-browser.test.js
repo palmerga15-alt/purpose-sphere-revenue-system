@@ -105,7 +105,20 @@ function attachErrorSink(page, errors) {
     const agingTotal = await page.evaluate(() => window.BillingModule.model.agingTotal);
     const outstanding = await page.evaluate(() => window.BillingModule.model.outstanding);
     t("aging bucket total equals outstanding balance", Math.abs(agingTotal - outstanding) < 0.01, { agingTotal, outstanding });
-    t("31-60 bucket captures the known overdue partial invoice (INV-2026-0103)", byKey.b31_60.count === 1 && byKey.b31_60.total > 0, byKey);
+
+    // The sample dataset uses fixed calendar dates, so which bucket a given
+    // invoice lands in shifts as real time passes (an invoice overdue by
+    // 40 days when this suite was written may be overdue by 140+ days a
+    // few months later). Compute the expected bucket from the invoice's
+    // own current daysPastDue instead of hardcoding one, so this assertion
+    // stays correct indefinitely rather than going stale with the calendar.
+    const inv0103 = await page.evaluate(() => window.BillingModule.model.invoices.find(i => i.id === "INV-2026-0103"));
+    t("INV-2026-0103 is overdue with its known $1,500 partial balance",
+      inv0103.st === "overdue" && inv0103.balance === 1500, inv0103);
+    const bucketForDays = d => d === null || d <= 0 ? "current" : d <= 30 ? "b1_30" : d <= 60 ? "b31_60" : d <= 90 ? "b61_90" : "b90p";
+    const expectedBucket = bucketForDays(inv0103.daysPastDue);
+    t(`INV-2026-0103 counted in the ${expectedBucket} aging bucket (dynamically derived from its current daysPastDue=${inv0103.daysPastDue})`,
+      byKey[expectedBucket].count >= 1 && byKey[expectedBucket].total >= 1500, byKey);
 
     // ---- Invoice Manager: search/filter don't lose input focus ----
     await page.fill("#bill-inv-search", "Harper");
