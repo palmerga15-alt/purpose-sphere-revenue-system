@@ -24,6 +24,17 @@ invoice-export*
 customer-export*
 ar-export*.csv
 
+# Deployment-injected IP intelligence configuration (endpoint, timeouts).
+# A private deployment writes this file at deploy time; it must
+# NEVER be committed — the public build ships without it and the
+# dashboard falls back to fictional sample data.
+dashboard/ip-config.js
+
+# Private IP/legal exports must never enter this repository.
+trademark-filing*
+license-agreement*
+legal-correspondence*
+
 # ── general ────────────────────────────────────────────────────
 node_modules/
 .DS_Store

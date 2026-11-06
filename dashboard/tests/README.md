@@ -70,4 +70,42 @@ relock · zero JavaScript errors.
 
 ### Latest result (Revenue Billing & Accounts Receivable)
 
-36 validator + 67 browser checks passing, zero JavaScript errors.
+36 validator + 68 browser checks passing, zero JavaScript errors.
+
+## Purposeology IP Intelligence
+
+```bash
+node dashboard/tests/ip-validate.test.js
+```
+
+```bash
+node dashboard/tests/ip-scan.test.js
+```
+
+Runs the real `dashboard/ip-scan.js` scanner against this actual repository
+(asserts zero findings) and against synthetic leaky/clean fixtures (asserts
+it still catches genuine definition/enumeration attempts). No browser
+required for either validator-style suite above.
+
+```bash
+python3 -m http.server 8788      # 1. serve the repository root
+node dashboard/tests/ip-browser.test.js   # 2. in another shell
+```
+
+Same environment overrides as above (`BASE_URL`, `CHROMIUM_PATH`).
+
+Covers: default privacy-locked state shared across Financial Intelligence,
+Billing, and IP Intelligence (one toggle governs all three) · unlock/relock
+via the section toggle and LOCK button · all 5 panels render · manual-local
+CRUD for IP assets and license records · the `IP_LEAK_PATTERN` rejection on
+local writes (and the credential-like rejection, confirming both rules are
+active) · renewal/expiry-derived IP Protection Calendar math · disconnected/
+ERROR degradation that leaves Finance and Billing working independently ·
+desktop + mobile layouts · inactivity relock · zero JavaScript errors.
+
+### Latest result (Purposeology IP Intelligence)
+
+29 validator + 9 scanner + 51 browser checks passing, zero JavaScript errors.
+Scanner suite confirms 0 false positives against this repository's own
+compliance language and still catches 4 synthetic enumeration/definition
+shapes against test fixtures.
