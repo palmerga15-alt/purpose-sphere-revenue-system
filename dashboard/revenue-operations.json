@@ -1,0 +1,504 @@
+{
+  "service": "Centurion Revenue Operations",
+  "status": "implementation-required",
+  "commandCenterMode": "non-sensitive operational tracking",
+  "lastUpdated": "2026-08-22T17:45:00-04:00",
+  "revenueSystem": {
+    "primaryObjective": "Create a measurable path from qualified attention to collected revenue and continued customer value.",
+    "funnelStages": [
+      "attention",
+      "leadCapture",
+      "qualification",
+      "offer",
+      "checkout",
+      "onboarding",
+      "delivery",
+      "followUp",
+      "nextOffer"
+    ],
+    "immediateStreams": [
+      {
+        "name": "Purposeful AI Starter Kit",
+        "role": "entry offer",
+        "readiness": "build-and-connect",
+        "nextRequiredActions": [
+          "finalize deliverable",
+          "create product record",
+          "connect checkout",
+          "write buyer confirmation",
+          "create delivery handoff",
+          "connect next-offer sequence"
+        ]
+      },
+      {
+        "name": "AI With Purpose Workshop",
+        "role": "paid public offer",
+        "readiness": "schedule-and-connect",
+        "nextRequiredActions": [
+          "lock date and capacity",
+          "create registration product",
+          "connect checkout",
+          "create reminders",
+          "prepare delivery materials",
+          "create post-event follow-up"
+        ]
+      },
+      {
+        "name": "Purpose-Centered AI Alignment Workshop™",
+        "role": "organizational flagship",
+        "readiness": "sales-system-build",
+        "nextRequiredActions": [
+          "finalize scope",
+          "create qualification form",
+          "create briefing registration",
+          "create proposal template",
+          "define payment milestones",
+          "create onboarding checklist",
+          "create delivery and evidence package"
+        ]
+      }
+    ],
+    "managementControls": {
+      "weeklyMetrics": [
+        "qualified leads",
+        "briefing registrations",
+        "executive conversations",
+        "proposals sent",
+        "sales won",
+        "cash collected",
+        "delivery cost",
+        "gross margin",
+        "next-offer conversions"
+      ],
+      "privacyBoundary": "No customer identities, assessments, credentials, payment details, or private pricing belong in the public repository.",
+      "systemOfRecordStatus": "not selected",
+      "checkoutStatus": "not connected",
+      "customerTrackingStatus": "not connected",
+      "emailAutomationStatus": "partially designed",
+      "commandCenterIntegrationStatus": "operating architecture added; live source connections pending",
+      "financialRecordHierarchy": [
+        "Podia records the customer order, product or enrollment.",
+        "Stripe records payment authorization, processing, fees, refunds and payout status.",
+        "The business bank account confirms settlement of funds.",
+        "The accounting system classifies transactions and serves as the formal reconciled financial record.",
+        "The PurposeSphere Command Center displays sanitized, verified summaries for monitoring, variance review and management confirmation."
+      ],
+      "commandCenterRole": "Management confirmation and check-and-balance layer only; not the legal ledger, payment processor, bank record or accounting system of record.",
+      "reconciliationRule": "Command Center totals must be traceable to and periodically reconciled against Podia, Stripe, bank and accounting records. Differences are flagged until resolved.",
+      "categoryPostingRule": "Assign each transaction to exactly one standardized revenue category. Do not create alternate labels or new categories without documented approval. Track products and offers separately from the accounting category.",
+      "manualInterimProcedure": "Until Podia, Stripe, bank and accounting feeds are securely connected, perform the unmatched-transaction check during the Friday financial close and notify Dr. G of every exception."
+    },
+    "standardRevenueCategories": [
+      {
+        "code": "R01",
+        "category": "Digital Products",
+        "postingRule": "Downloadable kits, templates, workbooks and other stand-alone digital purchases."
+      },
+      {
+        "code": "R02",
+        "category": "Courses and Educational Programs",
+        "postingRule": "Self-paced or instructor-led educational programs sold as courses."
+      },
+      {
+        "code": "R03",
+        "category": "Public Workshops and Seminars",
+        "postingRule": "Open-enrollment workshops, seminars, webinars and paid public training."
+      },
+      {
+        "code": "R04",
+        "category": "Organizational Workshops and Training",
+        "postingRule": "Services delivered to one contracting organization, including Purpose-Centered AI Alignment Workshop™."
+      },
+      {
+        "code": "R05",
+        "category": "Advisory and Consulting Services",
+        "postingRule": "Strategy, implementation guidance, retainers, Fiverr consulting and multi-session advisory engagements."
+      },
+      {
+        "code": "R06",
+        "category": "Certification and Credentialing",
+        "postingRule": "Purposeologist™ certification, credentialing, practicum and approved renewal fees."
+      },
+      {
+        "code": "R07",
+        "category": "Memberships and Subscriptions",
+        "postingRule": "Recurring membership, community or subscription revenue."
+      },
+      {
+        "code": "R08",
+        "category": "Assessments and Evaluations",
+        "postingRule": "Paid assessments, organizational evaluations and related interpretation services."
+      },
+      {
+        "code": "R09",
+        "category": "Speaking and Appearances",
+        "postingRule": "Keynotes, panels, guest teaching, speaking engagements and appearance fees."
+      },
+      {
+        "code": "R10",
+        "category": "Books and Publishing",
+        "postingRule": "Printed books, ebooks, audiobooks, workbooks and publishing-related sales."
+      },
+      {
+        "code": "R11",
+        "category": "Licensing and Intellectual Property",
+        "postingRule": "Authorized licensing of curricula, media, characters, methods, content or other intellectual property."
+      },
+      {
+        "code": "R12",
+        "category": "Sponsorships and Partnerships",
+        "postingRule": "Sponsorship payments and paid partnership arrangements not earned through another service category."
+      },
+      {
+        "code": "R13",
+        "category": "Premium and Private Experiences",
+        "postingRule": "Private Purposeology® experiences and other bespoke premium engagements."
+      },
+      {
+        "code": "R14",
+        "category": "Merchandise and Physical Products",
+        "postingRule": "Branded merchandise, physical products and heirloom products such as The Book of Purpose."
+      },
+      {
+        "code": "R15",
+        "category": "Grants and Contributions",
+        "postingRule": "Grant awards and contributions legally received by an eligible entity; not customer sales."
+      },
+      {
+        "code": "R16",
+        "category": "Other Operating Revenue",
+        "postingRule": "Rare operating income that cannot reasonably be classified elsewhere; requires Centurion review before use."
+      }
+    ],
+    "financialClassificationPrinciple": "Every record must have exactly one standardized revenue category (R01–R16) and exactly one current financial-status classification (F01–F04). Revenue categories and financial statuses are separate dimensions and must never be blended.",
+    "standardFinancialStatuses": [
+      {
+        "code": "F01",
+        "status": "Projected",
+        "definition": "A planning target or forecast not tied to an active customer commitment.",
+        "evidenceRequired": "Approved budget, forecast or planning assumption."
+      },
+      {
+        "code": "F02",
+        "status": "Pipeline",
+        "definition": "A specific active sales opportunity without a fully executed customer agreement.",
+        "evidenceRequired": "Identified prospect, offer, estimated value, stage, probability, next action and due date."
+      },
+      {
+        "code": "F03",
+        "status": "Booked but Uncollected",
+        "definition": "An amount supported by a signed agreement, confirmed order or enforceable invoice that has not yet been received.",
+        "evidenceRequired": "Executed agreement, confirmed order or valid invoice plus payment due date."
+      },
+      {
+        "code": "F04",
+        "status": "Collected",
+        "definition": "Funds actually received and confirmed through the approved payment processor or bank.",
+        "evidenceRequired": "Processor transaction and/or bank settlement record."
+      }
+    ],
+    "nonBlendingRules": [
+      "Do not report projected revenue as pipeline, booked revenue or collected cash.",
+      "Do not report pipeline value as booked revenue or collected cash.",
+      "Do not report a verbal commitment as booked revenue.",
+      "Do not report an invoice as collected until payment is confirmed.",
+      "When part of a signed contract is paid, classify the paid portion as F04 Collected and the remaining enforceable balance as F03 Booked but Uncollected.",
+      "Do not add F01, F02, F03 and F04 together to state total revenue.",
+      "Report each amount by standardized category and financial status, with source evidence and last verification date.",
+      "Any record missing a category, status or required evidence is Unclassified and excluded from official totals until corrected."
+    ],
+    "requiredRecordFields": [
+      "record ID",
+      "legal entity",
+      "standard revenue category code",
+      "product or service name",
+      "customer or opportunity reference",
+      "financial status code",
+      "amount",
+      "evidence source",
+      "transaction or agreement date",
+      "due date when applicable",
+      "last verified date",
+      "responsible owner",
+      "notes"
+    ],
+    "salesRecordControl": {
+      "principle": "No transaction may be treated as official revenue, receivable, refund or customer credit without a matching sales record.",
+      "requiredFor": [
+        "customer payment",
+        "deposit",
+        "invoice",
+        "signed contract amount",
+        "refund",
+        "chargeback",
+        "credit",
+        "installment",
+        "balance due",
+        "externally collected sale"
+      ],
+      "minimumSalesRecordFields": [
+        "sales record ID",
+        "legal entity",
+        "customer or organization reference",
+        "standard revenue category code",
+        "financial status code",
+        "product or service",
+        "contract or order date",
+        "total agreed price",
+        "amount invoiced",
+        "amount collected",
+        "amount outstanding",
+        "due date",
+        "payment source",
+        "supporting evidence",
+        "responsible owner",
+        "last verified date"
+      ],
+      "exceptionStatus": "Unmatched — Investigation Required",
+      "reportingRule": "Any financial transaction or expected payment without a matching sales record is excluded from official totals and immediately placed on the Unmatched Transaction Exception Report until resolved."
+    },
+    "unmatchedTransactionExceptionReport": {
+      "notificationRecipient": "Dr. G",
+      "requiredFields": [
+        "exception ID",
+        "date detected",
+        "transaction source",
+        "transaction type",
+        "amount",
+        "currency",
+        "payer or payee if known",
+        "product or service if known",
+        "what is supposed to be paid or refunded",
+        "expected due date",
+        "missing sales record or evidence",
+        "responsible owner",
+        "required corrective action",
+        "resolution deadline",
+        "status"
+      ],
+      "statuses": [
+        "New",
+        "Under Review",
+        "Awaiting Documentation",
+        "Matched and Resolved",
+        "Incorrect or Duplicate",
+        "Escalated"
+      ],
+      "notificationThreshold": "Every unmatched transaction or expected payment, regardless of amount.",
+      "resolutionRule": "Create or correct the supporting sales record, match the transaction to evidence, verify category and financial status, and document who resolved it and when. Never manufacture a sales record solely to force a match."
+    },
+    "primaryFinancialControlIssues": [
+      "Pre-Engagement Budget Approval",
+      "Invoice and Deposit Compliance",
+      "Sales Record Completeness",
+      "Revenue Category and Financial Status Classification",
+      "Unmatched Transaction Resolution",
+      "Payment Verification and Reconciliation"
+    ],
+    "invoiceAndDepositControl": {
+      "principle": "Every transaction must have a documented invoice or approved checkout receipt and an explicit deposit status. Blank invoice or deposit fields are prohibited.",
+      "applicability": [
+        {
+          "transactionType": "Organizational, custom, speaking, advisory and contracted services",
+          "invoiceRule": "Written agreement and formal invoice required before delivery.",
+          "depositRule": "Deposit required to reserve capacity unless a written exception is approved in Special Agreements."
+        },
+        {
+          "transactionType": "Low-cost digital products, public workshop registrations and other pay-in-full checkout sales",
+          "invoiceRule": "Podia order plus Stripe receipt may serve as the invoice/receipt record.",
+          "depositRule": "Mark Not Applicable — Paid in Full; do not leave blank."
+        },
+        {
+          "transactionType": "Installment or payment-plan sales",
+          "invoiceRule": "Order, total obligation and installment schedule required.",
+          "depositRule": "Record first installment as deposit only when the agreement expressly defines it as a deposit; otherwise classify it as an installment."
+        },
+        {
+          "transactionType": "Complimentary services",
+          "invoiceRule": "No invoice required, but an approved zero-dollar sales/service record is required.",
+          "depositRule": "Mark Not Applicable — Complimentary; do not leave blank."
+        }
+      ],
+      "standardServiceDepositRule": "Unless changed by a written, approved concession, contracted services require a 50% nonrefundable deposit at signing to reserve the date, with the remaining balance due five business days before delivery. Counsel and the Provider’s accountant must review this rule before contractual use.",
+      "requiredFields": [
+        "invoice required status",
+        "invoice number or checkout receipt ID",
+        "invoice date",
+        "invoice amount",
+        "deposit required status",
+        "deposit amount required",
+        "deposit due date",
+        "deposit amount received",
+        "deposit received date",
+        "remaining balance",
+        "remaining balance due date",
+        "exception approval and reason if applicable",
+        "last verified date"
+      ],
+      "prohibitedConditions": [
+        "invoice field blank",
+        "deposit status blank",
+        "deposit exception without written approval",
+        "delivery marked ready when a required deposit is missing",
+        "collected amount reported without receipt or processor evidence"
+      ]
+    },
+    "invoiceDepositExceptionAlert": {
+      "priority": "Primary — Action Required",
+      "trigger": "Any missing, incomplete, overdue, inconsistent or unverified invoice or deposit entry.",
+      "notificationRecipient": "Dr. G",
+      "notificationFields": [
+        "client or organization reference",
+        "service or product",
+        "total agreed amount",
+        "invoice required and current status",
+        "invoice amount and due date",
+        "deposit required and current status",
+        "deposit amount and due date",
+        "amount collected",
+        "balance outstanding",
+        "missing entry or evidence",
+        "responsible owner",
+        "required corrective action",
+        "resolution deadline"
+      ],
+      "actionRule": "Notify Dr. G when the issue becomes known; flag the record until corrected; do not mark the service ready for delivery when a required agreement, invoice or deposit is missing.",
+      "resolutionEvidence": [
+        "created or corrected invoice/receipt record",
+        "verified deposit or approved written exception",
+        "updated sales record",
+        "documented verifier and verification date"
+      ]
+    },
+    "preEngagementBudgetControl": {
+      "principle": "Centurion prepares a short engagement budget for Dr. G’s written approval before travel is booked, external costs are committed or engagement delivery begins.",
+      "appliesTo": [
+        "organizational workshops",
+        "seminars",
+        "keynotes",
+        "speaking appearances",
+        "advisory engagements",
+        "private experiences",
+        "in-person public workshops",
+        "any engagement with travel, contractors, production or reimbursable costs"
+      ],
+      "revenueInputs": [
+        "contracted service fee",
+        "approved add-on fees",
+        "approved reimbursable expenses billed to client",
+        "sponsorship or partner contribution tied to engagement",
+        "deposit collected",
+        "remaining balance",
+        "payment due dates"
+      ],
+      "costInputs": [
+        "airfare, rail or other intercity transportation",
+        "local transportation, rental vehicle, fuel, mileage, tolls and parking",
+        "lodging, occupancy taxes, resort/destination fees and internet",
+        "meals, per diem and approved hospitality",
+        "venue rental, room setup, security and permits",
+        "audio/visual, internet, streaming, recording and technical support",
+        "printing, workbooks, participant materials, supplies and shipping",
+        "contractors, facilitators, assistants, photographers, videographers and editors",
+        "accessibility services such as captioning or interpretation",
+        "insurance, licensing or required event fees",
+        "payment-processing and platform fees",
+        "marketing or audience-acquisition costs directly attributable to the engagement",
+        "preparation labor, travel time, delivery time and follow-up time for internal profitability analysis",
+        "tax reserve shown separately from direct delivery cost",
+        "contingency allowance",
+        "other engagement-specific committed cost"
+      ],
+      "requiredCalculations": [
+        "total contracted revenue",
+        "cash collected before engagement",
+        "cash still due",
+        "total direct cash costs",
+        "internal labor hours and assigned internal value",
+        "gross cash profit = contracted revenue minus direct cash costs",
+        "economic contribution = contracted revenue minus direct cash costs minus internal labor value",
+        "gross cash margin percentage",
+        "economic contribution margin percentage",
+        "profit per delivery hour",
+        "break-even revenue",
+        "cash required before reimbursement or final payment",
+        "expected payment and expense timing"
+      ],
+      "approvalFields": [
+        "engagement name",
+        "client reference",
+        "event date and location",
+        "budget version",
+        "prepared by Centurion",
+        "date prepared",
+        "Dr. G decision: Approved / Approved with Conditions / Revise / Declined",
+        "approval date",
+        "approval conditions",
+        "maximum authorized spend"
+      ],
+      "prohibitedActions": [
+        "booking travel before approval",
+        "committing contractors before approval",
+        "incurring unbudgeted material expenses without approval",
+        "delivering when required deposit or budget approval is missing"
+      ],
+      "varianceRule": "Reapproval is required when total expected cost increases by more than 10%, any unbudgeted single cost exceeds $250, expected revenue decreases, expected margin materially declines, or travel/scope changes.",
+      "closeoutRule": "Within five business days after delivery, Centurion compares budget to actual revenue and costs, explains variances, calculates final profitability and records lessons for future pricing."
+    },
+    "engagementBudgetStatusValues": [
+      "Draft",
+      "Awaiting Documentation",
+      "Awaiting Dr. G Approval",
+      "Approved",
+      "Approved with Conditions",
+      "Revise",
+      "Declined",
+      "Reapproval Required",
+      "Delivered — Awaiting Closeout",
+      "Closed and Reconciled"
+    ],
+    "profitabilityGateBeforeSignature": {
+      "principle": "If an engagement does not produce a reasonable expected margin, adjust the scope, price or delivery model before signing.",
+      "preliminaryMarginStandards": [
+        {
+          "status": "Green — Financially Acceptable",
+          "grossCashMargin": "60% or greater",
+          "action": "May proceed when all other controls are satisfied."
+        },
+        {
+          "status": "Gold — Conditional Review",
+          "grossCashMargin": "40%–59.9%",
+          "action": "Centurion must explain the strategic justification, margin weakness and corrective options; Dr. G’s written approval is required."
+        },
+        {
+          "status": "Red — Do Not Sign",
+          "grossCashMargin": "Below 40%",
+          "action": "Do not sign until price, scope, cost or delivery design is corrected, unless Dr. G documents an exceptional mission or strategic reason."
+        }
+      ],
+      "correctiveLevers": [
+        "increase the quoted price",
+        "reduce or clarify deliverables",
+        "shift from in-person to virtual or hybrid delivery",
+        "require the client to pay or directly arrange travel, lodging, venue, printing or production",
+        "reduce unnecessary travel days or lodging nights",
+        "limit participant count or charge for additional participants",
+        "reduce contractor or production complexity",
+        "standardize materials instead of custom-producing everything",
+        "separate optional services into paid add-ons",
+        "change payment timing to protect cash flow",
+        "decline the engagement when acceptable economics cannot be achieved"
+      ],
+      "exceptionRule": "An engagement below the margin floor may proceed only with Dr. G’s written exception stating the mission, relationship, market-entry or evidence-building purpose, the maximum authorized subsidy and why the exception is worthwhile.",
+      "signatureGateFields": [
+        "expected gross cash margin",
+        "expected economic contribution margin",
+        "Centurion recommendation",
+        "corrective action taken",
+        "Dr. G approval or exception",
+        "approval date"
+      ],
+      "accountingReviewNote": "These preliminary management thresholds should be reviewed with the Provider’s accountant and refined using actual delivery-cost history."
+    }
+  }
+}
