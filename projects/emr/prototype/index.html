@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EMR Prototype</title>
+<style>
+  :root {
+    --bg: #f5f6f8; --panel: #ffffff; --ink: #1d2433; --muted: #5d6677;
+    --line: #dde1e8; --accent: #2457c5; --accent-soft: #e8eefb;
+    --ok: #1d7a46; --ok-soft: #e3f4ea; --warn: #9a5b00; --warn-soft: #fdf1dc;
+    --bad: #b3261e; --bad-soft: #fbe7e6;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
+  header { background: var(--ink); color: #fff; padding: 10px 16px; display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
+  header .brand { font-weight: 700; font-size: 17px; }
+  header .demo { background: #f2c94c; color: #3a2c00; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 10px; }
+  header label { font-size: 13px; color: #c9cfdb; display: flex; gap: 6px; align-items: center; }
+  header select { font: inherit; font-size: 14px; padding: 4px 6px; border-radius: 6px; border: 0; }
+  header .spacer { flex: 1; }
+  .layout { display: grid; grid-template-columns: 200px 1fr; min-height: calc(100vh - 52px); }
+  nav { background: var(--panel); border-right: 1px solid var(--line); padding: 12px 8px; }
+  nav button { display: block; width: 100%; text-align: left; background: none; border: 0; font: inherit; padding: 9px 12px; border-radius: 8px; color: var(--ink); cursor: pointer; }
+  nav button:hover { background: var(--bg); }
+  nav button.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+  main { padding: 20px; max-width: 1000px; width: 100%; min-width: 0; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  h2 { font-size: 16px; margin: 0 0 10px; }
+  .sub { color: var(--muted); margin: 0 0 18px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; margin-bottom: 14px; overflow-x: auto; }
+  header label select { max-width: 60vw; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); font-weight: 600; }
+  tr.click { cursor: pointer; } tr.click:hover { background: var(--bg); }
+  .pill { display: inline-block; font-size: 12px; padding: 1px 8px; border-radius: 10px; background: var(--bg); border: 1px solid var(--line); }
+  .pill.ok { background: var(--ok-soft); color: var(--ok); border-color: transparent; }
+  .pill.warn { background: var(--warn-soft); color: var(--warn); border-color: transparent; }
+  .pill.bad { background: var(--bad-soft); color: var(--bad); border-color: transparent; }
+  .restricted { background: var(--bad-soft); color: var(--bad); border-radius: 8px; padding: 12px; font-weight: 500; }
+  .btn { font: inherit; background: var(--accent); color: #fff; border: 0; padding: 8px 14px; border-radius: 8px; cursor: pointer; }
+  .btn.secondary { background: var(--panel); color: var(--accent); border: 1px solid var(--accent); }
+  .btn:disabled { opacity: .45; cursor: not-allowed; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .chart-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; align-items: flex-start; }
+  label.field { display: block; font-size: 13px; font-weight: 600; color: var(--muted); margin: 10px 0 4px; }
+  textarea, input[type=text], input[type=number], select.in { width: 100%; font: inherit; padding: 8px; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--ink); }
+  textarea { min-height: 64px; resize: vertical; }
+  .vitals { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .note { border-left: 3px solid var(--line); padding: 6px 0 6px 12px; margin-bottom: 12px; }
+  .note .meta { font-size: 13px; color: var(--muted); }
+  .note dl { margin: 6px 0 0; display: grid; grid-template-columns: 110px 1fr; gap: 2px 10px; }
+  .note dt { font-weight: 600; font-size: 13px; color: var(--muted); }
+  .note dd { margin: 0; }
+  ul.plain { margin: 0; padding-left: 18px; }
+  .muted { color: var(--muted); }
+  .toast { position: fixed; bottom: 16px; right: 16px; background: var(--ink); color: #fff; padding: 10px 14px; border-radius: 8px; opacity: 0; transition: opacity .2s; pointer-events: none; }
+  .toast.show { opacity: 1; }
+  @media (max-width: 720px) {
+    .layout { grid-template-columns: minmax(0, 1fr); }
+    nav { display: flex; gap: 4px; border-right: 0; border-bottom: 1px solid var(--line); overflow-x: auto; }
+    nav button { width: auto; white-space: nowrap; }
+    main { padding: 16px; }
+    .grid2 { grid-template-columns: 1fr; }
+    .vitals { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <span class="brand">EMR Prototype</span>
+  <span class="demo">DEMO · MADE-UP DATA ONLY</span>
+  <span class="spacer"></span>
+  <label>Edition
+    <select id="edition">
+      <option value="coaching">Coaching &amp; Wellness</option>
+      <option value="behavioral" selected>Behavioral Health</option>
+      <option value="primary_care">Primary Care</option>
+    </select>
+  </label>
+  <label>Signed in as
+    <select id="role">
+      <option value="provider" selected>Provider (Dr. Avery Lane)</option>
+      <option value="front_desk">Front desk (Jordan Kim)</option>
+      <option value="billing">Billing (Sam Ortiz)</option>
+      <option value="admin">Practice admin (Riley Chen)</option>
+    </select>
+  </label>
+</header>
+<div class="layout">
+  <nav id="nav">
+    <button data-view="schedule">Today's schedule</button>
+    <button data-view="patients">Patients</button>
+    <button data-view="audit">Audit log</button>
+    <button data-view="about">About this prototype</button>
+  </nav>
+  <main id="main"></main>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+// ---------- Made-up demo data (no real people) ----------
+const USERS = {
+  provider:   { name: "Dr. Avery Lane", role: "Provider" },
+  front_desk: { name: "Jordan Kim", role: "Front desk" },
+  billing:    { name: "Sam Ortiz", role: "Billing" },
+  admin:      { name: "Riley Chen", role: "Practice admin" }
+};
+
+const patients = [
+  { id: 1, mrn: "D-1001", name: "Morgan Ellis", dob: "1984-03-12", pronouns: "she/her", phone: "(555) 010-2231",
+    insurance: "Demo Health Plan · ID ••••4821", dx: [["F41.1", "Generalized anxiety disorder"]],
+    meds: ["Sertraline 50 mg daily"], allergies: ["Penicillin (rash)"], goals: ["Reduce panic episodes to under 1 per week", "Return to full-time work by March"],
+    assess: [["GAD-7", 14, "2026-10-01"], ["GAD-7", 10, "2026-11-05"]],
+    vitals: { bp: "122/78", hr: 72, temp: "98.4", wt: 156 } },
+  { id: 2, mrn: "D-1002", name: "Theo Ramirez", dob: "1971-08-30", pronouns: "he/him", phone: "(555) 010-8842",
+    insurance: "Sample Mutual · ID ••••1190", dx: [["E11.9", "Type 2 diabetes without complications"], ["I10", "Essential hypertension"]],
+    meds: ["Metformin 500 mg twice daily", "Lisinopril 10 mg daily"], allergies: ["No known allergies"], goals: ["A1c below 7.0 by next quarter"],
+    assess: [["PHQ-9", 4, "2026-09-18"]], vitals: { bp: "138/86", hr: 80, temp: "98.6", wt: 212 } },
+  { id: 3, mrn: "D-1003", name: "Priya Shah", dob: "1992-01-07", pronouns: "she/they", phone: "(555) 010-5507",
+    insurance: "Self-pay", dx: [["F32.1", "Major depressive disorder, single episode, moderate"]],
+    meds: [], allergies: ["Latex"], goals: ["Clarify career direction", "Establish a consistent morning routine"],
+    assess: [["PHQ-9", 16, "2026-10-12"], ["PHQ-9", 11, "2026-11-09"]], vitals: { bp: "116/74", hr: 68, temp: "98.2", wt: 134 } },
+  { id: 4, mrn: "D-1004", name: "Walter Brooks", dob: "1958-11-21", pronouns: "he/him", phone: "(555) 010-3374",
+    insurance: "Demo Medicare Advantage · ID ••••7702", dx: [["J45.909", "Asthma, unspecified"]],
+    meds: ["Albuterol inhaler as needed"], allergies: ["Sulfa drugs (hives)"], goals: ["Walk 20 minutes, 5 days per week"],
+    assess: [], vitals: { bp: "128/80", hr: 76, temp: "98.7", wt: 188 } }
+];
+
+const appointments = [
+  { time: "9:00 AM",  pid: 3, type: "Follow-up session", mode: "Telehealth", status: "Checked in" },
+  { time: "10:00 AM", pid: 1, type: "Therapy session",   mode: "In person",  status: "Scheduled" },
+  { time: "11:30 AM", pid: 2, type: "Chronic care visit", mode: "In person", status: "Scheduled" },
+  { time: "2:00 PM",  pid: 4, type: "New patient intake", mode: "Telehealth", status: "Scheduled" }
+];
+
+const notes = [
+  { pid: 1, date: "2026-11-05", format: "SOAP", status: "Signed", author: "Dr. Avery Lane",
+    body: { Subjective: "Reports fewer panic episodes (2 this week, down from 4).", Objective: "Calm, engaged. GAD-7 = 10.", Assessment: "Improving on current plan.", Plan: "Continue weekly CBT; practice breathing exercise daily." } },
+  { pid: 3, date: "2026-11-09", format: "Coaching", status: "Signed", author: "Dr. Avery Lane",
+    body: { Focus: "Career direction and daily structure.", Insights: "Energized by teaching-related work.", Commitments: "Draft 3 role ideas; wake at 6:30 on weekdays.", "Next session": "Review role ideas." } }
+];
+
+const audit = [];
+
+// ---------- Rules: what each edition and role allows ----------
+const EDITION = {
+  coaching:     { label: "Coaching & Wellness", person: "Client",  formats: ["Coaching"], dx: false, meds: false, vitals: false, assess: false, insurance: false },
+  behavioral:   { label: "Behavioral Health",   person: "Patient", formats: ["SOAP", "DAP", "BIRP"], dx: true, meds: true, vitals: false, assess: true, insurance: true },
+  primary_care: { label: "Primary Care",        person: "Patient", formats: ["SOAP"], dx: true, meds: true, vitals: true, assess: true, insurance: true }
+};
+const NOTE_SECTIONS = {
+  SOAP: ["Subjective", "Objective", "Assessment", "Plan"],
+  DAP: ["Data", "Assessment", "Plan"],
+  BIRP: ["Behavior", "Intervention", "Response", "Plan"],
+  Coaching: ["Focus", "Insights", "Commitments", "Next session"]
+};
+const CAN = {
+  readNotes:  r => r === "provider" || r === "admin",
+  writeNotes: r => r === "provider",
+  readCodes:  r => r !== "front_desk",
+  readAudit:  r => r === "admin"
+};
+
+// ---------- State ----------
+let view = "schedule", currentPid = null, composing = false;
+const $ = s => document.querySelector(s);
+const ed = () => EDITION[$("#edition").value];
+const role = () => $("#role").value;
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const nowStamp = () => new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit", second: "2-digit" });
+
+function log(action, what, pid) {
+  const p = patients.find(x => x.id === pid);
+  audit.unshift({ t: nowStamp(), user: USERS[role()].name, role: USERS[role()].role, action, what, patient: p ? p.name : "—" });
+}
+function toast(msg) { const t = $("#toast"); t.textContent = msg; t.classList.add("show"); setTimeout(() => t.classList.remove("show"), 2200); }
+function age(dob) { const d = new Date(dob), n = new Date("2026-11-12"); let a = n.getFullYear() - d.getFullYear(); if (n < new Date(n.getFullYear(), d.getMonth(), d.getDate())) a--; return a; }
+
+// ---------- Views ----------
+function render() {
+  document.querySelectorAll("#nav button").forEach(b => b.classList.toggle("active", b.dataset.view === view));
+  const m = $("#main");
+  if (view === "schedule") m.innerHTML = schedule();
+  else if (view === "patients") m.innerHTML = patientList();
+  else if (view === "chart") m.innerHTML = chart();
+  else if (view === "audit") m.innerHTML = auditView();
+  else m.innerHTML = about();
+  bind();
+}
+
+function schedule() {
+  const rows = appointments.map(a => {
+    const p = patients.find(x => x.id === a.pid);
+    const cls = a.status === "Checked in" ? "ok" : "";
+    return `<tr class="click" data-open="${p.id}"><td>${a.time}</td><td><strong>${esc(p.name)}</strong></td><td>${esc(a.type)}</td><td>${a.mode}</td><td><span class="pill ${cls}">${a.status}</span></td></tr>`;
+  }).join("");
+  return `<h1>Today's schedule</h1><p class="sub">Thursday, November 12, 2026 · ${ed().label} edition · Select a row to open the ${ed().person.toLowerCase()}'s chart.</p>
+    <div class="card"><table><thead><tr><th>Time</th><th>${ed().person}</th><th>Type</th><th>Visit</th><th>Status</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+
+function patientList() {
+  const rows = patients.map(p => `<tr class="click" data-open="${p.id}"><td>${p.mrn}</td><td><strong>${esc(p.name)}</strong></td><td>${p.dob} (${age(p.dob)})</td><td>${p.phone}</td></tr>`).join("");
+  return `<h1>${ed().person}s</h1><p class="sub">${patients.length} active ${ed().person.toLowerCase()}s.</p>
+    <div class="card"><table><thead><tr><th>Record #</th><th>Name</th><th>Date of birth</th><th>Phone</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+
+function chart() {
+  const p = patients.find(x => x.id === currentPid), e = ed(), r = role();
+  const list = arr => arr.length ? `<ul class="plain">${arr.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : `<span class="muted">None recorded</span>`;
+
+  let clinical = "";
+  if (CAN.readCodes(r)) {
+    const parts = [];
+    if (e.dx) parts.push(`<div class="card"><h2>Diagnoses (ICD-10)</h2>${list(p.dx.map(d => d[0] + " — " + d[1]))}</div>`);
+    if (e.meds && CAN.readNotes(r)) parts.push(`<div class="card"><h2>Medications &amp; allergies</h2>${list(p.meds)}<p class="muted" style="margin:8px 0 2px">Allergies</p>${list(p.allergies)}</div>`);
+    if (CAN.readNotes(r)) parts.push(`<div class="card"><h2>${e.dx ? "Treatment plan goals" : "Coaching goals"}</h2>${list(p.goals)}</div>`);
+    if (e.assess && CAN.readNotes(r)) parts.push(`<div class="card"><h2>Assessments</h2>${p.assess.length ? `<table><tr><th>Measure</th><th>Score</th><th>Date</th></tr>${p.assess.map(a => `<tr><td>${a[0]}</td><td>${a[1]}</td><td>${a[2]}</td></tr>`).join("")}</table>` : '<span class="muted">None yet</span>'}</div>`);
+    if (e.vitals && CAN.readNotes(r)) parts.push(`<div class="card"><h2>Latest vitals</h2>BP ${p.vitals.bp} · HR ${p.vitals.hr} · Temp ${p.vitals.temp}°F · Weight ${p.vitals.wt} lb</div>`);
+    clinical = parts.length ? `<div class="grid2">${parts.join("")}</div>` : "";
+  }
+
+  let noteBlock;
+  if (!CAN.readNotes(r)) {
+    noteBlock = `<div class="restricted">🔒 Your role (${USERS[r].role}) can't view ${e.person.toLowerCase()} notes. This access attempt was recorded in the audit log.</div>`;
+  } else {
+    const mine = notes.filter(n => n.pid === p.id);
+    noteBlock = (mine.length ? mine.map(n => `<div class="note"><div class="meta">${n.date} · ${n.format} note · ${esc(n.author)} · <span class="pill ${n.status === "Signed" ? "ok" : "warn"}">${n.status}</span></div>
+      <dl>${Object.entries(n.body).map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v) || '<span class="muted">—</span>'}</dd>`).join("")}</dl></div>`).join("")
+      : `<p class="muted">No notes yet.</p>`) + (composing ? composer() : "");
+  }
+
+  return `<div class="chart-head"><div><h1>${esc(p.name)}</h1><p class="sub">${p.mrn} · DOB ${p.dob} (age ${age(p.dob)}) · ${p.pronouns} · ${p.phone}${e.insurance ? " · " + esc(p.insurance) : ""}</p></div>
+    <div class="row">${CAN.writeNotes(r) && !composing ? `<button class="btn" id="newNote">+ New ${e.formats[0] === "Coaching" ? "session" : "progress"} note</button>` : ""}<button class="btn secondary" id="back">← Back</button></div></div>
+    ${clinical}
+    <div class="card"><h2>${e.person === "Client" ? "Session notes" : "Clinical notes"}</h2>${noteBlock}</div>`;
+}
+
+function composer() {
+  const e = ed();
+  const fmt = e.formats[0];
+  return `<div class="card" style="background:var(--bg)"><h2>New note</h2>
+    <label class="field">Format</label>
+    <select class="in" id="fmt">${e.formats.map(f => `<option${f === fmt ? " selected" : ""}>${f}</option>`).join("")}</select>
+    ${e.vitals ? `<label class="field">Vitals</label><div class="vitals"><input type="text" placeholder="BP e.g. 120/80" id="v_bp"><input type="number" placeholder="Heart rate" id="v_hr"><input type="text" placeholder="Temp °F" id="v_t"><input type="number" placeholder="Weight lb" id="v_w"></div>` : ""}
+    <div id="sections">${sections(fmt)}</div>
+    <div class="row" style="margin-top:12px"><button class="btn" id="sign">Sign &amp; lock note</button><button class="btn secondary" id="draft">Save draft</button><button class="btn secondary" id="cancel">Cancel</button></div>
+    <p class="muted" style="font-size:13px;margin:8px 0 0">Signed notes can't be edited, only amended. This matches medical-record rules.</p></div>`;
+}
+function sections(fmt) { return NOTE_SECTIONS[fmt].map(s => `<label class="field">${s}</label><textarea data-sec="${s}"></textarea>`).join(""); }
+
+function auditView() {
+  if (!CAN.readAudit(role())) {
+    log("Denied", "Audit log", null);
+    return `<h1>Audit log</h1><div class="restricted">🔒 Only the practice admin can view the audit log. Switch "Signed in as" to Practice admin.</div>`;
+  }
+  const rows = audit.length ? audit.map(a => `<tr><td>${a.t}</td><td>${esc(a.user)}<br><span class="muted">${a.role}</span></td><td><span class="pill ${a.action === "Denied" ? "bad" : a.action === "Signed" ? "ok" : ""}">${a.action}</span></td><td>${esc(a.what)}</td><td>${esc(a.patient)}</td></tr>`).join("")
+    : `<tr><td colspan="5" class="muted">No activity yet. Open a chart, then come back.</td></tr>`;
+  return `<h1>Audit log</h1><p class="sub">Every time anyone views, creates or signs a record, or is denied access, it's recorded here. HIPAA requires this. In the real system it can't be edited or deleted.</p>
+    <div class="card"><table><thead><tr><th>Time</th><th>Who</th><th>Action</th><th>What</th><th>${ed().person}</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+
+function about() {
+  return `<h1>About this prototype</h1><p class="sub">Stage 4 (UI design) of the EMR development plan.</p>
+  <div class="card"><h2>Try this</h2><ul class="plain">
+    <li><strong>Switch the edition</strong> at the top. Coaching hides diagnoses, insurance and medications and says "Client"; Primary Care adds vitals.</li>
+    <li><strong>Switch "Signed in as"</strong> to Front desk, then open a chart. Clinical notes are locked.</li>
+    <li>As the Provider, open a chart and <strong>write and sign a note</strong>.</li>
+    <li>Switch to Practice admin and open the <strong>Audit log</strong> to see everything that happened.</li></ul></div>
+  <div class="card"><h2>What this is and isn't</h2><p>A clickable mock-up for testing ideas with you and with real clinicians before coding begins. All names and data are made up. It runs entirely in the browser, saves nothing, and must never hold real patient information. The production system will be built in PHP/Laravel with the database design in <code>database/schema.sql</code>.</p></div>`;
+}
+
+// ---------- Events ----------
+function bind() {
+  document.querySelectorAll("[data-open]").forEach(el => el.onclick = () => openChart(+el.dataset.open));
+  const b = id => document.getElementById(id);
+  if (b("back")) b("back").onclick = () => { composing = false; view = "schedule"; render(); };
+  if (b("newNote")) b("newNote").onclick = () => { composing = true; render(); };
+  if (b("cancel")) b("cancel").onclick = () => { composing = false; render(); };
+  if (b("fmt")) b("fmt").onchange = e => { b("sections").innerHTML = sections(e.target.value); };
+  if (b("sign")) b("sign").onclick = () => saveNote("Signed");
+  if (b("draft")) b("draft").onclick = () => saveNote("Draft");
+}
+function openChart(pid) {
+  currentPid = pid; composing = false; view = "chart";
+  log(CAN.readNotes(role()) ? "Viewed" : "Denied", CAN.readNotes(role()) ? "Chart" : "Clinical notes", pid);
+  if (!CAN.readNotes(role())) log("Viewed", "Demographics", pid);
+  render();
+}
+function saveNote(status) {
+  let body = {};
+  document.querySelectorAll("#sections textarea").forEach(t => body[t.dataset.sec] = t.value.trim());
+  if (!Object.values(body).some(Boolean)) { toast("Write something in the note first."); return; }
+  if (ed().vitals) {
+    const bp = $("#v_bp").value, hr = $("#v_hr").value, t = $("#v_t").value, w = $("#v_w").value;
+    if (bp || hr || t || w) body = Object.assign({ Vitals: `BP ${bp || "—"} · HR ${hr || "—"} · Temp ${t || "—"} · Wt ${w || "—"}` }, body);
+  }
+  notes.push({ pid: currentPid, date: "2026-11-12", format: $("#fmt").value, status, author: USERS[role()].name, body });
+  log(status === "Signed" ? "Signed" : "Created", `${$("#fmt").value} note`, currentPid);
+  composing = false; render(); toast(status === "Signed" ? "Note signed and locked." : "Draft saved.");
+}
+
+document.querySelectorAll("#nav button").forEach(b => b.onclick = () => { view = b.dataset.view; composing = false; render(); });
+$("#edition").onchange = () => { composing = false; render(); };
+$("#role").onchange = () => { composing = false; if (view === "chart") openChart(currentPid); else render(); };
+render();
+</script>
+</body>
+</html>
