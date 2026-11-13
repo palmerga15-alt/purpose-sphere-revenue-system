@@ -16,79 +16,80 @@
 // (see the dashboard-refresh skill for the explicit rule).
 // ============================================================
 window.DASHBOARD_DATA = {
-  generatedAt: "2026-07-23T01:37:06Z",
+  generatedAt: "2026-11-13T02:37:58Z",
   generatedBy: "claude-data-engine",
 
   // ---- source health: probed at generation time ----
   sources: {
-    gmail:   { label: "GMAIL",        status: "online", probedAt: "2026-07-23T01:35:00Z", account: "purposequestinc@gmail.com" },
-    gdrive:  { label: "GOOGLE DRIVE", status: "online", probedAt: "2026-07-23T01:35:00Z", account: "palmerga15@gmail.com" },
-    dropbox: { label: "DROPBOX",      status: "online", probedAt: "2026-07-23T01:35:00Z", account: "Dr. G. Alfred Palmer" },
-    lovable: { label: "LOVABLE",      status: "online", probedAt: "2026-07-23T01:35:00Z", account: "Gregory's Lovable" },
-    github:  { label: "GITHUB",       status: "online", probedAt: "2026-07-23T01:35:00Z", account: "palmerga15-alt" }
+    gmail:   { label: "GMAIL",        status: "online", probedAt: "2026-11-13T02:25:00Z", account: "purposequestinc@gmail.com" },
+    gcal:    { label: "CALENDAR",     status: "online", probedAt: "2026-11-13T02:25:00Z", account: "America/New_York" },
+    gdrive:  { label: "GOOGLE DRIVE", status: "online", probedAt: "2026-11-13T02:25:00Z", account: "palmerga15@gmail.com" },
+    dropbox: { label: "DROPBOX",      status: "online", probedAt: "2026-11-13T02:37:00Z", account: "Dr. G. Alfred Palmer" },
+    lovable: { label: "LOVABLE",      status: "online", probedAt: "2026-11-13T02:25:00Z", account: "Gregory's Lovable" },
+    github:  { label: "GITHUB",       status: "online", probedAt: "2026-11-13T02:25:00Z", account: "palmerga15-alt" }
   },
 
   // ---- AI MORNING BRIEFING (cross-referenced across tools) ----
   briefing: {
-    date: "Wednesday, July 23, 2026",
-    headline: "Webinar follow-up window is closing; a finished corporate-outreach draft is idle in Gmail; two Kenya outreach emails bounced.",
-    summary: "The July 15 'Purposeology & AI' webinar was 8 days ago and the repo's offer suite for it is built but nothing in Gmail shows a post-webinar follow-up sequence going out. Meanwhile the highest-leverage assets sitting idle are a fully-written Fortune 500 outreach email (drafted June 12, never sent) and 7 Lovable sites of which only 1 is published.",
+    date: "Friday, November 13, 2026",
+    headline: "Two purposeology.ai booking inquiries have waited since Nov 4; the NC Reentry proposal is due Saturday 5 PM; the 7-Day Purpose Blueprint founding cohort launches Monday.",
+    summary: "The platform is live and producing inbound leads while the DMV speaking campaign is mid-follow-up — but the two Nov 4 booking inquiries (speaking + AI consulting) show no reply in sent mail 9 days later. This weekend is deadline-heavy: NC Reentry proposal Saturday, Blueprint cohort launch Monday morning. Two subscription payments are also failing.",
     actions: [
       {
         priority: 1,
-        title: "Send the post-webinar follow-up sequence",
-        detail: "The 'Purposeology & AI' webinar (July 15) is 8 days past. The offer suite exists in the repo (offers/2026-07-15-purposeology-ai-webinar-offer-suite.md) but Gmail sent-mail shows no follow-up emails since. No-show + replay emails convert as well as the live event — this window closes fast.",
-        sources: ["github", "gmail"]
+        title: "Reply to the two purposeology.ai booking inquiries (9 days old)",
+        detail: "On Nov 4 the live purposeology.ai site sent two booking-inquiry notifications — one Speaking engagement, one AI consulting. Sent mail through Nov 11 shows no reply to either. These are the first inbound platform leads on record; answer them before the weekend.",
+        sources: ["gmail", "lovable"]
       },
       {
         priority: 2,
-        title: "Finish and send the Fortune 500 outreach draft (idle 41 days)",
-        detail: "A complete 'Transforming Business Through Purpose, Leadership, and AI' email has been sitting in Gmail drafts since June 12 with placeholder [Phone Number]/[Email]/[Website] fields. It maps directly to Strategic Priority #4 and the repo's corporate-training offer spec (offers/2026-07-14-fortune-500-corporate-training-offer.md). Fill 3 placeholders and ship it.",
-        sources: ["gmail", "github"]
+        title: "Submit the NC Reentry Conference proposal by Saturday 5 PM",
+        detail: "Calendar deadline: 'From Mission to Meaning' is due to the 2027 NC Rehabilitation & Reentry Conference by Nov 15, 5 PM — the text is already in the 'Speaking Proposals – Fall 2026 Submission Package' doc. Also confirm the three RISE27 proposals (deadline Nov 12) actually went out; sent mail shows no submission email.",
+        sources: ["gcal", "gdrive", "gmail"]
       },
       {
         priority: 3,
-        title: "Repair the bounced Kenya outreach and resend",
-        detail: "The June 29 Kenya institutional outreach (8 recipients incl. Strathmore, Daystar, Kenyatta University) triggered 2 mailer-daemon bounces. Those institutions never got the pitch. Verify the bad addresses and resend — this was the global-speaking priority in motion.",
-        sources: ["gmail"]
+        title: "Final prep: 7-Day Purpose Blueprint founding cohort starts Monday 6 AM",
+        detail: "Nov 16–22 daily cohort with a 10–20 participant goal and ≥70% completion target. Three recruiting channels are already warm: Power Circle Network (Thu), Power Tool Monday, and the DMV Christian Chamber's Nov 25 event list. Pricing is set (see pipeline).",
+        sources: ["gcal", "lovable"]
       },
       {
         priority: 4,
-        title: "Verify Constant Contact to unblock email marketing",
-        detail: "Constant Contact (trial started July 17) is still waiting on email verification — every planned sequence (webinar reminders, follow-ups, nurture) is blocked until this ~2-minute step is done.",
+        title: "Fix two failing subscription payments",
+        detail: "LinkedIn Premium's renewal (Nov 12) could not process payment — access at risk; YouTube Premium flagged the same on Nov 6. Same-card failures usually mean an expired/replaced card: one update fixes both.",
         sources: ["gmail"]
       },
       {
         priority: 5,
-        title: "Publish Alliance Glow (or decide not to)",
-        detail: "7 Lovable projects exist; only 1 is published (grow-your-web-garden-purposeology-15.lovable.app). Alliance Glow — the Purpose Power Alliance landing page — was finished July 20 and is sitting unpublished. An unpublished landing page captures zero signups.",
-        sources: ["lovable"]
+        title: "Nudge the warm Montgomery County Chamber thread + close the Zoho decision",
+        detail: "The Chamber replied and a complimentary 'Why Before AI' member briefing was offered on Nov 4 — no date confirmed since; a short nudge keeps it alive. Separately a Zoho CRM account exec replied Nov 12 and the trial's free-onboarding window expires this week: decide if Zoho is the CRM for tracking exactly these threads.",
+        sources: ["gmail"]
       },
       {
         priority: 6,
-        title: "Reply check: John Stanko thread",
-        detail: "Active mentor/peer correspondence with John Stanko (last exchange July 1–2). Three weeks of silence on a warm relationship thread — worth a touch-base.",
-        sources: ["gmail"]
+        title: "Fortune 500 outreach draft is now 154 days idle — ship or archive",
+        detail: "The 'Transforming Business Through Purpose, Leadership, and AI' draft (Jun 12) still sits in Gmail drafts with placeholder contact fields, while the Oct 31 campaign proved the sending muscle works (12 DMV orgs in one sitting). The matching offer spec remains at offers/2026-07-14-fortune-500-corporate-training-offer.md.",
+        sources: ["gmail", "github"]
       }
     ]
   },
 
-  // ---- REVENUE PIPELINE (from repo offer specs; money values flagged) ----
+  // ---- REVENUE PIPELINE (from repo offer specs + live signals; money values flagged) ----
   pipeline: {
     streams: [
-      { name: "Webinar Offer Suite", stage: "LAUNCHED JUL 15 — FOLLOW-UP DUE", doc: "offers/2026-07-15-purposeology-ai-webinar-offer-suite.md", money: null },
-      { name: "Purposeologist Certification", stage: "OFFER SPEC COMPLETE", doc: "offers/2026-07-14-online-purposeologist-certification-school.md", money: "$3,495 core credential" },
-      { name: "Corporate Delivery License", stage: "OFFER SPEC COMPLETE", doc: "offers/2026-07-14-online-purposeologist-certification-school.md", money: "$12,000–$25,000+/yr" },
-      { name: "Fortune 500 Training", stage: "SPEC DONE — OUTREACH DRAFT IDLE", doc: "offers/2026-07-14-fortune-500-corporate-training-offer.md", money: null },
-      { name: "Global Speaking", stage: "OUTREACH ACTIVE (KENYA/GHANA)", doc: "offers/2026-07-14-global-speaking-keynote-offer.md", money: null },
-      { name: "purposeology.ai Platform", stage: "RESEARCH + SPEC COMPLETE", doc: "offers/2026-07-14-purposeology-ai-platform-offer.md", money: null }
+      { name: "7-Day Purpose Blueprint", stage: "FOUNDING COHORT LAUNCHES NOV 16", doc: "calendar: Nov 16–22 daily", money: "$47 founding / $27 mo" },
+      { name: "purposeology.ai Platform", stage: "LIVE — 2 INBOUND INQUIRIES NOV 4", doc: "Lovable: Your Dream Website (published)", money: null },
+      { name: "Speaking Circuit (DMV + recovery/veterans)", stage: "FOLLOW-UP WAVE ACTIVE — 2 PROPOSALS DUE", doc: "offers/2026-07-14-global-speaking-keynote-offer.md", money: null },
+      { name: "Purposeologist Certification", stage: "COHORT APPLICATIONS LIVE ON PLATFORM", doc: "offers/2026-07-14-online-purposeologist-certification-school.md", money: "$3,495 core credential" },
+      { name: "PurposeQuest Healthcare (EMR)", stage: "PUBLISHED OCT 30 — EMERGING B2B STREAM", doc: "Lovable: Purposequest Healthcare", money: null },
+      { name: "Fortune 500 Training", stage: "SPEC DONE — OUTREACH DRAFT IDLE 154 DAYS", doc: "offers/2026-07-14-fortune-500-corporate-training-offer.md", money: null }
     ],
     priorities: [
-      { rank: 1, name: "Books, seminars, workshops", note: "most immediate revenue path" },
-      { rank: 2, name: "Certification school", note: "scalable licensing model" },
-      { rank: 3, name: "Global speaking", note: "Kenya/Ghana outreach in motion" },
-      { rank: 4, name: "Fortune 500 training", note: "outreach draft ready, unsent" },
-      { rank: 5, name: "purposeology.ai", note: "long-term, highest impact" }
+      { rank: 1, name: "Books, seminars, workshops", note: "Blueprint cohort = first paid workshop test" },
+      { rank: 2, name: "Certification school", note: "cohort applications live on purposeology.ai" },
+      { rank: 3, name: "Global speaking", note: "DMV wave + veterans/recovery outreach active" },
+      { rank: 4, name: "Fortune 500 training", note: "outreach draft still unsent" },
+      { rank: 5, name: "purposeology.ai", note: "LIVE and generating inbound inquiries" }
     ]
   },
 
@@ -98,40 +99,57 @@ window.DASHBOARD_DATA = {
     draftCount: 3,
     keyDrafts: [
       { subject: "Transforming Business Through Purpose, Leadership, and AI", note: "Fortune 500 outreach — complete, placeholders unfilled", idleSince: "2026-06-12" },
-      { subject: "(no subject) → marketing@esvachamber.org", note: "empty draft to ES VA Chamber", idleSince: "2026-06-12" }
+      { subject: "(no subject) → ES VA Chamber marketing", note: "empty draft", idleSince: "2026-06-12" }
     ],
     alerts: [
-      { type: "BOUNCE", text: "2 mailer-daemon bounces on June 29 Kenya outreach (8 recipients)" },
-      { type: "BLOCKED", text: "Constant Contact email verification pending since Jul 17" },
-      { type: "ACTION", text: "Acquisition.com offers-workshop 'last call' received Jul 22" }
+      { type: "ACTION", text: "2 purposeology.ai booking inquiries (speaking + AI consulting) awaiting reply since Nov 4" },
+      { type: "BLOCKED", text: "LinkedIn Premium (Nov 12) + YouTube Premium (Nov 6) payments failing — update card" },
+      { type: "ACTION", text: "Zoho CRM: account exec replied Nov 12; free onboarding window expires this week" }
     ],
     recentSent: [
-      { to: "info@marylandbcc.org", date: "2026-07-05", note: "Maryland Black Chamber outreach" },
-      { to: "J. Stanko (personal contact)", date: "2026-07-02", note: "mentor/peer thread (4 msgs)" },
-      { to: "8 Kenya institutions", date: "2026-06-29", note: "education/enterprise outreach — 2 bounced" },
-      { to: "3 Kenya SME agencies", date: "2026-06-29", note: "MSEA, Nyota Project, Kenya Chamber" },
-      { to: "info@gea.gov.gh", date: "2026-06-29", note: "Ghana Enterprises Agency" }
+      { to: "DC Mayor's Office of Veterans Affairs", date: "2026-11-11", note: "free 'From Service to Purpose' session offer" },
+      { to: "PG County Office of Veterans Affairs", date: "2026-11-11", note: "veterans purpose session offer" },
+      { to: "FBC Glenarden Prison Ministry", date: "2026-11-11", note: "'Purpose as a Path to Recovery' session offer" },
+      { to: "MD-DCSAM (addiction medicine society)", date: "2026-11-09", note: "Feb 2027 conference speaker inquiry" },
+      { to: "12 DMV orgs — chambers, SHRM, leadership programs", date: "2026-10-31", note: "Leadership & Purposeology™ follow-up wave" }
     ],
     recentUnread: [
-      { from: "LinkedIn", subject: "Add Warner H. Session (Session Law Firm)", date: "2026-07-22" },
-      { from: "OpusClip", subject: "Top features to help you save time", date: "2026-07-22" },
-      { from: "Base44", subject: "Welcome offer: 30% off — expires soon", date: "2026-07-22" },
-      { from: "Acquisition.com", subject: "last call — offers workshop", date: "2026-07-22" },
-      { from: "Acquisition.com", subject: "Mozi Minute: My Highest ROI Decisions", date: "2026-07-21" },
-      { from: "Kajabi", subject: "Watch me build a whole business in one hour", date: "2026-07-21" }
+      { from: "Zoho CRM (account exec)", subject: "Re: Why Zoho CRM — evaluation reply", date: "2026-11-12" },
+      { from: "DMV Christian Chamber", subject: "Grow Your Business! (Nov 25 session)", date: "2026-11-12" },
+      { from: "LinkedIn Billing", subject: "Action needed: Premium payment failed", date: "2026-11-12" },
+      { from: "VistaPrint", subject: "Your package has been delivered", date: "2026-11-12" },
+      { from: "LinkedIn", subject: "You have 1 new message", date: "2026-11-13" },
+      { from: "Google Analytics", subject: "Meet Task Assistant: easier GA setup", date: "2026-11-12" }
     ]
   },
 
-  // ---- GOOGLE DRIVE ----
+  // ---- CALENDAR (next 7 days, America/New_York) ----
+  gcal: {
+    deadlines: [
+      { when: "2026-11-12", what: "RISE27 (All Rise, National Harbor 2027) — 3 session proposals due", status: "confirm submitted" },
+      { when: "2026-11-15 17:00", what: "NC Rehabilitation & Reentry Conference — 'From Mission to Meaning' proposal due", status: "text ready in Drive" }
+    ],
+    upcoming: [
+      { when: "Fri Nov 13 15:00", what: "GrowthHub365 Member Onboarding (Zoom)" },
+      { when: "Sat Nov 14 08:00", what: "Purposeology: 7-Day Purpose Blueprint prep block" },
+      { when: "Mon Nov 16 06:00", what: "7-DAY PURPOSE BLUEPRINT — founding cohort Day 1 (runs daily through Nov 22)" },
+      { when: "Mon Nov 16 12:00", what: "Power Tool Monday (recurring)" },
+      { when: "Tue Nov 17 14:00", what: "Business Breakthrough Weekly" },
+      { when: "Thu Nov 19 10:00", what: "Power Circle Network" }
+    ]
+  },
+
+  // ---- GOOGLE DRIVE (titles/dates only — see guardrail) ----
   gdrive: {
     recentFiles: [
-      { title: "IMG_-oow2gt.jpg", type: "image", modified: "2026-07-22", note: "" },
-      { title: "IMG_20221226_181648_326.jpg", type: "image", modified: "2026-07-22", note: "book/brand collage w/ Myles Munroe" },
-      { title: "FB_IMG_1685161138420.jpg", type: "image", modified: "2026-07-22", note: "Purpose-ology book series art" },
-      { title: "DrG_Alfred_Palmer_Full_Bio.md", type: "doc", modified: "2026-07-13", note: "speaker bio — pipeline input" },
-      { title: "Quick Avatar Video.mp4", type: "video", modified: "2026-07-21", note: "HeyGen avatar asset (47 MB)" },
-      { title: "final PALMERGA promo-1", type: "video", modified: "2026-07-16", note: "promo video (304 MB)" },
-      { title: "VideoPrayer.m4a + Purpose Prayer 002", type: "audio", modified: "2026-07-19", note: "prayer audio series (x3)" }
+      { title: "00 — PURPOSEOLOGY® KNOWLEDGE SYSTEM — MASTER INDEX v2", type: "doc", modified: "2026-11-09", note: "knowledge-system index" },
+      { title: "Is Your Job Your Purpose?.mp4", type: "video", modified: "2026-11-09", note: "content video (427 MB)" },
+      { title: "AI Power Circle Mastermind Kick-Off", type: "doc", modified: "2026-11-08", note: "shared by mastermind collaborator" },
+      { title: "Power Circle Vision Statement (copy)", type: "docx", modified: "2026-11-09", note: "" },
+      { title: "All in with AI — 11/4/26 — Claude Motion", type: "folder", modified: "2026-11-04", note: "shared training folder" },
+      { title: "PurposeQuest Adolescent Outpatient SUD Platform", type: "docx", modified: "2026-10-22", note: "healthcare stream input" },
+      { title: "Purposeology® Comprehensive Assessment", type: "form", modified: "2026-10-15", note: "live assessment form" },
+      { title: "Begin Your Purposeology Journey", type: "form", modified: "2026-09-17", note: "intake form" }
     ]
   },
 
@@ -143,7 +161,7 @@ window.DASHBOARD_DATA = {
     note: "Effectively dormant — newest business file is from 2020.",
     entries: [
       { name: "Paper Docs/", modified: "2025-11-18", type: "folder" },
-      { name: "BUILT TO SERVE WORKBOOK.pdf", modified: "2020-03-12", type: "pdf" },
+      { name: "BUILT TO SERVE WORKBOOK.pdf", modified: "2020-05-22", type: "pdf" },
       { name: "Get Started with Dropbox.pdf", modified: "2019-10-29", type: "pdf" }
     ]
   },
@@ -151,15 +169,18 @@ window.DASHBOARD_DATA = {
   // ---- LOVABLE ----
   lovable: {
     workspace: "Gregory's Lovable",
-    projectCount: 7,
-    publishedCount: 1,
+    projectCount: 15,
+    publishedCount: 5,
     projects: [
-      { name: "Alliance Glow", status: "UNPUBLISHED", edited: "2026-07-20", note: "Purpose Power Alliance landing — finished, not live" },
-      { name: "Galfred Palmer Landing", status: "UNPUBLISHED", edited: "2026-07-15", note: "bio + speaking requests" },
-      { name: "Your Dream Website", status: "PUBLISHED", edited: "2026-06-28", url: "grow-your-web-garden-purposeology-15.lovable.app" },
-      { name: "Connect Analytics To You", status: "UNPUBLISHED", edited: "2026-06-28", note: "GA integration" },
-      { name: "My Story Hub", status: "UNPUBLISHED", edited: "2026-06-24", note: "blog" },
-      { name: "Survey Responses Inbox", status: "UNPUBLISHED", edited: "2026-06-12", note: "survey viewer" },
+      { name: "Secure Admin Access", status: "UNPUBLISHED", edited: "2026-11-10", note: "purposeology.ai admin portal (newest build)" },
+      { name: "Your Dream Website", status: "PUBLISHED", edited: "2026-11-09", note: "purposeology.ai platform — assessment, cohorts, payments", url: "purposeology.ai" },
+      { name: "Connect Analytics To You", status: "UNPUBLISHED", edited: "2026-11-07", note: "GA4 tracking" },
+      { name: "Purposequest Healthcare", status: "PUBLISHED", edited: "2026-10-30", note: "behavioral-health EMR + revenue cycle" },
+      { name: "Kindred Care Insights", status: "UNPUBLISHED", edited: "2026-10-17", note: "MD ASAM 3.1 EMR prototype" },
+      { name: "Purposeful AI Design", status: "UNPUBLISHED", edited: "2026-08-31", note: "purposeology.ai marketing site" },
+      { name: "Alliance Glow", status: "PUBLISHED", edited: "2026-07-20", note: "Purpose Power Alliance landing" },
+      { name: "Galfred Palmer Landing", status: "PUBLISHED", edited: "2026-07-15", note: "bio + speaking requests" },
+      { name: "Survey Responses Inbox", status: "PUBLISHED", edited: "2026-06-12", note: "survey viewer" },
       { name: "Purpose Fuel", status: "UNPUBLISHED", edited: "2026-06-06", note: "purpose discovery app" }
     ]
   },
@@ -169,15 +190,16 @@ window.DASHBOARD_DATA = {
     repo: "palmerga15-alt/purpose-sphere-revenue-system",
     openIssues: 0,
     openPRs: 0,
-    workflowRuns: 0,
+    workflowRuns: 140,
+    workflowNote: "GitHub Pages deploys — latest run #140 succeeded Nov 10",
     assetCounts: { research: 4, offers: 5, contentAngles: 5 },
     recentCommits: [
-      { msg: "Add content angles for purposeology.ai priority (#5)", date: "2026-07-14" },
-      { msg: "Add offer spec for purposeology.ai priority (#5)", date: "2026-07-14" },
-      { msg: "Add market research for purposeology.ai priority (#5)", date: "2026-07-14" },
-      { msg: "Add content angles for Fortune 500 corporate training (#4)", date: "2026-07-14" },
-      { msg: "Add offer spec for Fortune 500 corporate training (#4)", date: "2026-07-14" },
-      { msg: "Refine certification school pricing vs market research", date: "2026-07-14" }
+      { msg: "Remove real personal health and financial data exposed publicly", date: "2026-11-10" },
+      { msg: "Merge PR #6: fix date-fragile AR aging test", date: "2026-11-06" },
+      { msg: "Fix date-fragile AR aging assertion in billing-browser.test.js", date: "2026-11-06" },
+      { msg: "Update Excalibur communications report (Sep 14, 5 PM)", date: "2026-09-14" },
+      { msg: "Update Excalibur 8 AM communications report", date: "2026-09-14" },
+      { msg: "Update Excalibur communications report (Sep 13)", date: "2026-09-13" }
     ]
   }
 };
